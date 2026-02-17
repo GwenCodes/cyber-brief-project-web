@@ -15,3 +15,17 @@
     font-size: 0.75rem;
     letter-spacing: 0.2em;
 }
+.article-card {
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -20px rgba(238, 108, 77, 0.15);
+}
+
+/* Custom underline animation for the link */
+.article-card a {
+    position: relative;
+    text-decoration: none;
+}
