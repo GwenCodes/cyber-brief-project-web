@@ -1,0 +1,28 @@
+/* Custom styles for the signup section */
+.signup-container {
+    background: linear-gradient(to top, #0a0a0a, #050505);
+}
+
+.input-field {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #ee6c4d;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.subscribe-button {
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ee6c4d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}

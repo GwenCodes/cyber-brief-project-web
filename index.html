@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber-Brief.io | Modern Defense</title>
+    <title>Cyber-Brief | Modern Defense</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reality-section.css">
+
+    <link rel="stylesheet" href="signup-section.css"> 
 </head>
 <body class="bg-[#050505] text-white">
 
     <header class="py-6 border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <span class="font-ibm font-extrabold text-2xl tracking-tighter uppercase">Cyber-Brief.io</span>
+            <span class="font-ibm font-extrabold text-2xl tracking-normal">Cyber-Brief</span>
             <nav class="hidden md:flex gap-8 font-ibm text-xs uppercase tracking-widest text-slate-500">
                 <a href="#" class="hover:text-white transition-colors">Intelligence</a>
                 <a href="#" class="px-4 py-1.5 border border-white/10 rounded-full hover:border-white transition-all">About</a>
@@ -26,7 +28,7 @@
     <section class="py-24 border-b border-white/5 overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="font-blinker text-5xl md:text-6xl font-extrabold leading-[0.9] tracking-tighter uppercase">
+                <h2 class="font-ibm text-5xl md:text-6xl font-extrabold leading-[0.9] tracking-normal">
                     The painful reality <br>
                     <span class="text-slate-600">of cyber threats</span>
                 </h2>
@@ -51,6 +53,28 @@
             </div>
         </div>
     </section>
+    <section class="py-24 signup-container">
+    <div class="max-w-xl mx-auto px-6 text-center">
+        <h3 class="font-roboto font-black text-3xl md:text-4xl mb-4 uppercase tracking-tight">
+            Stay Ahead of the <span class="text-[#ee6c4d]">Threat.</span>
+        </h3>
+        
+        <form class="flex flex-col sm:flex-row gap-3">
+            <input 
+                type="email" 
+                placeholder="Enter work email" 
+                class="flex-1 input-field px-6 py-4 rounded-xl font-ibm"
+                required
+            >
+            <button 
+                type="submit" 
+                class="subscribe-button font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider"
+            >
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
 
 </body>
 </html>
