@@ -4,13 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form) {
     form.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevents the page from refreshing
+      e.preventDefault();
 
-      // Hide form and show success
-      form.style.display = "none";
-      successMsg.classList.remove("hidden");
+      const formData = new FormData(form);
 
-      console.log("CISO Subscription Successful");
+      // This "fetches" the Netlify handler
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => {
+          form.style.display = "none";
+          successMsg.classList.remove("hidden");
+        })
+        .catch((error) => alert(error));
     });
   }
 });

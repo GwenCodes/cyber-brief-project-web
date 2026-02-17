@@ -43,7 +43,7 @@
       >
         <div>
           <h2
-            class="font-ibm text-5xl md:text-6xl font-extrabold leading-[0.9] tracking-normal"
+            class="font-ibm text-4xl md:text-6xl font-extrabold leading-[1.1] md:leading-[0.9] tracking-tight"
           >
             The painful reality <br />
             <span class="text-slate-600">of cyber threats</span>
@@ -54,7 +54,7 @@
           <div
             class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-[#050505] via-transparent to-[#050505]"
           ></div>
-          <div class="animate-vertical-scroll flex flex-col gap-4">
+          <div class="animate-vertical-scroll flex flex-col gap-4 items-center">
             <div class="threat-item">Operational stoppage</div>
             <div class="threat-item">Ransomware</div>
             <div class="threat-item">Lost trust</div>
@@ -145,7 +145,12 @@
         </p>
 
         <div id="signup-area">
-          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3">
+          <form
+            id="newsletter-form"
+            name="ciso-signup"
+            data-netlify="true"
+            class="flex flex-col sm:flex-row gap-3"
+          >
             <input
               type="email"
               placeholder="Enter work email"
