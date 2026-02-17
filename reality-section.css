@@ -20,8 +20,11 @@
 }
 
 .mask-fade-edges {
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    /* List the -webkit version first */
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    
+    /* List the standard version last */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
 .mask-fade-edges:hover .animate-vertical-scroll {
