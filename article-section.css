@@ -1,31 +1,84 @@
 /* Custom styles for the article preview */
 .article-card {
-    background-color: #0a0a0a;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .article-card:hover {
-    border-color: #ee6c4d;
-    transform: translateY(-4px);
+  border-color: #ee6c4d;
+  transform: translateY(-4px);
 }
 
 .article-category {
-    color: #ee6c4d;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+  color: #ee6c4d;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
 }
 .article-card {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px -20px rgba(238, 108, 77, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -20px rgba(238, 108, 77, 0.15);
 }
 
 /* Custom underline animation for the link */
 .article-card a {
-    position: relative;
-    text-decoration: none;
+  position: relative;
+  text-decoration: none;
+}
+/* Article Content Container */
+.content-body {
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.8;
+  color: #cbd5e1; /* slate-300 */
+  font-size: 1.125rem;
+}
+
+/* Headers */
+.content-body h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #f0f0f0;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* Paragraph spacing */
+.content-body p {
+  margin-bottom: 1.5rem;
+}
+
+/* Strategic Callout Box */
+.strategy-box {
+  background: rgba(238, 108, 77, 0.05);
+  border-left: 4px solid #ee6c4d;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Lists */
+.content-body ul {
+  margin-bottom: 2rem;
+  padding-left: 1.25rem;
+}
+
+.content-body li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.content-body li::before {
+  content: "→";
+  color: #ee6c4d;
+  position: absolute;
+  left: -1.5rem;
 }
