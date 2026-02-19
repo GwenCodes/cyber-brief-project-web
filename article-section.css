@@ -48,3 +48,14 @@
   position: absolute;
   left: -1.5rem;
 }
+a {
+  color: #0056b3; /* Your chosen color */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #003d7a; /* A slightly darker shade for the hover */
+  text-decoration: none;
+}
