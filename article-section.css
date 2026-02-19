@@ -1,3 +1,12 @@
+.strategy-box {
+  background: #fff7f5;
+  border-left: 4px solid #ee6c4d;
+  color: #475569;
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 2rem 0;
+}
+
 /* Custom styles for the article preview */
 .article-card {
   background-color: #0a0a0a;
@@ -41,21 +50,25 @@
 
 /* Headers */
 .content-body h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "verdana", sans-serif;
   font-weight: 900;
-  color: #f0f0f0;
+  color: #10141a;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   font-size: 1.7rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   line-height: 1.2;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
 }
 
 /* Paragraph spacing */
 .content-body p {
   margin-bottom: 1.5rem;
 }
-
+.content-body strong {
+  color: #2a374a;
+}
 /* Strategic Callout Box */
 .strategy-box {
   background: rgba(238, 108, 77, 0.05);

@@ -1,8 +1,11 @@
 /* Change this in your style.css */
-.font-roboto { 
-    font-family: 'Roboto', sans-serif; 
+.font-roboto {
+  font-family: "Roboto", sans-serif;
 }
 
-.font-ibm { 
-    font-family: 'IBM Plex Sans', sans-serif; 
+.font-ibm {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.font-verdana {
+  font-family: "Verdana", sans-serif;
 }
