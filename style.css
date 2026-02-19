@@ -1,11 +1,18 @@
-/* Change this in your style.css */
-.font-roboto {
-  font-family: "Roboto", sans-serif;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-ibm {
-  font-family: "IBM Plex Sans", sans-serif;
+/* Scroller Animation Logic */
+@keyframes vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
-.font-verdana {
-  font-family: "Verdana", sans-serif;
+
+.animate-vertical-scroll {
+  animation: vertical-scroll 20s linear infinite;
 }

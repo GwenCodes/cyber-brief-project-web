@@ -11,16 +11,11 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reality-section.css" />
     <link rel="stylesheet" href="article-section.css" />
     <link rel="stylesheet" href="signup-section.css" />
-    <style>
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    </style>
   </head>
   <body class="bg-[#0D1117] text-white">
     <header class="py-6 border-b border-white/5">
@@ -49,7 +44,7 @@
       >
         <div>
           <h2
-            class="font-ibm text-4xl md:text-6xl font-extrabold leading-[1.1] md:leading-[1.2] tracking-tight text-center md:text-left"
+            class="font-ibm text-4xl md:text-6xl font-extrabold leading-[1.1] md:leading-[1.2] tracking-normal text-center md:text-left"
           >
             The painful reality <br />
             <span class="text-slate-600">of cyber threats</span>
@@ -59,18 +54,18 @@
           <div
             class="animate-vertical-scroll flex flex-col gap-4 items-center md:items-end text-center md:text-right"
           >
-            <div class="threat-item">Operational stoppage</div>
-            <div class="threat-item">Ransomware</div>
-            <div class="threat-item">Lost trust</div>
-            <div class="threat-item">Data loss</div>
-            <div class="threat-item">Lost productivity</div>
-            <div class="threat-item">Data breach</div>
-            <div class="threat-item">Operational stoppage</div>
-            <div class="threat-item">Ransomware</div>
-            <div class="threat-item">Lost trust</div>
-            <div class="threat-item">Data loss</div>
-            <div class="threat-item">Lost productivity</div>
-            <div class="threat-item">Data breach</div>
+            <div class="threat-item text-slate-400">Operational stoppage</div>
+            <div class="threat-item text-slate-400">Ransomware</div>
+            <div class="threat-item text-slate-400">Lost trust</div>
+            <div class="threat-item text-slate-400">Data loss</div>
+            <div class="threat-item text-slate-400">Lost productivity</div>
+            <div class="threat-item text-slate-400">Data breach</div>
+            <div class="threat-item text-slate-400">Operational stoppage</div>
+            <div class="threat-item text-slate-400">Ransomware</div>
+            <div class="threat-item text-slate-400">Lost trust</div>
+            <div class="threat-item text-slate-400">Data loss</div>
+            <div class="threat-item text-slate-400">Lost productivity</div>
+            <div class="threat-item text-slate-400">Data breach</div>
           </div>
         </div>
       </div>
@@ -105,17 +100,15 @@
             </p>
           </div>
 
-          <article class="content-body text-slate-800">
-            <h2
-              class="font-roboto font-bold text-3xl text-slate-900 tracking-normal mt-16 mb-6"
-            >
+          <article class="content-body text-slate-800 font-sans antialiased">
+            <h2 class="text-3xl tracking-tight mt-16 mb-6">
               1. The Deep Dive: Resilience vs. Resistance
             </h2>
             <p class="mb-6">
               In 2026, <strong>"Operational Resilience"</strong> is the new
               benchmark. Regulators now assume a breach will happen. Their
               question for you during an exam will be:
-              <em
+              <em class="text-slate-700"
                 >How quickly can you recover critical business lines without
                 impacting the broader financial ecosystem?</em
               >
@@ -128,13 +121,10 @@
               smaller firms, the June 2026 deadline for these amendments is
               approaching fast. You are now required to have a written incident
               response program that can notify affected individuals within 30
-              days—and sometimes as little as 72 hours for certain federal
-              agencies.
+              days.
             </p>
 
-            <h2
-              class="font-roboto font-bold text-3xl text-slate-900 tracking-tight mt-16 mb-6"
-            >
+            <h2 class="text-3xl tracking-tight mt-16 mb-6">
               2. The Pulse: 2026 Financial Sector Quick Hits
             </h2>
             <div class="space-y-6">
@@ -145,7 +135,6 @@
                 sensitive client spreadsheets into unvetted AI "productivity"
                 tools?
               </p>
-
               <p>
                 <strong>FFIEC Strengthening Third-Party Oversight:</strong>
                 Regulators are increasing scrutiny on
@@ -159,9 +148,7 @@
               </p>
             </div>
 
-            <h2
-              class="font-roboto font-bold text-3xl text-slate-900 tracking-tight mt-16 mb-6"
-            >
+            <h2 class="text-3xl tracking-tight mt-16 mb-6">
               3. The Win: Your 15-Minute "WISP" Check
             </h2>
             <p class="mb-6">
@@ -171,18 +158,22 @@
             </p>
 
             <div
-              class="bg-slate-300 p-6 rounded-lg border border-slate-200 italic"
+              class="bg-slate-300 p-8 rounded-xl border-l-4 border-[#EE6C4D] shadow-sm my-10 font-sans"
             >
-              <strong class="text-[#EE6C4D] not-italic">DO THIS TODAY:</strong>
-              Find your WISP and check the "Last Updated" date. If it doesn't
-              mention Multi-Factor Authentication (MFA) for remote access or AI
-              usage policies, it's obsolete. A modern WISP must be a living
-              document that reflects your current tech stack.
+              <strong class="uppercase tracking-wider text-xs block mb-2"
+                >Critical Action Item</strong
+              >
+              <p class="leading-relaxed italic">
+                <span class="font-bold not-italic"
+                  >Find your WISP and check the "Last Updated" date.</span
+                >
+                If it doesn't mention Multi-Factor Authentication (MFA) for
+                remote access or AI usage policies, it's obsolete. A modern WISP
+                must be a living document that reflects your current tech stack.
+              </p>
             </div>
 
-            <h2
-              class="font-roboto font-bold text-3xl text-slate-900 tracking-tight mt-16 mb-6"
-            >
+            <h2 class="text-3xl tracking-tight mt-16 mb-6">
               4. The Executive Action: Don't Guess. Know.
             </h2>
             <p class="mb-6">
@@ -216,6 +207,7 @@
         <p class="font-ibm text-slate-400 mb-8">
           Subscribe to receive high-signal risk intelligence.
         </p>
+
         <div id="signup-area">
           <form
             id="newsletter-form"
@@ -230,9 +222,6 @@
               class="flex-1 bg-[#161b22] border border-white/10 px-6 py-4 rounded-xl font-ibm text-white focus:outline-none focus:border-[#EE6C4D]"
               required
             />
-            <p aria-hidden="true" class="hidden">
-              <label>Don't fill this out: <input name="bot-field" /></label>
-            </p>
             <button
               type="submit"
               class="bg-[#ee6c4d] font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap hover:brightness-110 transition-all"
@@ -240,6 +229,7 @@
               Subscribe
             </button>
           </form>
+
           <div id="success-message" class="hidden">
             <div class="flex flex-col items-center animate-fade-in">
               <div
