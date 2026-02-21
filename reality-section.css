@@ -1,32 +1,48 @@
 .threat-item {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #475569;
-    transition: color 0.4s ease;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #475569;
+  transition: color 0.4s ease;
 }
 
 .threat-item:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .animate-vertical-scroll {
-    animation: scroll-up 15s linear infinite;
+  animation: scroll-up 15s linear infinite;
 }
 
 @keyframes scroll-up {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 .mask-fade-edges {
-    /* List the -webkit version first */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    
-    /* List the standard version last */
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  /* List the -webkit version first */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+
+  /* List the standard version last */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
 }
 
 .mask-fade-edges:hover .animate-vertical-scroll {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
