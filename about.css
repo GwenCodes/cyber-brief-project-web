@@ -1,0 +1,16 @@
+/* Signature Styling */
+.signature-name {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+/* Optional: Subtle interaction for the company link if you choose to wrap it in an <a> tag */
+.signature-name + p span:hover {
+  text-decoration: underline;
+  cursor: default;
+}
+
+/* Ensure the image doesn't stretch */
+img.rounded-full {
+  object-fit: cover;
+}

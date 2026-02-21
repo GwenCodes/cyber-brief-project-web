@@ -11,11 +11,7 @@
     Arial,
     sans-serif;
   line-height: 1.625;
-  letter-spacing: -0.011em;
-}
-.font-blinker {
-  font-family: "Blinker", sans-serif;
-  color: #ee6c4d;
+  font-size: 1.1rem;
 }
 
 .content-body h2 {
@@ -45,21 +41,7 @@
   margin-bottom: 0.75rem;
   position: relative;
 }
-
-.content-body li::before {
-  content: "→";
-  color: #ee6c4d;
-  position: absolute;
-  left: -1.5rem;
-}
-a {
-  color: #0056b3; /* Your chosen color */
-  text-decoration: underline;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
 a:hover {
-  color: #ee6c4d; /* A slightly darker shade for the hover */
-  text-decoration: none;
+  color: rgb(7, 211, 44);
+  transition: color 0.3s ease;
 }
