@@ -1,22 +1,17 @@
 {
   "name": "cyber-brief-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "signup-logic.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GwenCodes/cyber-brief-project-web.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/GwenCodes/cyber-brief-project-web/issues"
-  },
-  "homepage": "https://github.com/GwenCodes/cyber-brief-project-web#readme"
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.0",
+    "vite": "^7.3.1"
+  }
 }

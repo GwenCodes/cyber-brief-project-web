@@ -76,10 +76,7 @@ a:hover {
   color: var(--hover-green);
   transition: color 0.3s ease;
 }
-/* Bolding inside the "The Bottom Line" or "Critical Action" boxes */
-.bg-slate-300 strong {
-  color: var(--editorial-bold);
-}
+
 /* Core Article Layout */
 .content-body {
   font-family:
@@ -107,6 +104,10 @@ a:hover {
 .editorial-bold strong {
   color: var(--editorial-bold);
   font-weight: 700;
+}
+/* Bolding inside the "Calendar" */
+.calendar strong {
+  color: var(--editorial-bold);
 }
 .next-label {
   font-family: var(--mono);
