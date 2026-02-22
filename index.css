@@ -105,6 +105,11 @@ a:hover {
   color: var(--editorial-bold);
   font-weight: 700;
 }
+.editorial-bold:hover {
+  color: var(--hover-green);
+  transition: color 0.3s ease;
+}
+
 /* Bolding inside the "Calendar" */
 .calendar strong {
   color: var(--editorial-bold);
