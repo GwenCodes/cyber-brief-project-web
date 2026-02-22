@@ -105,8 +105,8 @@ a:hover {
   color: var(--editorial-bold);
   font-weight: 700;
 }
-.editorial-bold:hover {
-  color: var(--hover-green);
+a.editorial-bold:hover {
+  color: var(--hover-green) !important;
   transition: color 0.3s ease;
 }
 
