@@ -29,7 +29,7 @@
     "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-
+/* Body */
 .main-bg {
   background-color: var(--bg-dark);
 }
