@@ -101,7 +101,7 @@ a:hover {
   color: var(--text-heading);
 }
 
-.editorial-bold strong {
+.editorial-bold {
   color: var(--editorial-bold);
   font-weight: 700;
 }
