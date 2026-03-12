@@ -1,13 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  p {
-    border: 2px solid red;
-  }
-}
-
 :root {
   /* Brand Colors */
   --accent: #ee6c4d; /* Orange-red used for labels/buttons */
@@ -139,11 +129,4 @@ a.editorial-bold:hover {
   color: var(--accent);
   white-space: nowrap;
   flex-shrink: 0;
-}
-
-/* Global Styles */
-@layer base {
-  p {
-    @apply text-xl leading-relaxed sm:text-lg;
-  }
 }
