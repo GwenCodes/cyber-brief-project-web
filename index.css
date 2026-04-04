@@ -1,9 +1,9 @@
 :root {
   /* Brand Colors */
   --accent: #ee6c4d; /* Orange-red used for labels/buttons */
-  --accent-hover: #ff7d5d; /* Brightened version for hover */
+  --accent-hover: #00c244; /* Brightened version for hover */
   --editorial-bold: #963f05; /* Brownish-orange for article strong tags */
-  --hover-green: rgb(7, 211, 44); /* Your custom green hover color */
+  --hover-green: #00c244; /* Your custom green hover color */
 
   /* Neutral / Background Colors */
   --bg-dark: #0d1117; /* Main background */
@@ -129,4 +129,12 @@ a.editorial-bold:hover {
   color: var(--accent);
   white-space: nowrap;
   flex-shrink: 0;
+}
+button {
+  background-color: var(--accent);
+  color: var(--text-white);
+}
+button:hover {
+  background-color: var(--hover-green);
+  transition: background-color 0.25s;
 }

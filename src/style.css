@@ -16,6 +16,10 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  --accent: #ee6c4d; /* Orange-red used for labels/buttons */
+  --accent-hover: #00c244; /* Brightened version for hover */
+  --editorial-bold: #963f05; /* Brownish-orange for article strong tags */
+  --hover-green: #00c244; /* Your custom green hover color */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,11 +29,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: --hover-green;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: --hover-green;
 }
 
 body {
@@ -60,10 +64,10 @@ h1 {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em --hover-green);
 }
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  filter: drop-shadow(0 0 2em --hover-green);
 }
 
 .card {
@@ -86,7 +90,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: --hover-green;
 }
 button:focus,
 button:focus-visible {
@@ -99,7 +103,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: --hover-green;
   }
   button {
     background-color: #f9f9f9;
