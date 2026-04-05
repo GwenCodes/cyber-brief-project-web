@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom CSS */
+@import "./styles/style.css";
+@import "./styles/index.css";
+@import "./styles/reality-section.css";
+@import "./styles/signup-section.css";
+@import "./styles/about.css";

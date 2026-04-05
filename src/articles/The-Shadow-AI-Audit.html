@@ -45,7 +45,7 @@
     />
 
     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/dist/output.css" />
 
     <!-- Your CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -99,15 +99,16 @@
         class="bg-light p-7 md:p-20 rounded-3xl shadow-sm border border-slate-200"
       >
         <!-- HERO / TITLE BLOCK -->
-        <header class="text-center mb-16">
+        <section class="text-center mb-16">
           <span
             class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
           >
             Strategic Briefing
           </span>
 
-          <h1 class="title">Shadow AI Audit</h1>
-        </header>
+          <h1 class="title">Deepfakes & CEO Fraud 2.0</h1>
+        </section>
+
         <div class="newsletter-image w-full max-w-5xl mx-auto px-4 mb-16">
           <div
             class="aspect-square md:aspect-video w-full overflow-hidden rounded-lg shadow-xl"
@@ -391,7 +392,7 @@
           </h2>
         </div>
 
-        <div class="h-[120px] relative overflow-hidden">
+        <div class="h-30 relative overflow-hidden">
           <div
             class="animate-vertical-scroll flex flex-col gap-4 items-center md:items-start text-center md:text-left font-sans text-base leading-normal"
           >
@@ -437,7 +438,7 @@
             />
             <button
               type="submit"
-              class="bg-corral text-text-white hover:border-hover-green border-2 border-transparent transition-all duration-300 font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap transition-all"
+              class="bg-corral text-text-white hover:border-hover-green border-2 border-transparent duration-300 font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap"
             >
               Subscribe
             </button>
@@ -483,6 +484,6 @@
         © 2026 Cyber-Brief. All Rights Reserved.
       </p>
     </footer>
-    <script src="signup-logic.js"></script>
+    <script src="/signup-logic.js"></script>
   </body>
 </html>

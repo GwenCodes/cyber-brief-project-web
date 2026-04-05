@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Signature Styling */
 .signature-name {
   font-variant: small-caps;

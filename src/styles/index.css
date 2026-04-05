@@ -1,16 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
+  /* Neutral / Background Colors */
+  --bg-dark: #050505;
+  --bg-dark-secondary: #161b22; /* Input field background */
+  --bg-gradient-end: #22262c; /* Bottom of hero gradient */
+  --bg-light-card: #f7f7f7; /* Article card background */
+  --bg-slate-highlight: #cbd5e1; /* Corresponds to bg-slate-300 */
+  --paper: #f5f0e8;
+
   /* Brand Colors */
   --accent: #ee6c4d; /* Orange-red used for labels/buttons */
   --accent-hover: #00c244; /* Brightened version for hover */
   --editorial-bold: #963f05; /* Brownish-orange for article strong tags */
   --hover-green: #00c244; /* Your custom green hover color */
-
-  /* Neutral / Background Colors */
-  --bg-dark: #0d1117; /* Main background */
-  --bg-dark-secondary: #161b22; /* Input field background */
-  --bg-gradient-end: #22262c; /* Bottom of hero gradient */
-  --bg-light-card: #f7f7f7; /* Article card background */
-  --bg-slate-highlight: #cbd5e1; /* Corresponds to bg-slate-300 */
 
   /* Text Colors */
   --text-white: #ffffff;
@@ -22,6 +27,7 @@
   /* Border Colors */
   --border-white-faint: rgba(255, 255, 255, 0.05);
   --border-slate-light: #e2e8f0; /* slate-200 */
+  --rule: #d0cac0; /* For stats row dividers */
 
   /* Fonts */
   --serif: "Playfair Display", Georgia, serif;
@@ -137,4 +143,36 @@ button {
 button:hover {
   background-color: var(--hover-green);
   transition: background-color 0.25s;
+}
+/* STATS ROW — layout removed */
+.stats-row {
+  /* no grid-template-columns here */
+  margin: 36px 0;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+/* stat-cell styling is fine */
+.stat-cell {
+  background: var(--paper);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--red);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+  font-weight: 500;
 }

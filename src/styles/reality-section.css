@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .threat-item {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.75rem;

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Updated SEO Title + Description -->
     <title>
       Shadow AI Audit for 2026 | Autonomous Agents, PII Exposure & AI Governance
     </title>
@@ -16,10 +15,10 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="img/cyber-brief-logo-corral.png"
+      href="/img/cyber-brief-logo-corral.png"
     />
 
-    <!-- Updated Open Graph -->
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Shadow AI Audit for 2026 | Autonomous Agents, PII Exposure & AI Governance"
@@ -44,14 +43,14 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind v3 compiled CSS -->
+    <link rel="stylesheet" href="/dist/output.css" />
 
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reality-section.css" />
-    <link rel="stylesheet" href="signup-section.css" />
-    <link rel="stylesheet" href="index.css" />
+    <!-- Your custom CSS (must load AFTER Tailwind) -->
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="stylesheet" href="/src/styles/reality-section.css" />
+    <link rel="stylesheet" href="/src/styles/signup-section.css" />
   </head>
 
   <body class="main-bg">
@@ -62,7 +61,7 @@
           class="flex items-center gap-3 font-blinker font-black text-xl uppercase tracking-widest text-white hover:opacity-80 transition-opacity"
         >
           <img
-            src="img/cyber-brief-logo-corral.png"
+            src="/img/cyber-brief-logo-corral.png"
             alt="Cyber-Brief logo"
             class="h-7 w-auto"
           />
@@ -92,6 +91,7 @@
         </nav>
       </div>
     </header>
+
     <main
       class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
     >
@@ -99,21 +99,21 @@
         class="bg-light p-7 md:p-20 rounded-3xl shadow-sm border border-slate-200"
       >
         <!-- HERO / TITLE BLOCK -->
-        <header class="text-center mb-16">
+        <section class="text-center mb-16">
           <span
             class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
           >
             Strategic Briefing
           </span>
 
-          <h1 class="title">Shadow AI Audit</h1>
-        </header>
+          <h1 class="title">Deepfakes & CEO Fraud 2.0</h1>
+        </section>
         <div class="newsletter-image w-full max-w-5xl mx-auto px-4 mb-16">
           <div
             class="aspect-square md:aspect-video w-full overflow-hidden rounded-lg shadow-xl"
           >
             <img
-              src="/img/Shadow-AI-Audit.png"
+              src="\img\Deepfakes-ceo-fraud.png"
               alt="Strategic Briefing Visual"
               class="w-full h-full object-cover"
               loading="lazy"
@@ -128,74 +128,125 @@
             class="font-ibm mb-6 bg-zinc-300 p-4 rounded-lg border-l-4 border-[#EE6C4D] shadow-sm"
           >
             <p class="mb-2">
-              <strong>bottom line up front:</strong>
-            </p>
-            <p class="mb-2">
-              • Productivity is winning the war against security, and the stakes
-              have shifted from simple data leaks to unauthorized corporate
-              actions.
-            </p>
-
-            <p class="mb-6">
-              • To protect the firm, you must provide sanctioned tools that are
-              safer than the ones your employees are finding themselves.
+              AI-cloned voices are now authorizing wire transfers. Here's how
+              sophisticated criminals are impersonating your executives — and
+              what you must do today.
             </p>
           </div>
+          <p class="mb-6 font-bold">A True Story — February 2024</p>
           <p class="mb-6">
-            Without guardrails, an analyst in your firm is likely using a public
-            AI tool to beat a deadline. They might be pasting a client's
-            personal information — a file with legal names, dates of birth,
-            account holdings, and risk profiles — into a chatbot to summarize it
-            for an annual review. In that moment, they have handed restricted
-            data to a third party with no contract, no audit trail, and no way
-            to get it back.
+            The video conference looked completely normal. The CFO of a major
+            multinational was on screen, speaking clearly, gesturing naturally.
+            Several other senior executives appeared alongside him. The Hong
+            Kong-based finance worker had been trained to verify unusual
+            requests — so he had asked for exactly this: a live video call
+            before authorizing any large transaction.
           </p>
           <p class="mb-6">
-            This is <strong class="editorial-bold">Shadow AI</strong>. It is the
-            2026 version of an unsupervised intern with the keys to the vault.
+            What he didn't know was that every face on that call was a
+            fabrication. Every voice was generated by artificial intelligence.
+            Within hours, he had authorized 15 separate wire transfers totaling
+            $25 million. By the time the engineering giant Arup discovered the
+            fraud, the money had vanished into criminal accounts.
           </p>
+          <p class="mb-2">Source: Arup / CNN, February 2024</p>
+          <p class="mb-6">
+            The Arup case didn't just represent a financial loss. It shattered
+            the last "safe" verification method executives trusted: seeing and
+            hearing the person make the request. If a live video call with your
+            CFO can now be entirely fabricated in real time, the rules of
+            authorization have changed permanently. This is CEO Fraud 2.0 — and
+            it's targeting financial and business executives right now.
+          </p>
+        </article>
+        <section>
+          <div
+            class="stats-row grid grid-cols-1 md:grid-cols-3 gap-[1px] mx-auto w-full max-w-4xl"
+          >
+            <div class="stat-cell text-center md:text-left">
+              <span class="stat-num">3,000%</span>
+              <div class="stat-label break-words">
+                Surge in deepfake attacks on businesses, 2023
+              </div>
+            </div>
 
+            <div class="stat-cell text-center md:text-left">
+              <span class="stat-num">$40B</span>
+              <div class="stat-label break-words">
+                Projected AI fraud losses by 2027 (Deloitte)
+              </div>
+            </div>
+
+            <div class="stat-cell text-center md:text-left">
+              <span class="stat-num">400/day</span>
+              <div class="stat-label break-words">
+                Companies targeted by CEO deepfake impostor attacks
+              </div>
+            </div>
+          </div>
+        </section>
+        <article class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            The New Threat to Corporate Authority
+            How the Attack Works
           </h2>
           <p class="mb-6">
-            For years, Shadow IT meant unauthorized apps — a personal Dropbox
-            account here, an unapproved browser extension there. Security teams
-            learned to manage it. But the risk has evolved into something far
-            more consequential:
-            <strong class="editorial-bold">Autonomous AI Agents</strong>.
+            The blueprint is deceptively simple. Criminals source audio of your
+            CEO from a LinkedIn video, a podcast appearance, a company webinar —
+            even a 30-second earnings call clip. Modern AI voice-cloning tools
+            can build a convincing replica from as little as 3 seconds of audio,
+            achieving an 85% voice match to the original speaker. From there,
+            attackers research your org chart to identify who controls wire
+            transfers, craft a plausible pretext ("confidential acquisition,"
+            "emergency vendor payment"), and call — or now, video-call — the
+            right employee at the right moment.
           </p>
           <p class="mb-6">
-            Unlike a chatbot — which waits for a human to type a question — an
-            AI agent is a system that can plan, decide, and act on its own. It
-            can be granted ongoing access to your firm's email, calendar,
-            internal drives, or Customer Relationship Management tool, and
-            execute multi-step tasks without human involvement at each step.
+            What makes this generation of fraud so dangerous is the
+            psychological layer. A 2024 Medius survey found that over 50% of
+            finance professionals in the US and UK had been targeted by a
+            deepfake scam, and a striking 43% admitted they fell for it. These
+            aren't unsophisticated employees — they are trained CFOs,
+            controllers, and treasury directors.
           </p>
           <p class="mb-6">
-            AI agents can execute code, enter agreements, and bind firms to
-            contracts — without a human ever signing off. Under traditional
-            agency law, that does not matter. If it acted on your behalf, you
-            are liable. (1)
+            "The emotional realism of a cloned voice removes the mental barrier
+            to skepticism. If it sounds like your boss, your rational defenses
+            tend to shut down."
+          </p>
+          <p class="mb-6">
+            The threat is accelerating at a pace that should alarm every
+            C-suite. According to Deloitte's Center for Financial Services,
+            generative AI-driven fraud losses in the U.S. are projected to climb
+            from $12.3 billion in 2023 to $40 billion by 2027 — a compound
+            annual growth rate above 30%. In Q1 2025 alone, documented losses
+            from deepfake-enabled fraud in North America exceeded $200 million.
+            Deepfake incidents increased by 257% between 2023 and 2024, and in
+            the first quarter of 2025, the volume already surpassed all of 2024
+            combined.
           </p>
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Regulators Are No Longer Waiting
+            The Ferrari Test: What Good Looks Like
           </h2>
+
           <p class="mb-6">
-            The regulatory "grace period" for AI is over. "We didn't know" is no
-            longer a defense. Regulators now require Substantiation—documented
-            proof that your actual AI usage matches your public disclosures. (2)
+            In July 2024, Ferrari senior executives received WhatsApp messages
+            from someone impersonating CEO Benedetto Vigna — complete with a
+            deepfake voice that replicated his distinctive southern Italian
+            accent. Rather than comply, a sharp executive asked the caller a
+            personal question: what book had Vigna recently recommended to them?
+            The impersonator had no answer and hung up. Ferrari lost nothing.
+            The lesson: pre-shared, relationship-specific information that no AI
+            can access is now a frontline defense tool.
           </p>
           <p class="mb-6">
-            If your team is quietly using public AI while you claim to safeguard
-            client data, regulators call this "AI Washing." Like greenwashing,
-            this is increasingly treated as a material misstatement or a
-            misleading representation of your compliance program. FINRA now
-            expects you to monitor these automated actors with the same rigor as
-            human employees. (3)
+            Compare that outcome to what happened at Arup, where $25 million
+            disappeared, or to a Singapore-based firm in March 2025, where a
+            finance director authorized a $499,000 transfer after a fabricated
+            video call — in a case where the fraudsters had proactively
+            suggested the video call themselves to build false confidence.
           </p>
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Traditional Security Tools Are Context-Blind
+            Five Actions Every Executive Should Take Now
           </h2>
           <p class="mb-6">
             Standard security tools see that an employee is visiting a website,
@@ -204,145 +255,115 @@
             looks like any other encrypted web traffic. No alert fires, and no
             record is created of what was shared.
           </p>
-          <p class="mb-6">
-            To close this gap, firms are shifting to
-            <strong class="editorial-bold">Semantic Inspection</strong>. Unlike
-            old tools that just watch where data is sent, these new solutions
-            actually understand the meaning of the text. By using AI gateway
-            proxies to inspect the content of a prompt in real time, your system
-            can detect and block sensitive financial data before it ever leaves
-            your internal network.
-          </p>
-          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Reclaiming Control: What a 2026 Shadow AI Audit Actually Covers
-          </h2>
-          <p class="mb-6">
-            Most executives assume a Shadow AI audit is simply a list of
-            unauthorized websites their employees visited. It is not. A modern
-            audit goes several layers deeper — and what it uncovers often
-            surprises even the most security-aware leadership teams. Here is
-            what your security team should be examining:
-          </p>
           <section class="calendar">
             <div
               class="bg-zinc-300 w-full pb-4 pt-10 px-4 sm:max-w-3xl sm:mx-auto sm:p-10 rounded-xl border-l-4 border-[#EE6C4D] shadow-sm my-10 font-sans"
             >
-              <h3 class="mt-3">
-                <strong>1. Unauthorized AI Tool Discovery</strong>
-              </h3>
-              <p class="mb-6">
-                The starting point. A full scan of DNS logs, browser telemetry,
-                egress traffic, and SaaS OAuth grants to map every AI tool being
-                used inside your firm — approved or not. In most financial
-                services firms, this surfaces dozens of tools nobody in
-                leadership knew existed.
-              </p>
-              <h3>
-                <strong>2. The Agentic Footprint</strong>
-              </h3>
-              <p class="mb-6">
-                The most dangerous finding of a modern audit. This goes beyond
-                chatbots to identify AI agents — automated systems that have
-                been quietly granted ongoing Read/Write access to executive
-                mailboxes, internal drives, CRM systems, or communication
-                platforms. These are not one-time data pastes. They are
-                persistent connections with continuous access to your most
-                sensitive information.
-              </p>
-              <h3>
-                <strong>3. PII Exposure Mapping</strong>
-              </h3>
-              <p class="mb-6">
-                Once unauthorized tools are identified, the audit traces what
-                data actually left the firm — and through which channels. This
-                includes client names, account details, Social Security numbers,
-                and financial records that may have been submitted in prompts
-                over days, weeks, or months.
-              </p>
-              <h3>
-                <strong>4. The Substantiation Gap Analysis</strong>
-              </h3>
-              <p class="mb-6">
-                The audit's most strategically important output. This is a
-                direct comparison between what your compliance policies say your
-                firm does with AI — and what is actually happening on the
-                ground. This gap is precisely what SEC examiners are now looking
-                for, and closing it before an examination is far less costly
-                than explaining it during one.
-              </p>
-              <h3>
-                <strong>5. Shadow Workflow Identification</strong>
-              </h3>
-              <p class="mb-6">
-                The final step — and the one that turns the audit into a
-                roadmap. By identifying the specific tasks employees are using
-                Shadow AI to accomplish, your firm can prioritize which
-                governed, enterprise-grade tools to deploy first. The goal is
-                not to eliminate those workflows. It is to bring them into a
-                safe, auditable environment where they can continue — without
-                the risk.
-              </p>
+              <ul class="list-inside space-y-2">
+                <li>
+                  <strong>Establish verbal code words.</strong> Create
+                  pre-agreed passphrases between executives and finance teams —
+                  rotating monthly. AI cannot know what was whispered privately
+                  between two people.
+                </li>
+                <li>
+                  <strong>Mandate dual-channel verification.</strong>
+                  Any wire transfer request received by phone or video must be
+                  confirmed via a separate, independent channel — a known direct
+                  number, an in-person check, or a secure messaging platform.
+                  One channel is never enough.
+                </li>
+                <li>
+                  <strong
+                    >Require multi-person authorization for large
+                    transfers.</strong
+                  >
+                  No single employee should be able to execute a significant
+                  wire transfer without a second authorized approver, regardless
+                  of who appears to be asking.
+                </li>
+                <li>
+                  <strong
+                    >Train your team to treat urgency as a red flag.</strong
+                  >
+                  Deepfake fraudsters exploit time pressure and secrecy.
+                  Legitimate executives don't demand that employees bypass
+                  controls. Build a culture where "my boss said to do it
+                  immediately" is a trigger for pause, not action.
+                </li>
+                <li>
+                  <strong
+                    >Audit your executives' public digital footprint.</strong
+                  >
+                  Every video, podcast, and webinar featuring your leadership is
+                  raw material for voice cloning. Implement a policy on
+                  minimizing accessible audio/video, and assume anything public
+                  can be weaponized.
+                </li>
+              </ul>
             </div>
           </section>
 
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            The Answer Is Enablement, Not Prohibition
+            Learn More & Stay Ahead:
           </h2>
 
-          <p class="mb-6">
-            The most resilient firms are building a Path of Least Resistance —
-            deploying enterprise-grade AI platforms backed by
-            <strong class="editorial-bold">Zero Data Retention (ZDR)</strong>
-            agreements, where client data is never used to train the underlying
-            model. When the sanctioned tool is faster, smarter, and more capable
-            than whatever an employee would find on their own, compliance
-            becomes the obvious choice.
-          </p>
-          <p class="mb-6">
-            It means building a formal AI tool request process and having a
-            cross-functional AI governance board that can scale as the volume of
-            tool requests accelerates — because it will.
-          </p>
+          <div class="mb-6">
+            <ul>
+              <li class="mb-2">
+                👉🏻
+                <a
+                  href="https://youtu.be/7akzhpx0EIU?si=EwCNWKHNf23264aX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline editorial-bold"
+                  >How to spot deepfakes and AI-generated images
+                </a>
+              </li>
+              <li class="mb-2">
+                👉🏻 Detect Deepfakes with
+                <a
+                  href="https://deepware.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline editorial-bold"
+                  >Deepware AI</a
+                >
+                or
+                <a
+                  href="https://www.duckduckgoose.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline editorial-bold"
+                  >DuckDuckGoose AI</a
+                >
+              </li>
+            </ul>
+          </div>
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Did You Know?
+            On Erosion of Trust:
           </h2>
-          <ul class="list-disc list-inside space-y-2">
-            <li>
-              The riskiest channel for sensitive data exposure isn't email or
-              file storage — it's
-              <strong class="editorial-bold">instant messaging</strong>. 62% of
-              all pastes into Chat and IM apps contain PII or PCI data, and 87%
-              of those pastes originate from unmanaged, non-corporate accounts.
-              For security teams, this is effectively a blind spot:
-              high-sensitivity data, moving at volume, through channels that
-              fall entirely outside identity management and DLP controls.
-            </li>
-            <li>
-              On personal AI accounts,
-              <strong class="editorial-bold"
-                >"Paid" does not mean "Private."</strong
-              >
-              Even on $20/month Pro plans, conversations are used to train
-              future models by default. Furthermore, "deleted" chats often
-              persist for 30 days on provider servers for safety
-              monitoring—meaning your firm's data is exposed long after the
-              browser tab is closed.
-            </li>
-            <li>
-              The average cost of a data breach in financial services is now
-              $7.9 million — the highest of any industry. (4)
-            </li>
-            <li>
-              Here's a real story similar to our intern story 👉🏻
-              <a
-                href="https://gizmodo.com/chatgpt-ai-samsung-employees-leak-data-1850307376"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="editorial-bold"
-                >Samsung employees leaking data through ChatGPT in 2023</a
-              >
-            </li>
-          </ul>
+          <p class="mb-6">
+            <strong class="editorial-bold">Deepfakes</strong> — once a curiosity
+            of Hollywood face-swaps and viral internet jokes — have become one
+            of the most destabilizing tools in modern politics.
+          </p>
+          <p class="mb-6">
+            The Munich Security Conference (2024) warns that the most corrosive
+            effect may not be any single piece of disinformation, but the
+            cumulative erosion of public trust — leaving citizens so overwhelmed
+            by uncertainty that they disengage from the political process
+            altogether.
+          </p>
+          <p class="mb-6">
+            The rise of deepfake-enabled CEO fraud is not just a financial
+            threat; it's an
+            <strong class="editorial-bold">erosion of trust</strong> at the
+            highest levels of business. When executives can no longer be sure
+            that the voice on the other end of the line is real, it undermines
+            confidence in communication channels and decision-making processes.
+          </p>
+
           <br />
           <section class="text-slate-500">
             <p class="mb-2 text-sm">
@@ -351,26 +372,20 @@
             <p class="mb-1 text-sm">
               1 - 2026 AI Legal Forecast by Baker Donelson
             </p>
-            <p class="mb-1 text-sm">2 - 2026 SEC Examination Priorities</p>
-            <p class="mb-1 text-sm">
-              3 - 2026 FINRA Annual Regulatory Oversight Report
-            </p>
-            <p class="mb-1 text-sm">
-              4 - IBM Security Cost of a Data Breach Report 2025/2026.
-            </p>
+            <p class="mb-1 text-sm">2 -</p>
+            <p class="mb-1 text-sm">3 -</p>
+            <p class="mb-1 text-sm">4 -</p>
           </section>
 
           <div class="border-t border-slate-200 pt-8">
             <div>
               <p class="next-label text-sm font-bold">Next Issue:</p>
-              <p>
-                Deepfakes & The CEO Fraud 2.0. The rise of AI-cloned voices in
-                wire transfer authorization.
-              </p>
+              <p>Breach Notification Deadlines (The 72-Hour Rule).</p>
               <br />
-              <p class="font-bold">
-                <a href="/intelligence.html"
-                  >👉🏻 Explore previous Intelligence Briefings</a
+              <p>
+                👉🏻
+                <a href="/intelligence.html" class="underline editorial-bold"
+                  >Explore previous Intelligence Briefings</a
                 >
               </p>
             </div>
@@ -437,7 +452,7 @@
             />
             <button
               type="submit"
-              class="bg-corral text-text-white hover:border-hover-green border-2 border-transparent transition-all duration-300 font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap transition-all"
+              class="bg-corral text-text-white hover:border-hover-green border-2 border-transparent duration-300 font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap transition-all"
             >
               Subscribe
             </button>
