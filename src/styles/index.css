@@ -144,15 +144,16 @@ button:hover {
   background-color: var(--hover-green);
   transition: background-color 0.25s;
 }
-/* STATS ROW — layout removed */
+/* STATS ROW */
 .stats-row {
-  /* no grid-template-columns here */
-  margin: 36px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   background: var(--rule);
   border: 1px solid var(--rule);
+  margin: 36px 0;
 }
 
-/* stat-cell styling is fine */
 .stat-cell {
   background: var(--paper);
   padding: 24px 20px;
@@ -163,14 +164,14 @@ button:hover {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 36px;
-  color: var(--red);
+  color: var(--editorial-bold);
   line-height: 1;
   display: block;
 }
 
 .stat-label {
   font-size: 11px;
-  color: var(--muted);
+  color: var(--text-main-slate);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 6px;

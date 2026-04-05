@@ -31,7 +31,6 @@
 
 a {
   font-weight: 500;
-  color: var(--hover-green);
   text-decoration: inherit;
 }
 a:hover {
@@ -43,17 +42,4 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: --hover-green;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
