@@ -151,7 +151,6 @@ button:hover {
 
 .stat-cell {
   background: var(--paper);
-  padding: 1.5rem 1.5rem;
   border: 1px solid var(--rule);
 }
 
@@ -169,6 +168,6 @@ button:hover {
   color: var(--text-main-slate);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 0.375rem;
+  margin-top: 0.75rem;
   font-weight: 500;
 }
