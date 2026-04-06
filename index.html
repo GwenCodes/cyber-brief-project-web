@@ -51,6 +51,16 @@
     <link rel="stylesheet" href="/src/styles/index.css" />
     <link rel="stylesheet" href="/src/styles/reality-section.css" />
     <link rel="stylesheet" href="/src/styles/signup-section.css" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
   </head>
 
   <body class="main-bg">
@@ -436,6 +446,7 @@
           </h2>
           <p>Breach Notification Deadlines (The 72-Hour Rule).</p>
         </article>
+        <div data-include="/components/author.html"></div>
       </article>
     </main>
 
