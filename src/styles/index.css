@@ -37,7 +37,7 @@
 }
 /* Body */
 .main-bg {
-  background-color: var(--bg-dark);
+  background-color: bg-neutral-900;
 }
 .bg-light {
   background-color: var(--bg-light-card);

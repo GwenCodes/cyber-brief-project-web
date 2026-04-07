@@ -51,47 +51,21 @@
     <link rel="stylesheet" href="/src/styles/index.css" />
     <link rel="stylesheet" href="/src/styles/reality-section.css" />
     <link rel="stylesheet" href="/src/styles/signup-section.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
   </head>
   <body class="main-bg">
-    <header class="py-6">
-      <div class="max-w-6xl mx-auto px-10 flex justify-between items-center">
-        <a
-          href="/index.html"
-          class="flex items-center gap-3 font-blinker font-black text-xl uppercase tracking-widest text-white hover:opacity-80 transition-opacity"
-        >
-          <img
-            src="/img/cyber-brief-logo-corral.png"
-            alt="Cyber-Brief logo"
-            class="h-7 w-auto"
-          />
-          Cyber-Brief
-        </a>
+    <div data-include="/components/header.html"></div>
 
-        <nav
-          class="flex gap-6 md:gap-8 items-center font-ibm text-sm tracking-widest text-white"
-        >
-          <a
-            href="/intelligence.html"
-            class="font-blinker transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Intelligence
-          </a>
-
-          <a
-            href="/about.html"
-            class="font-blinker transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            About
-          </a>
-        </nav>
-      </div>
-    </header>
     <main
-      class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+      class="newsletter-container main-bg pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
     >
       <article
         class="bg-light p-7 md:p-20 rounded-3xl shadow-sm border border-slate-200"
@@ -375,81 +349,14 @@
             </div>
           </div>
         </article>
+        <div data-include="/components/author.html"></div>
       </article>
     </main>
 
-    <section class="subscription-section py-24 bg-dark">
-      <div class="max-w-xl mx-auto px-6 text-center">
-        <h3
-          class="font-roboto font-black text-3xl md:text-4xl mb-4 uppercase text-white"
-        >
-          Protect the <span class="text-accent">Bottom Line.</span>
-        </h3>
-        <p class="font-ibm text-slate-400 mb-8">
-          Subscribe to receive high-signal risk intelligence.
-        </p>
-        <div id="signup-area">
-          <form
-            id="newsletter-form"
-            name="ciso-signup"
-            data-netlify="true"
-            class="flex flex-col sm:flex-row gap-3"
-          >
-            <input
-              name="email"
-              type="email"
-              placeholder="Enter work email"
-              class="flex-1 bg-[#161b22] border border-white/10 px-6 py-4 rounded-xl font-ibm text-white focus:outline-none focus:border-[#EE6C4D]"
-              required
-            />
-            <button
-              type="submit"
-              class="bg-corral text-text-white hover:border-hover-green border-2 border-transparent duration-300 font-roboto font-black px-8 py-4 rounded-xl uppercase tracking-wider whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
+    <!--placeholder for reality section, to be added back in after finalizing-->
 
-          <div id="success-message" class="hidden">
-            <div class="flex flex-col items-center animate-fade-in">
-              <div
-                class="w-12 h-12 bg-corral rounded-full flex items-center justify-center mb-4 text-white"
-              >
-                ✓
-              </div>
-              <h4 class="font-roboto font-black text-xl uppercase italic">
-                Briefing Confirmed.
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div data-include="/components/footer.html"></div>
 
-    <footer class="py-12 bg-dark border-t border-white/5 text-center">
-      <div
-        class="flex justify-center gap-6 text-xs text-slate-500 uppercase tracking-widest font-ibm"
-      >
-        <a
-          href="privacy.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-white transition-colors"
-          >Privacy Policy</a
-        >
-
-        <a
-          href="terms.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-white transition-colors"
-          >Terms</a
-        >
-      </div>
-      <p class="mt-4 text-[10px] text-slate-600 uppercase tracking-widest">
-        © 2026 Cyber-Brief. All Rights Reserved.
-      </p>
-    </footer>
-    <script src="/signup-logic.js"></script>
+    <script src="signup-logic.js"></script>
   </body>
 </html>
