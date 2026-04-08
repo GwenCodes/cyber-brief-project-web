@@ -149,16 +149,57 @@ button:hover {
   background-color: var(--hover-green);
   transition: background-color 0.25s;
 }
-/* STATS ROW */
-.stats-row {
-  margin: 0 auto;
+/* ============================
+   STATS SECTION WRAPPER
+   ============================ */
+.stats-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* ============================
+   STATS GRID
+   ============================ */
+/* Default: mobile styles */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-left: 1.25rem; /* 20px */
+  margin-right: 1.25rem; /* 20px */
+}
+
+/* Remove margins at 500px and above */
+@media (min-width: 500px) {
+  .stats-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Switch to 3 columns at 640px */
+@media (min-width: 640px) {
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================
+   STAT CELL
+   ============================ */
 .stat-cell {
   background: var(--paper);
   border: 1px solid var(--rule);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
+/* ============================
+   STAT NUMBER
+   ============================ */
 .stat-num {
   font-family: "Playfair Display", serif;
   font-weight: 700;
@@ -166,8 +207,12 @@ button:hover {
   color: var(--editorial-bold);
   line-height: 1;
   display: block;
+  margin-bottom: 0.5rem;
 }
 
+/* ============================
+   STAT LABEL
+   ============================ */
 .stat-label {
   font-size: 11px;
   color: var(--text-main-slate);
@@ -175,4 +220,6 @@ button:hover {
   letter-spacing: 0.1em;
   margin-top: 0.75rem;
   font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
