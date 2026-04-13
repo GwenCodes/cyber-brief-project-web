@@ -37,7 +37,7 @@
 }
 /* Body */
 .main-bg {
-  background-color: bg-neutral-900;
+  background-color: var(--bg-dark);
 }
 .bg-light {
   background-color: var(--bg-light-card);
@@ -131,15 +131,6 @@ a.editorial-bold:hover {
 /* Bolding inside the "Calendar" */
 .calendar strong {
   color: var(--editorial-bold);
-}
-.next-label {
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 button {
   background-color: var(--accent);
