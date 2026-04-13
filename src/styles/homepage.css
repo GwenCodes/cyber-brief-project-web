@@ -52,6 +52,18 @@ nav {
   justify-content: space-between;
   gap: 24px;
 }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.nav-logo img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
 .subscribe-link {
   color: var(--cb-accent);
 }
@@ -59,26 +71,14 @@ nav {
 .subscribe-link:hover {
   color: var(--green);
 }
-
-.wordmark {
+.nav-wordmark {
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
-.wordmark-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -119,6 +119,7 @@ nav {
 .hero {
   padding: 96px 0 80px;
   border-bottom: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;

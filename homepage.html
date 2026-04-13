@@ -13,22 +13,23 @@
         <!-- Tailwind v3 compiled CSS -->
     <link rel="stylesheet" href="/dist/output.css" />
     <link rel="stylesheet" href="/src/styles/homepage.css" />
+
     <title>Homepage</title>
     <link rel="icon" type="image/x-icon" href="/img/cyber-brief-logo-corral.png" />
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async el => {
+        const file = el.getAttribute("data-include");
+        const html = await fetch(file).then(res => res.text());
+        el.innerHTML = html;
+        });
+    });
+    </script>
+
   </head>
   <body>
-    <div class="nav-inner">
-      <a class="nav-logo nav-links" href="/index.html">
-        <span class="nav-logo-dot"></span>
-        Cyber-Brief
-      </a>
-      <ul class="nav-links">
-        <li><a href="/intelligence.html">Briefings</a></li>     
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/subscribe.html" class="subscribe-link">Subscribe</a></li>
-      </ul>
-    </div>
-     
+    <div data-include="/components/new-header.html"></div>
+    
     <div class="page">
     
         <!-- HERO -->
