@@ -85,14 +85,14 @@ nav {
   list-style: none;
 }
 .nav-links a {
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--ink-soft);
   text-decoration: none;
   transition: color 0.12s;
 }
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 .nav-cta {
   background: var(--ink) !important;
@@ -213,8 +213,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
   overflow: hidden;
 }
 .hero-stat-item {
@@ -315,7 +313,7 @@ p {
   padding-left: 18px;
 }
 .briefing-intro {
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--ink);
   line-height: 1.72;
@@ -498,7 +496,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--rule);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -508,7 +506,7 @@ p {
   content: "";
   width: 20px;
   height: 2px;
-  background: var(--green);
+  background: var(--rule);
   border-radius: 1px;
   flex-shrink: 0;
 }
