@@ -4,7 +4,7 @@
 
 :root {
   --bg: #f7f7f7;
-  --bg-warm: #2b1f1b;
+  --bg-warm: #0a0807;
   --accent: #cc5d38;
   --green: #00c244;
   --ink: #1a1210;
@@ -29,7 +29,7 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -61,7 +61,7 @@ nav {
 
 .wordmark {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -85,7 +85,7 @@ nav {
   list-style: none;
 }
 .nav-links a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--ink-soft);
   text-decoration: none;
@@ -100,7 +100,7 @@ nav {
   padding: 7px 18px !important;
   border-radius: 999px !important;
   font-weight: 500 !important;
-  font-size: 13px !important;
+  font-size: 0.8125rem !important;
   transition: background 0.12s !important;
 }
 .nav-cta:hover {
@@ -125,7 +125,7 @@ nav {
 }
 .hero-kicker {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -143,9 +143,14 @@ nav {
   background: var(--accent);
   border-radius: 1px;
 }
+p {
+  font-size: 1.125rem;
+  line-height: 1.72;
+}
+
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(36px, 4.5vw, 56px);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.025em;
@@ -157,9 +162,9 @@ nav {
   color: var(--accent);
 }
 .hero-sub {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--ink-mid);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--ink);
   line-height: 1.65;
   max-width: 420px;
 }
@@ -177,7 +182,7 @@ nav {
   background: var(--accent);
   color: #fff;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 11px 24px;
   border-radius: 999px;
@@ -191,7 +196,7 @@ nav {
   opacity: 0.88;
 }
 .hero-trust {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
   display: flex;
   align-items: center;
@@ -221,7 +226,7 @@ nav {
 }
 .hero-stat-num {
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--ink);
   line-height: 1;
@@ -231,7 +236,7 @@ nav {
   color: var(--accent);
 }
 .hero-stat-label {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
   font-weight: 400;
 }
@@ -246,14 +251,14 @@ nav {
 }
 .section-title {
   font-family: var(--serif);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);
 }
 .section-link {
-  font-size: 13px;
+  font-size: 0.9rem;
   color: var(--ink-soft);
   text-decoration: none;
   display: flex;
@@ -262,7 +267,7 @@ nav {
   transition: color 0.12s;
 }
 .section-link:hover {
-  color: var(--accent);
+  color: var(--green);
 }
 
 /* ── FEATURE BRIEFING ── */
@@ -278,7 +283,7 @@ nav {
   padding-top: 52px;
 }
 .feature-meta {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -293,7 +298,7 @@ nav {
 }
 .feature-article h2 {
   font-family: var(--serif);
-  font-size: clamp(26px, 3.2vw, 40px);
+  font-size: clamp(1.625rem, 3.2vw, 2.5rem);
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -301,25 +306,25 @@ nav {
   margin-bottom: 20px;
 }
 .feature-deck {
-  font-size: 17px;
-  font-weight: 300;
-  color: var(--ink-mid);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--ink);
   line-height: 1.7;
   margin-bottom: 32px;
   border-left: 3px solid var(--accent);
   padding-left: 18px;
 }
 .briefing-intro {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--ink-mid);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--ink);
   line-height: 1.72;
   margin-bottom: 32px;
 }
 
 .read-link {
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--ink);
   text-decoration: none;
@@ -333,8 +338,8 @@ nav {
     border-color 0.12s;
 }
 .read-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--green);
+  border-color: var(--green);
 }
 .feature-aside {
   display: flex;
@@ -343,7 +348,7 @@ nav {
   margin-top: 2px;
 }
 .aside-label {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -360,7 +365,7 @@ nav {
 }
 .key-stat-num {
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--ink);
   line-height: 1;
@@ -371,8 +376,8 @@ nav {
   font-weight: 700;
 }
 .key-stat-text {
-  font-size: 13px;
-  color: var(--ink-soft);
+  font-size: 0.9rem;
+  color: var(--ink-mid);
   line-height: 1.5;
 }
 
@@ -423,7 +428,7 @@ nav {
   cursor: default;
 }
 .tag {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -439,7 +444,7 @@ nav {
 }
 .archive-item h3 {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.015em;
@@ -447,9 +452,9 @@ nav {
   margin-bottom: 10px;
 }
 .archive-item p {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--ink-mid);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--ink);
   line-height: 1.65;
   margin-bottom: 18px;
 }
@@ -459,12 +464,12 @@ nav {
   justify-content: space-between;
 }
 .archive-date {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--ink-faint);
   letter-spacing: 0.04em;
 }
 .archive-arrow {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--ink-soft);
   transition:
     transform 0.12s,
@@ -489,7 +494,7 @@ nav {
   align-items: center;
 }
 .cta-kicker {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -509,7 +514,7 @@ nav {
 }
 .cta-left h2 {
   font-family: var(--serif);
-  font-size: clamp(26px, 3vw, 38px);
+  font-size: clamp(1.625rem, 3.2vw, 2.375rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -521,9 +526,9 @@ nav {
   color: var(--accent);
 }
 .cta-body {
-  font-size: 16px;
-  font-weight: 300;
-  color: rgba(247, 247, 247, 0.55);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--rule);
   line-height: 1.65;
 }
 .cta-perks {
@@ -534,8 +539,8 @@ nav {
   gap: 12px;
 }
 .cta-perks li {
-  font-size: 14px;
-  color: rgba(247, 247, 247, 0.7);
+  font-size: 0.9rem;
+  color: var(--rule);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -570,14 +575,14 @@ nav {
   border-radius: 4px;
   padding: 13px 18px;
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 0.975rem;
   color: #f7f7f7;
   outline: none;
   width: 100%;
   transition: border-color 0.12s;
 }
 .cta-input::placeholder {
-  color: rgba(247, 247, 247, 0.3);
+  color: var(--rule);
 }
 .cta-input:focus {
   border-color: rgba(247, 247, 247, 0.4);
@@ -588,7 +593,7 @@ nav {
   border-radius: 4px;
   padding: 13px 24px;
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -597,10 +602,10 @@ nav {
   transition: opacity 0.12s;
 }
 .cta-submit:hover {
-  opacity: 0.88;
+  background-color: var(--green);
 }
 .cta-fine {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: rgba(247, 247, 247, 0.28);
   text-align: center;
   margin-top: 4px;
@@ -621,7 +626,7 @@ nav {
 }
 .about-wordmark {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -629,7 +634,7 @@ nav {
   line-height: 1;
 }
 .about-tagline {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -637,10 +642,10 @@ nav {
 }
 .about-right p {
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 400;
   line-height: 1.72;
-  color: var(--ink-mid);
+  color: var(--ink);
   margin-bottom: 20px;
 }
 .about-right p:last-child {
@@ -667,7 +672,7 @@ footer {
   gap: 12px;
 }
 .footer-copy {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--ink-faint);
 }
 .footer-nav {
@@ -676,7 +681,7 @@ footer {
   list-style: none;
 }
 .footer-nav a {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--ink-soft);
   text-decoration: none;
   transition: color 0.12s;
@@ -686,6 +691,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
   .hero {
     grid-template-columns: 1fr;
     gap: 40px;

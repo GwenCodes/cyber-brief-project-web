@@ -15,7 +15,6 @@
   --accent: #ee6c4d; /* Orange-red used for labels/buttons */
   --accent-hover: #00c244; /* Brightened version for hover */
   --editorial-bold: #963f05; /* Brownish-orange for article strong tags */
-  --hover-green: #00c244; /* Your custom green hover color */
 
   /* Text Colors */
   --text-white: #ffffff;
@@ -79,7 +78,7 @@
 
 /* General link hover state */
 a:hover {
-  color: var(--hover-green);
+  color: var(--accent-hover);
   transition: color 0.3s ease;
 }
 
@@ -124,7 +123,7 @@ h3 {
   font-weight: 700;
 }
 a.editorial-bold:hover {
-  color: var(--hover-green) !important;
+  color: var(--accent-hover) !important;
   transition: color 0.3s ease;
 }
 
@@ -137,7 +136,7 @@ button {
   color: var(--text-white);
 }
 button:hover {
-  background-color: var(--hover-green);
+  background-color: var(--accent-hover);
   transition: background-color 0.25s;
 }
 /* ============================
