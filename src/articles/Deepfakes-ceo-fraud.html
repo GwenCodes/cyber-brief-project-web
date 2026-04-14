@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta -->
-    <title>The Enforcement Year | Cyber-Brief Strategic Intelligence</title>
+    <title>Deepfakes & CEO Fraud 2.0 | Cyber-Brief Strategic Intelligence</title>
     <meta
       name="description"
       content="Regulators are shifting from guidance to aggressive enforcement. This briefing outlines the new expectations, penalties, and operational risks leaders must prepare for."
@@ -18,26 +18,26 @@
     />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="The Shadow AI Audit" />
+    <meta property="og:title" content="Deepfakes & CEO Fraud 2.0" />
     <meta
       property="og:description"
       content="As AI becomes more integrated into business operations, the need for a comprehensive audit of shadow AI systems has never been more critical."
     />
     <meta
       property="og:url"
-      content="https://cyber-brief.net/articles/the-shadow-ai-audit.html"
+      content="https://cyber-brief.net/articles/deepfakes-ceo-fraud.html"
     />
     <meta
       property="og:image"
-      content="https://cyber-brief.net/src/articles/the-shadow-ai-audit/og.png"
+      content="https://cyber-brief.net/src/articles/deepfakes-ceo-fraud/og.png"
     />
     <meta
       property="og:image:alt"
-      content="The Shadow AI Audit — Cyber-Brief Strategic Intelligence"
+      content="Deepfakes & CEO Fraud 2.0 — Cyber-Brief Strategic Intelligence"
     />
     <link
       rel="canonical"
-      href="https://cyber-brief.net/articles/the-shadow-ai-audit.html"
+      href="https://cyber-brief.net/articles/deepfakes-ceo-fraud.html"
     />
 
     <!-- Fonts -->
@@ -251,7 +251,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="underline editorial-bold"
-              >(Link to article)</a
+              >[Link to article]</a
             >.
           </p>
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
@@ -420,5 +420,28 @@
     <!--placeholder for reality section, to be added back in after finalizing-->
 
     <div data-include="/components/footer.html"></div>
+    <script>
+      const link = document.querySelector('.read-link');
+      if (!link) return;
+
+      const isLocal =
+        location.hostname === '127.0.0.1' ||
+        location.hostname === 'localhost';
+
+      const path = location.pathname;
+      const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
+
+      if (!slugMatch) {
+        console.warn("No article slug found in URL.");
+        return;
+      }
+
+      const slug = slugMatch[1];
+
+      const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+      const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+      link.href = isLocal ? localUrl : prodUrl;
+    </script>
   </body>
 </html>
