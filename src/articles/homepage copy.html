@@ -1,25 +1,44 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Primary Meta -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Enforcement Year | Cyber-Brief Strategic Intelligence</title>
+    <meta
+      name="description"
+      content="Regulators are shifting from guidance to aggressive enforcement. This briefing outlines the new expectations, penalties, and operational risks leaders must prepare for."
+    />
 
-    <!-- Article Description -->
-    <meta name="description" content="A high-signal briefing on Shadow AI audits, autonomous AI agents, PII exposure mapping, substantiation gaps, and modern AI governance for financial-sector security teams." />
-
-    <title>Deepfakes & CEO Fraud 2.0 | Cyber-Brief Strategic Intelligence</title>
-
-    <link rel="icon" type="image/x-icon" href="/img/cyber-brief-logo-corral.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/cyber-brief-logo-corral.png"
+    />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Deepfakes & CEO Fraud 2.0 | Cyber-Brief Strategic Intelligence" />
-    <meta property="og:description" content="A high-signal briefing on Shadow AI audits, autonomous AI agents, PII exposure mapping, substantiation gaps, and modern AI governance for financial-sector security teams." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://cyber-brief.net/intelligence/deepfakes-ceo-fraud-2-0.html" />
-    <meta property="og:image" content="https://cyber-brief.net/img/Deepfakes-ceo-fraud.png" />
-    <meta property="og:image:alt" content="Cyber-Brief Intelligence Briefing — Deepfakes & CEO Fraud 2.0" />
-    <meta property="og:site_name" content="Cyber-Brief" />
+    <meta property="og:title" content="The Shadow AI Audit" />
+    <meta
+      property="og:description"
+      content="As AI becomes more integrated into business operations, the need for a comprehensive audit of shadow AI systems has never been more critical."
+    />
+    <meta
+      property="og:url"
+      content="https://cyber-brief.net/articles/the-shadow-ai-audit.html"
+    />
+    <meta
+      property="og:image"
+      content="https://cyber-brief.net/src/articles/the-shadow-ai-audit/og.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="The Shadow AI Audit — Cyber-Brief Strategic Intelligence"
+    />
+    <link
+      rel="canonical"
+      href="https://cyber-brief.net/articles/the-shadow-ai-audit.html"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,32 +51,29 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Tailwind v3 compiled CSS -->
+        <!-- Tailwind v3 compiled CSS -->
     <link rel="stylesheet" href="/dist/output.css" />
-
-    <!-- Your custom CSS (must load AFTER Tailwind) -->
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="/src/styles/index.css" />
     <link rel="stylesheet" href="/src/styles/reality-section.css" />
     <link rel="stylesheet" href="/src/styles/signup-section.css" />
+    <link rel="stylesheet" href="/src/styles/homepage.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
 
+    <title>Homepage</title>  
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("[data-include]").forEach(async (el) => {
-          const file = el.getAttribute("data-include");
-          const html = await fetch(file).then((res) => res.text());
-          el.innerHTML = html;
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async el => {
+        const file = el.getAttribute("data-include");
+        const html = await fetch(file).then(res => res.text());
+        el.innerHTML = html;
         });
-      });
+    });
     </script>
+
   </head>
-
   <body>
-    <div data-include="/components/header.html"></div>
-
+    <div data-include="/components/header.html"></div> 
     <main
-      class="newsletter-container main-bg pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+      class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
     >
       <article
         class="bg-light p-6 md:p-20"
@@ -71,8 +87,8 @@
           </span>
 
           <h1 class="title">
-            <p class="mb-2">Deepfakes</p>
-            <p>& CEO Fraud 2.0</p>
+            <span class="mb-2">Deepfakes</span>
+            <span>& CEO Fraud 2.0</span>
           </h1>
         </section>
         <section>
