@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta -->
     <title>The Enforcement Year | Cyber-Brief Strategic Intelligence</title>
     <meta name="description" content="Regulators are shifting from guidance to aggressive enforcement. This briefing outlines the new expectations, penalties, and operational risks leaders must prepare for.">
 
@@ -18,25 +17,18 @@
     <meta property="og:image:alt" content="The Enforcement Year — Cyber-Brief Strategic Intelligence">
     <link rel="canonical" href="https://cyber-brief.net/articles/The-Enforcement-Year.html">
 
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind v3 compiled CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="/src/styles/index.css" />
-    <link rel="stylesheet" href="/src/styles/reality-section.css" />
-    <link rel="stylesheet" href="/src/styles/signup-section.css" />
+
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/reality-section.css" />
+    <link rel="stylesheet" href="/styles/signup-section.css" />
+    <link rel="stylesheet" href="/styles/homepage.css" />
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -48,45 +40,33 @@
       });
     </script>
   </head>
-
-  <body class="main-bg">
+  <body>
     <div data-include="/components/header.html"></div>
         <div
-          class="greeting font-ibm text-center text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto mt-3 mb-3 pt-6"
+          class="greeting font-ibm text-center text-lg text-slate-800 leading-relaxed max-w-2xl mx-auto mt-3 pt-6"
         >
           <p>Welcome to the inaugural issue of Cyber-Brief.</p>
         </div>
-    <main
-      class="newsletter-container main-bg pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
-    >
-      <article
-        class="bg-light p-7 md:p-20 rounded-xl shadow-sm border border-slate-200"
-      >
-
+    <main class="newsletter-container w-full px-1 sm:max-w-4xl sm:mx-auto">
+      <article class="bg-light p-6 md:p-20">
         <section class="text-center mb-16">
           <span
             class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
-          >Strategic Briefing</span
-                >
+          >Strategic Briefing</span>
           <h1 class="title">The Enforcement Year</h1>
         </section>
         <section>
           <div class="newsletter-image w-full max-w-5xl mx-auto px-4 mb-16">
-            <div
-              class="aspect-square md:aspect-video w-full overflow-hidden rounded-lg shadow-xl"
-            >
+            <div class="aspect-square md:aspect-video w-full overflow-hidden rounded-lg shadow-xl">
               <img
-                src="/img/The-Enforcement-Year-rect.png"
+                src="/img/the-enforcement-year-rect.png"
                 alt="Strategic Briefing Visual"
                 class="w-full h-full object-cover"
-                loading="lazy"
-              />
+                loading="lazy"/>
             </div>
           </div>
         </section>              
-              <article
-                class="content-body text-slate-800 font-sans antialiased"
-              >
+              <article class="content-body text-slate-800 font-sans antialiased">
                 <section>
                   <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
                     Cyber Insurance: Know What You Have
@@ -404,7 +384,29 @@
     <!--placeholder for reality section, to be added back in after finalizing-->
 
     <div data-include="/components/footer.html"></div>
-
     <script src="signup-logic.js"></script>
+    <script>
+      const link = document.querySelector('.read-link');
+      if (!link) return;
+
+      const isLocal =
+        location.hostname === '127.0.0.1' ||
+        location.hostname === 'localhost';
+
+      const path = location.pathname;
+      const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
+
+      if (!slugMatch) {
+        console.warn("No article slug found in URL.");
+        return;
+      }
+
+      const slug = slugMatch[1];
+
+      const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+      const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+      link.href = isLocal ? localUrl : prodUrl;
+    </script>
   </body>
 </html>
