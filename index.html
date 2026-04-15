@@ -162,8 +162,32 @@
                 </div> -->
             </div>
         </section>        
-    </div>        
+    </div>
     <div data-include="/components/footer.html"></div>
-    
+    <script src="/signup-logic.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector('.read-link');
+        if (!link) return;
+
+        const isLocal =
+          location.hostname === '127.0.0.1' ||
+          location.hostname === 'localhost';
+
+        const path = location.pathname;
+        const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
+
+        if (!slugMatch) {
+          console.warn("No article slug found in URL.");
+          return;
+        }
+
+        const slug = slugMatch[1];
+        const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+        const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+        link.href = isLocal ? localUrl : prodUrl;
+      });
+    </script>    
   </body>
 </html>
