@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --bg: #f7f7f7;
   --bg-warm: #0a0807;

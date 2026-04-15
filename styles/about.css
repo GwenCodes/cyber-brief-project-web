@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* General Styling for the About Page */
 /* Signature Styling */
 .signature-name {
   font-variant: small-caps;
