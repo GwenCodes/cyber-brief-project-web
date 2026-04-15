@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>Deepfakes & CEO Fraud 2.0 | Cyber-Brief Strategic Intelligence</title>
     <meta
       name="description"
       content="Regulators are shifting from guidance to aggressive enforcement. This briefing outlines the new expectations, penalties, and operational risks leaders must prepare for."
@@ -14,6 +17,7 @@
       href="/img/cyber-brief-logo-corral.png"
     />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Deepfakes & CEO Fraud 2.0" />
     <meta
       property="og:description"
@@ -23,13 +27,10 @@
       property="og:url"
       content="https://cyber-brief.net/articles/deepfakes-ceo-fraud.html"
     />
-
-    <!-- FIX THIS ONCE YOU MOVE THE IMAGE -->
     <meta
       property="og:image"
-      content="https://cyber-brief.net/img/articles/deepfakes-ceo-fraud/og.png"
+      content="https://cyber-brief.net/src/articles/deepfakes-ceo-fraud/og.png"
     />
-
     <meta
       property="og:image:alt"
       content="Deepfakes & CEO Fraud 2.0 — Cyber-Brief Strategic Intelligence"
@@ -39,9 +40,9 @@
       href="https://cyber-brief.net/articles/deepfakes-ceo-fraud.html"
     />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
@@ -50,32 +51,33 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/reality-section.css" />
-    <link rel="stylesheet" href="/styles/signup-section.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/homepage.css" />
-  
+        <!-- Tailwind v3 compiled CSS -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/src/styles/reality-section.css" />
+    <link rel="stylesheet" href="/src/styles/signup-section.css" />
+    <link rel="stylesheet" href="/src/styles/homepage.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
 
-    <title>
-      Deepfakes & CEO Fraud 2.0 | Cyber-Brief Strategic Intelligence
-    </title>
-
+    <title>Homepage</title>  
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("[data-include]").forEach(async (el) => {
-          const file = el.getAttribute("data-include");
-          const html = await fetch(file).then((res) => res.text());
-          el.innerHTML = html;
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async el => {
+        const file = el.getAttribute("data-include");
+        const html = await fetch(file).then(res => res.text());
+        el.innerHTML = html;
         });
-      });
+    });
     </script>
+
   </head>
-
   <body>
-    <div data-include="/components/header.html"></div>
-
-    <main class="newsletter-container pt-12">
-      <article class="bg-light p-6 md:p-20">
+    <div data-include="/components/header.html"></div> 
+    <main
+      class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+    >
+      <article
+        class="bg-light p-6 md:p-20"
+      >
         <!-- HERO / TITLE BLOCK -->
         <section class="text-center mb-16">
           <span
@@ -89,23 +91,21 @@
             <span>& CEO Fraud 2.0</span>
           </h1>
         </section>
-        <!-- IMAGE BLOCK -->
         <section>
           <div class="newsletter-image w-full max-w-5xl mx-auto px-4 mb-16">
             <div
               class="aspect-square md:aspect-video w-full overflow-hidden rounded-lg shadow-xl"
             >
               <img
-                src="/img/Deepfakes-ceo-fraud.png"
+                src="\img\Deepfakes-ceo-fraud.png"
                 alt="Strategic Briefing Visual"
                 class="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
-          </div>
-        </section>
-        <!-- ARTICLE BODY -->
-        <section class="content-body text-slate-800 font-sans antialiased">
+          </section>
+        </div>
+        <article class="content-body text-slate-800 font-sans antialiased">
           <div
             class="font-ibm mb-6 bg-zinc-300 p-4 rounded-lg border-l-4 border-[#EE6C4D] shadow-sm"
           >
@@ -154,6 +154,7 @@
         </article>
         <section class="stats-section">
           <div class="stats-row">
+
             <div class="stat-cell">
               <span class="stat-num">3,000%</span>
               <div class="stat-label">
@@ -177,6 +178,7 @@
                 <div>(PR Newswire)</div>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -419,11 +421,12 @@
 
     <div data-include="/components/footer.html"></div>
     <script>
-      const link = document.querySelector(".read-link");
+      const link = document.querySelector('.read-link');
       if (!link) return;
 
       const isLocal =
-        location.hostname === "127.0.0.1" || location.hostname === "localhost";
+        location.hostname === '127.0.0.1' ||
+        location.hostname === 'localhost';
 
       const path = location.pathname;
       const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);

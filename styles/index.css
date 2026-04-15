@@ -35,17 +35,6 @@
   --cambria: "Cambria", "Times New Roman", Times, serif;
 }
 /* Body */
-newsletter-container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-@media (max-width: 640px) {
-  .newsletter-container {
-    padding: 0 24px;
-  }
-}
-
 .main-bg {
   background-color: var(--bg-dark);
 }
