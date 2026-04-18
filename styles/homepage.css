@@ -477,6 +477,9 @@ button:hover {
   background-color: var(--green);
   transition: background-color 0.25s;
 }
+.bg-corral {
+  background-color: var(--accent);
+}
 .text-accent {
   color: var(--accent);
 }
