@@ -5,32 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta -->
     <title>Cyber-Brief — Strategic Intelligence for Security Leaders</title>
-    <meta name="description" content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders." />
+    <meta
+      name="description"
+      content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders."
+    />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://cyber-brief.net/" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Cyber-Brief — Strategic Intelligence" />
-    <meta property="og:description" content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders." />
+    <meta
+      property="og:description"
+      content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders."
+    />
     <meta property="og:url" content="https://cyber-brief.net/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://cyber-brief.net/images/cyber-brief-og.png" />
-    <meta property="og:image:alt" content="Cyber-Brief — Strategic Intelligence for Security Leaders" />
+    <meta
+      property="og:image"
+      content="https://cyber-brief.net/images/cyber-brief-og.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Cyber-Brief — Strategic Intelligence for Security Leaders"
+    />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Cyber-Brief",
-    "url": "https://cyber-brief.net/",
-    "logo": "https://cyber-brief.net/img/logo.png",
-    "description": "High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats.",
-    "sameAs": [
-        "https://www.linkedin.com/company/cyber-brief"
-    ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cyber-Brief",
+        "url": "https://cyber-brief.net/",
+        "logo": "https://cyber-brief.net/img/logo.png",
+        "description": "High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats.",
+        "sameAs": ["https://www.linkedin.com/company/cyber-brief"]
+      }
     </script>
 
     <title>Cyber-Brief — Strategic Intelligence</title>
@@ -51,119 +61,157 @@
     <link rel="stylesheet" href="/styles/signup-section.css" />
 
     <title>Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/img/cyber-brief-logo-corral.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/cyber-brief-logo-corral.png"
+    />
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("[data-include]").forEach(async el => {
-        const file = el.getAttribute("data-include");
-        const html = await fetch(file).then(res => res.text());
-        el.innerHTML = html;
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
         });
-    });
+      });
     </script>
-
   </head>
   <body>
     <div data-include="/components/header.html"></div>
-    
-    <div class="page">    
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-left">
-                <div class="hero-kicker">Cyber&#8209;Brief Strategic Intelligence</div>
-                <h1>High&#8209;signal briefings for security leaders.</h1>
-                <p class="hero-sub">A high-signal newsletter delivering strategic insight on emerging AI risks, organizational blind spots, and the evolving governance landscape shaping how modern enterprises deploy and secure advanced AI systems.</p>               
-            </div>
-            <div class="hero-right">               
-            </div>
-        </section>
-        
-        <!-- LATEST BRIEFING -->
-        <section class="feature-wrap">
-            <div class="section-header">
-            <span class="section-title">Latest briefing</span>
-            <a href="https://cyber-brief.net/intelligence.html" class="section-link">View all &#8594;</a>
-            </div>
-            <div class="feature-article">
-                <div>
-                    <img src="/img/Deepfakes-ceo-fraud.png" alt="deepfakes and CEO fraud" class="feature-image" />
-                </div>
-                <div>
-                    <div class="feature-meta">
-                        <span>April 9, 2026</span>
-                        <span class="meta-sep">/</span>
-                        <span>AI Governance</span>
-                        <span class="meta-sep">/</span>
-                        <span>Shadow IT</span>
-                    </div>
-                    <h2>Deepfakes &amp; CEO Fraud 2.0</h2>
 
-                    <p class="briefing-intro">
-                    The video conference looked completely normal. The CFO of a major multinational was on screen, speaking clearly, gesturing naturally. Several other senior executives appeared alongside him. The Hong Kong-based finance worker had been trained to verify unusual requests — so he had asked for exactly this: a live video call before authorizing any large transaction.
-                    </p>
-                    <p class="briefing-intro"> What he didn't know was that every face on that call was a fabrication.</p>
-                    </p>
-                    <a class="read-link" href="/articles/deepfakes-ceo-fraud.html">Read the full briefing →</a>
-          
-                </div>
+    <div class="page">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-kicker">
+            Cyber&#8209;Brief Strategic Intelligence
+          </div>
+          <h1>High&#8209;signal briefings for security leaders.</h1>
+          <p class="hero-sub">
+            A high-signal newsletter delivering strategic insight on emerging AI
+            risks, organizational blind spots, and the evolving governance
+            landscape shaping how modern enterprises deploy and secure advanced
+            AI systems.
+          </p>
+        </div>
+        <div class="hero-right"></div>
+      </section>
 
+      <!-- LATEST BRIEFING -->
+      <section class="feature-wrap">
+        <div class="section-header">
+          <span class="section-title">Latest briefing</span>
+          <a
+            href="https://cyber-brief.net/intelligence.html"
+            class="section-link"
+            >View all &#8594;</a
+          >
+        </div>
+        <div class="feature-article">
+          <div>
+            <img
+              src="/img/breach-notification-victim-cyber-brief.png"
+              alt="Breach Notification"
+              class="feature-image"
+            />
+          </div>
+          <div>
+            <div class="feature-meta">
+              <span>April 25, 2026</span>
+              <span class="meta-sep">/</span>
+              <span>Governance Debt</span>
+              <span class="meta-sep">/</span>
+              <span>Operational AI Hygiene</span>
             </div>
-        </section>
-        
-        <!-- ARCHIVE: Synthetic tags to use: AI‑Driven Fraud/Executive Impersonation/Shadow AI/Model Risk Management (MRM)/Autonomous Agent Oversight/Synthetic Media/Governance Debt/Operational AI Hygiene/Semantic Drift Detection/Control Plane Integrity -->
-        <section class="archive-wrap">
-            <div class="section-header">
-                <span class="section-title">Previous briefings</span>
-                <a href="https://cyber-brief.net/intelligence.html" class="section-link">Full archive &#8594;</a>
+            <h2>Breach Notification &amp; 72-Hour Rule</h2>
+
+            <p class="briefing-intro">
+              A breach discovered on Day 91 becomes a regulatory nightmare when
+              customers aren't told for three more months — and regulators are
+              done tolerating those delays. The 72-hour rule is no longer a
+              guideline but a hard deadline, and organizations that notify after
+              forensics instead of in parallel are already operating in the
+              liability zone.
+            </p>
+
+            <a
+              class="read-link"
+              href="/articles/breach-notification-72-hour-rule.html"
+              >Read the full briefing →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ARCHIVE: Synthetic tags to use: AI‑Driven Fraud/Executive Impersonation/Shadow AI/Model Risk Management (MRM)/Autonomous Agent Oversight/Synthetic Media/Governance Debt/Operational AI Hygiene/Semantic Drift Detection/Control Plane Integrity -->
+      <section class="archive-wrap">
+        <div class="section-header">
+          <span class="section-title">Previous briefings</span>
+          <a
+            href="https://cyber-brief.net/intelligence.html"
+            class="section-link"
+            >Full archive &#8594;</a
+          >
+        </div>
+        <div class="archive-grid">
+          <a href="/articles/deepfakes-ceo-fraud.html" class="archive-item">
+            <div class="archive-tags">
+              <span class="tag tag-accent">AI-Driven Fraud</span>
+              <span class="tag">Synthetic Media</span>
             </div>
-            <div class="archive-grid">
-                <a href="/articles/deepfakes-ceo-fraud.html" class="archive-item">
-                    <div class="archive-tags">
-                        <span class="tag tag-accent">AI-Driven Fraud</span>
-                        <span class="tag">Synthetic Media</span>
-                    </div>
-                    <h3>Deepfakes & CEO Fraud 2.0</h3>
-                    <p>A finance worker approves a multimillion-dollar transfer after a “live” video call—unaware every executive on screen was an AI-generated fake.</p>
-                    <div class="archive-footer">
-                        <span class="archive-date">April 9, 2026</span>
-                        <span class="archive-arrow">&#8594;</span>
-                    </div>
-                </a>
+            <h3>Deepfakes & CEO Fraud 2.0</h3>
+            <p>
+              A finance worker approves a multimillion-dollar transfer after a
+              “live” video call—unaware every executive on screen was an
+              AI-generated fake.
+            </p>
+            <div class="archive-footer">
+              <span class="archive-date">April 9, 2026</span>
+              <span class="archive-arrow">&#8594;</span>
+            </div>
+          </a>
 
-                <a href="/articles/the-shadow-ai-audit.html" class="archive-item">
-                        <div class="archive-tags">
-                            <span class="tag tag-accent">Shadow AI</span>
-                            <span class="tag">AI Governance</span>
-                        </div>
-                        <h3>Shadow AI Audit for 2026</h3>
-                        <p>A comprehensive overview of the emerging risks associated with autonomous AI agents and the need for robust governance frameworks.</p>
-                        <div class="archive-footer">
-                            <span class="archive-date coming-soon">March 5, 2026</span>
-                            <span class="archive-arrow">&#8594;</span>
-                        </div>                    
-                </a>
-                                <a href="/articles/the-enforcement-year.html" class="archive-item">
-                    <div class="archive-tags">
-                        <span class="tag tag-accent">Compliance</span>
-                        <span class="tag">SEC</span>
-                    </div>
-                    <h3>The Enforcement Year</h3>
-                    <p>A deep dive into operational resilience vs. resistance — and why the SEC is sharpening its focus on AI governance and Regulation S&#8209;P obligations for financial firms.</p>
-                    <div class="archive-footer">
-                        <span class="archive-date">February 19, 2026</span>
-                        <span class="archive-arrow">&#8594;</span>
-                    </div>
-                </a>
-                <div class="archive-item">
-                    <div class="archive-tags">
-                        <span>Coming Soon:</span>
-                        <span></span>
-                    </div>
-                    <h3>Vendor Risk: Your Weakest Link</h3>
-                    <p>Why your fintech partners are your biggest liability in 2026.</p>
-
-                </div>
-                <!--<div class="archive-item archive-disabled">
+          <a href="/articles/the-shadow-ai-audit.html" class="archive-item">
+            <div class="archive-tags">
+              <span class="tag tag-accent">Shadow AI</span>
+              <span class="tag">AI Governance</span>
+            </div>
+            <h3>Shadow AI Audit for 2026</h3>
+            <p>
+              A comprehensive overview of the emerging risks associated with
+              autonomous AI agents and the need for robust governance
+              frameworks.
+            </p>
+            <div class="archive-footer">
+              <span class="archive-date coming-soon">March 5, 2026</span>
+              <span class="archive-arrow">&#8594;</span>
+            </div>
+          </a>
+          <a href="/articles/the-enforcement-year.html" class="archive-item">
+            <div class="archive-tags">
+              <span class="tag tag-accent">Compliance</span>
+              <span class="tag">SEC</span>
+            </div>
+            <h3>The Enforcement Year</h3>
+            <p>
+              A deep dive into operational resilience vs. resistance — and why
+              the SEC is sharpening its focus on AI governance and Regulation
+              S&#8209;P obligations for financial firms.
+            </p>
+            <div class="archive-footer">
+              <span class="archive-date">February 19, 2026</span>
+              <span class="archive-arrow">&#8594;</span>
+            </div>
+          </a>
+          <div class="archive-item">
+            <div class="archive-tags">
+              <span>Coming Soon:</span>
+              <span></span>
+            </div>
+            <h3>Vendor Risk: Your Weakest Link</h3>
+            <p>Why your fintech partners are your biggest liability in 2026.</p>
+          </div>
+          <!--<div class="archive-item archive-disabled">
                     <div class="archive-tags">
                         <span class="tag">Threat Intel</span>
                     </div>
@@ -173,19 +221,19 @@
                         <span class="archive-date coming-soon">Coming soon</span>
                     </div>
                 </div> -->
-            </div>
-        </section>        
+        </div>
+      </section>
     </div>
     <div data-include="/components/footer.html"></div>
     <script src="/signup-logic.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const link = document.querySelector('.read-link');
+        const link = document.querySelector(".read-link");
         if (!link) return;
 
         const isLocal =
-          location.hostname === '127.0.0.1' ||
-          location.hostname === 'localhost';
+          location.hostname === "127.0.0.1" ||
+          location.hostname === "localhost";
 
         const path = location.pathname;
         const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
@@ -201,6 +249,6 @@
 
         link.href = isLocal ? localUrl : prodUrl;
       });
-    </script>    
+    </script>
   </body>
 </html>
