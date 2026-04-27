@@ -31,11 +31,15 @@
   --cambria: "Cambria", "Times New Roman", Times, serif;
 }
 /* Body */
+body {
+  background: #f8f8f8;
+}
+
 .main-bg {
   background-color: var(--bg-dark);
 }
 .bg-light {
-  background-color: var(--bg-light-card);
+  background-color: var(--paper);
 }
 .bg-dark {
   background-color: var(--bg-dark);
