@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="/styles/signup-section.css" />
     <link rel="stylesheet" href="/styles/homepage.css" />
     <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/feature-sections.css" />
 
     <title>Homepage</title>  
     <script>
@@ -117,6 +118,7 @@
           <p class="mb-6">
             It started in June. Nobody noticed until September. That's the thing about a patient attacker — they don't make noise. They query a database here, pull a few records there, and test what they can reach. By the time Prosper Marketplace's systems flagged the intrusion on September 1, 2025, the attackers had spent three months inside the peer-to-peer lender's customer databases. Social Security numbers. Bank account numbers. Passport numbers. Driver's licenses. Tax records. <strong class="editorial-bold">Seventeen-point-six million people's most complete financial identity — already gone.</strong>
           </p>
+          
           <p class="mb-6">
             What happened next is where this story stops being about hackers and starts being about your organization.
           </p>
@@ -127,7 +129,63 @@
           <strong class="editorial-bold">For three months, 17.6 million people went about their lives — paying bills, applying for mortgages, filing taxes — without knowing that their entire financial identity was potentially circulating on criminal marketplaces.</strong> They couldn't freeze their credit because they didn't know they needed to. They couldn't monitor their accounts with any particular vigilance because nobody told them to. That window — the gap between when a company knows and when its customers know — is exactly what regulators have been trying to close for eight years. 
           </p>
         </article>
-        
+        <!-- TIMELINE SECTION -->
+        <section>
+          <div class="timeline-wrap">
+            <div class="tl-head text-center">The Prosper Breach · A Timeline of Silence</div>
+            <div class="tl-items">
+              <div class="tl-row">
+                <div class="tl-date">Jun 2025</div>
+                <div class="tl-spine"><div class="tl-dot warn"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">Attackers enter. Nobody knows.</div>
+                  <div class="tl-desc">Unauthorized database queries begin. <strong>17.6M records</strong> start moving.</div>
+                </div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-date">Jul-Aug</div>
+                <div class="tl-spine"><div class="tl-dot warn"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">60 more days of silent access.</div>
+                  <div class="tl-desc">SSNs, bank accounts, passports, tax data. <strong>No alerts triggered.</strong></div>
+                  <div class="tl-gap-label">↑ 90-day dwell time</div>
+                </div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-date">Sep 1</div>
+                <div class="tl-spine"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">Breach detected. Clocks start.</div>
+                  <div class="tl-desc">Forensics engaged. Law enforcement notified. <strong>72-hour regulatory window opens.</strong></div>
+                </div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-date">Sep 17</div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">Public website posted.</div>
+                  <div class="tl-desc">Minimal detail. No individual notifications sent.</div>
+                </div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-date">Nov 26</div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">Forensic analysis concludes.</div>
+                  <div class="tl-desc">Scope confirmed: <strong>17.6 million individuals</strong> affected.</div>
+                </div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-date">Dec 9</div>
+                <div class="tl-spine"><div class="tl-dot active"></div></div>
+                <div class="tl-content">
+                  <div class="tl-title">Customers finally notified.</div>
+                  <div class="tl-desc"><strong>99 days after detection.</strong> 180+ days after first breach. Class action lawsuits already filed.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>      
         <article class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-12 mb-6">
             The Rule Everyone Knows and Nobody Is Ready For
@@ -141,11 +199,15 @@
           
           <p class="mb-6">
             For organizations operating across multiple jurisdictions, the practical notification window is determined by the most restrictive framework that applies. A US bank with EU depositors and a New York entity isn't managing three separate 72-hour windows. It's managing one: the shortest one in the stack.            
-          </p>          
-          <p  class="italic editorial-bold mb-10">
-            The 72 hours isn't a grace period for investigation. It's a deadline to notify with incomplete information. Building that tolerance into your Incident Response (IR) culture is the hard work nobody wants to do until it's too late.
           </p>
         </article>
+        <section>
+          <!-- BLOCKQUOTE SECTION -->
+          <div class="pq">
+            <blockquote>The 72 hours isn't a grace period for investigation — it's the deadline to notify while the facts are still incomplete.</blockquote>
+            <div class="pq-attr">Cyber Brief · Incident Response Analysis · 2026</div>
+          </div>
+        </section>
         <article class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-12 mb-6">
             What Regulators Actually Fine You For (It's Not the Breach)
@@ -162,7 +224,7 @@
             The Math Regulators Want You To Do:
           </h2>
           <p class="mb-6">
-            IBM's 2025 Cost of a Data Breach Report puts the average financial services breach at <strong class="editorial-bold">$5.56 million</strong>. That number rises sharply when notification delays trigger regulatory escalation — because delays don't just add fines. They extend the window of customer harm, which amplifies class action exposure, which drives legal costs, which feeds back into the total. The cheapest path through a breach is almost always also the fastest one to notification.
+            IBM's 2025 Cost of a Data Breach Report puts the average financial services breach at <strong class="editorial-bold">$5.56 million</strong>. That number rises sharply when notification delays trigger regulatory escalation — because delays don't just add fines. They extend the window of customer harm, which amplifies class action exposure, which drives legal costs, which feeds back into the total. <strong class="editorial-bold">The cheapest path through a breach is almost always also the fastest one to notification.</strong>
           </p>
         </article>
         <article class="content-body text-slate-800 font-sans antialiased">
@@ -170,7 +232,7 @@
             The Cultural Problem No Framework Can Fix
           </h2>          
           <p class="mb-6">
-            Here is the tension that every financial services CISO and General Counsel recognizes immediately: the instinct to be accurate before being public is professionally and culturally ingrained. Boards don't want to alarm customers unnecessarily. Legal teams don't want to trigger notification obligations without confirmed scope. Communications teams don't want to send a letter they'll have to correct. PR is worried about the headline. Finance is worried about the stock price.
+            Every financial services CISO and General Counsel knows the tension: accuracy before disclosure is professionally ingrained. Boards don't want to alarm customers unnecessarily. Legal teams don't want to trigger notification obligations without confirmed scope. Communications teams don't want to send a letter they'll have to correct. PR is worried about the headline. Finance is worried about the stock price.
           </p>
           <p class="mb-6">
             These instincts aren't wrong. They're just operating on a timeline that regulators no longer recognize as valid.
@@ -217,13 +279,13 @@
         </article>
         <article class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-4">
-            The Windows Are Closing. There Is No Jurisdiction Moving the Other Way.
-          </h2>
+            The Windows Are Closing
+          </h2>         
           <p class="mb-6">
             California's SB 446 introduced a hard 30-day consumer notification deadline in January 2026, explicitly eliminating the ambiguity that had let companies interpret "reasonable delay" to mean "whenever forensics is done." New York matched it in December 2024. Australia is moving its Notifiable Data Breaches window from 30 days to 72 hours for serious incidents. India's DPDP Act, in implementation since 2025, tracks the GDPR benchmark. Brazil's LGPD is tightening enforcement.            
           </p>
           <p>
-            The direction is not ambiguous. The industry benchmark is moving toward 72 hours for regulatory notification and 30 days for consumer notification — and the trend line strongly suggests both will tighten further within this decade. <strong class="editorial-bold">Organizations still running a forensic-first notification culture are operating in the liability zone.</strong>
+            The industry benchmark is moving toward 72 hours for regulatory notification and 30 days for consumer notification — and the trend line strongly suggests both will tighten further within this decade. <em><strong class="editorial-bold">Are you still operating in the liability zone?</em></strong>
           </p>
         </article>
         <article class="content-body text-slate-800 font-sans antialiased">      
