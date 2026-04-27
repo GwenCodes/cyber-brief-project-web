@@ -15,3 +15,17 @@
 img.rounded-full {
   object-fit: cover;
 }
+.author-photo {
+  width: clamp(80px, 12vw, 90px);
+  height: clamp(80px, 12vw, 90px);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.author-photo.grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+.author-photo.grayscale:hover {
+  filter: grayscale(0%);
+}

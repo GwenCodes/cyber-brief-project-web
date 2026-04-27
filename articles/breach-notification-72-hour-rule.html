@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="/styles/signup-section.css" />
     <link rel="stylesheet" href="/styles/homepage.css" />
     <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/about.css">
     <link rel="stylesheet" href="/styles/feature-sections.css" />
 
     <title>Homepage</title>  
@@ -366,14 +367,15 @@
               Next Issue:
             </h2>
             <p>Vendor Risk: Your Weakest Link</p>
-        </article>
-        <div data-include="/components/author.html"></div>
-      </article>
+        </article>        
+      </article>      
     </main>
+    <div data-include="/components/author.html"></div>
+    <div data-include="/components/footer.html"></div>
+    <script src="/signup-logic.js"></script>
 
     <!--placeholder for reality section, to be added back in after finalizing-->
-
-    <div data-include="/components/footer.html"></div>
+    
     <script>
       const link = document.querySelector('.read-link');
       if (!link) return;
@@ -396,6 +398,6 @@
       const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
 
       link.href = isLocal ? localUrl : prodUrl;
-    </script>
+    </script>    
   </body>
 </html>

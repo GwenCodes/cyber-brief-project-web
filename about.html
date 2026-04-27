@@ -24,11 +24,29 @@
 
     <title>About | Cyber-Brief</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="about-styles.css" />
+    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/signup-section.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
+
+    <title>Homepage</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/cyber-brief-logo-corral.png"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
   </head>
 
   <body class="bg-[#F1F3F5] text-slate-800 font-sans antialiased">
+    <div data-include="/components/header.html"></div>
     <div class="max-w-3xl mx-auto px-10 py-24">
       <a
         href="index.html"
@@ -66,32 +84,13 @@
           that drive action.
         </p>
       </div>
-      <div class="mt-20 pt-12 border-t border-slate-200">
-        <div class="flex items-center gap-5">
-          <img
-            src="img/cyber-edge-profile.png"
-            alt="Van Munoz"
-            class="w-20 h-20 rounded-full grayscale hover:grayscale-0 transition-all duration-500 shadow-sm border border-white"
-          />
-
-          <div>
-            <h4
-              class="signature-name text-slate-900 font-bold text-lg leading-tight"
-            >
-              Van Munoz
-            </h4>
-            <p class="text-slate-500 text-sm tracking-wide">
-              <span class="font-semibold">Cyber Edge LLC</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <div data-include="/components/author.html"></div>
       <footer
         class="mt-24 pt-8 border-t border-slate-200 text-sm text-slate-500"
       >
         © 2026 Cyber-Brief. Operational Resilience for the Modern Defense.
       </footer>
     </div>
+    <script src="/js/include.js"></script>
   </body>
 </html>

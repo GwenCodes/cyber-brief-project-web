@@ -23,12 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap" rel="stylesheet" />
 
+        <!-- Tailwind v3 compiled CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/reality-section.css" />
     <link rel="stylesheet" href="/styles/signup-section.css" />
     <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" href="/styles/feature-sections.css" />
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -48,7 +50,7 @@
           <p>Welcome to the inaugural issue of Cyber-Brief.</p>
         </div>
     <main class="newsletter-container w-full px-1 sm:max-w-4xl sm:mx-auto">
-      <article class="bg-light p-6 md:p-20">
+      <article class="p-6 md:p-20">
         <section class="text-center mb-16">
           <span
             class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
@@ -375,11 +377,10 @@
               </article>
             </div>
           </div>
-        </section>
-        <div data-include="/components/author.html"></div>
+        </section>        
       </article>
     </main>
-
+    <div data-include="/components/author.html"></div>
     <div data-include="/components/footer.html"></div>
     <script src="/signup-logic.js"></script>
     <script>
