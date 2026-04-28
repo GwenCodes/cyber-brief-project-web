@@ -1,158 +1,210 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title>Intelligence Archive</title>
     <meta
       name="description"
-      content="Explore the Cyber-Brief Intelligence archive — high-signal briefings on AI risk, fraud, governance, and modern security strategy for security leaders."
+      content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders."
     />
 
-    <title>Intelligence Archive | Cyber-Brief Strategic Intelligence</title>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://cyber-brief.net/" />
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Intelligence Archive" />
+    <meta
+      property="og:description"
+      content="High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats. Trusted strategic intelligence for modern security leaders."
+    />
+    <meta property="og:url" content="https://cyber-brief.net/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://cyber-brief.net/images/cyber-brief-og.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Cyber-Brief — Strategic Intelligence for Security Leaders"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cyber-Brief",
+        "url": "https://cyber-brief.net/",
+        "logo": "https://cyber-brief.net/img/logo.png",
+        "description": "High-signal briefings on AI risk, governance, fraud, compliance, and emerging threats.",
+        "sameAs": ["https://www.linkedin.com/company/cyber-brief"]
+      }
+    </script>
+
+        <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/signup-section.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
+
+    <title>Homepage</title>
     <link
       rel="icon"
       type="image/x-icon"
       href="/img/cyber-brief-logo-corral.png"
     />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Intelligence Archive | Cyber-Brief Strategic Intelligence"
-    />
-    <meta
-      property="og:description"
-      content="Browse past Cyber-Brief intelligence briefings on AI risk, fraud, governance, and modern security strategy."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://cyber-brief.net/intelligence.html"
-    />
-    <meta
-      property="og:image"
-      content="https://cyber-brief.net/img/cyber-brief-intelligence-og.png"
-    />
-    <meta property="og:image:alt" content="Cyber-Brief Intelligence Archive" />
-    <meta property="og:site_name" content="Cyber-Brief" />
-
-    <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="/reality-section.css" />
-    <link rel="stylesheet" href="/signup-section.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
   </head>
   <body class="bg-[#F1F3F5] text-slate-800 font-sans antialiased">
-    <div class="max-w-4xl mx-auto px-6 py-24">
-      <a
-        href="/index.html"
-        class="back-link text-[#EE6C4D] font-bold tracking-widest hover:opacity-80 mb-12 block"
-      >
-        ← Back to Home
-      </a>
+    <div data-include="/components/header.html"></div>
+    <main class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto">
+      <div class="max-w-4xl mx-auto px-6 py-24">
+        <a
+          href="/index.html"
+          class="back-link text-[#EE6C4D] font-bold tracking-widest hover:opacity-80 mb-12 block"
+        >
+          ← Back to Home
+        </a>
 
-      <header class="mb-20">
-        <h1 class="text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-          Intelligence Archive
-        </h1>
-        <p class="text-xl text-slate-500">
-          The full log of regulatory outlooks and risk assessments.
-        </p>
-      </header>
+        <header class="mb-20">
+          <h1 class="text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+            Intelligence Archive
+          </h1>
+          <p class="text-xl text-slate-500">
+            The full log of regulatory outlooks and risk assessments.
+          </p>
+        </header>
 
-      <div class="space-y-16">
-        <article class="group">
-          <div
-            class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
-          >
-            <h2
-              class="text-2xl font-bold text-slate-900 group-hover:text-[#EE6C4D] transition-colors"
+        <div class="space-y-16">
+          <article class="group">
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
             >
-              <a
-                href="https://cyber-brief.net/src/articles/the-enforcement-year.html"
-                >The Enforcement Year</a
+              <h2
+                class="text-2xl font-bold text-slate-900 group-hover:text-[#EE6C4D] transition-colors"
               >
-            </h2>
-            <span class="text-sm text-slate-400 font-mono">FEB 19, 2026</span>
-          </div>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            A deep dive into operational resilience vs. resistance and why the
-            SEC is shifting focus toward AI Governance and Regulation S-P.
-          </p>
-          <div class="flex gap-4">
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >Compliance</span
-            >
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >SEC</span
-            >
-          </div>
-        </article>
-        <article class="group">
-          <div
-            class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
-          >
-            <h2
-              class="text-2xl font-bold text-slate-900 group-hover:text-[#EE6C4D] transition-colors"
-            >
-              <a
-                href="https://cyber-brief.net/src/articles/the-shadow-ai-audit.html"
-                >The Shadow AI Audit</a
+                <a
+                  href="https://cyber-brief.net/src/articles/the-enforcement-year.html"
+                  >The Enforcement Year</a
+                >
+              </h2>
+              <span class="text-sm text-slate-400 font-mono">FEB 19, 2026</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              A deep dive into operational resilience vs. resistance and why the
+              SEC is shifting focus toward AI Governance and Regulation S-P.
+            </p>
+            <div class="flex gap-4">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >Compliance</span
               >
-            </h2>
-            <span class="text-sm text-slate-400 font-mono">MAR 5, 2026</span>
-          </div>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            A comprehensive overview of the emerging risks associated with
-            autonomous AI agents and the need for robust governance frameworks.
-          </p>
-          <div class="flex gap-4">
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >Compliance</span
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >SEC</span
+              >
+            </div>
+          </article>
+          <article class="group">
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
             >
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >SEC</span
+              <h2
+                class="text-2xl font-bold text-slate-900 group-hover:text-[#EE6C4D] transition-colors"
+              >
+                <a
+                  href="https://cyber-brief.net/src/articles/the-shadow-ai-audit.html"
+                  >The Shadow AI Audit</a
+                >
+              </h2>
+              <span class="text-sm text-slate-400 font-mono">MAR 5, 2026</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              A comprehensive overview of the emerging risks associated with
+              autonomous AI agents and the need for robust governance frameworks.
+            </p>
+            <div class="flex gap-4">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >Compliance</span
+              >
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >SEC</span
+              >
+            </div>
+          </article>
+          <article class="group">
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
             >
-          </div>
-        </article>
+              <h2 class="text-2xl font-bold text-slate-900">
+                Breach Notification Deadlines (The 72-Hour Rule).
+              </h2>
+              <span class="text-sm text-slate-400 font-mono">COMING SOON</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              An overview of the regulatory requirements for reporting data
+              breaches within the 72-hour window.
+            </p>
+            <div class="flex gap-4">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >Shadow IT</span
+              >
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
+                >AI Governance</span
+              >
+            </div>
+          </article>        
+    </main>
+    
+    <div data-include="/components/footer.html"></div>
+    <script src="/signup-logic.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector(".read-link");
+        if (!link) return;
 
-        <hr class="border-slate-200" />
+        const isLocal =
+          location.hostname === "127.0.0.1" ||
+          location.hostname === "localhost";
 
-        <article class="opacity-60">
-          <div
-            class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
-          >
-            <h2 class="text-2xl font-bold text-slate-900">
-              Breach Notification Deadlines (The 72-Hour Rule).
-            </h2>
-            <span class="text-sm text-slate-400 font-mono">COMING SOON</span>
-          </div>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            An overview of the regulatory requirements for reporting data
-            breaches within the 72-hour window.
-          </p>
-          <div class="flex gap-4">
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >Shadow IT</span
-            >
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-200 px-2 py-1 rounded"
-              >AI Governance</span
-            >
-          </div>
-        </article>
-      </div>
+        const path = location.pathname;
+        const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
 
-      <div data-include="/components/footer.html"></div>
-      <script src="/signup-logic.js"></script>
-    </div>
+        if (!slugMatch) {
+          console.warn("No article slug found in URL.");
+          return;
+        }
+
+        const slug = slugMatch[1];
+        const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+        const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+        link.href = isLocal ? localUrl : prodUrl;
+      });
+    </script>
   </body>
 </html>
