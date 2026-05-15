@@ -260,13 +260,6 @@ p {
   padding-bottom: 72px;
   border-bottom: 1px solid var(--rule);
 }
-.feature-article {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 80px;
-  align-items: start;
-  padding-top: 52px;
-}
 .feature-meta {
   font-size: 0.75rem;
   font-weight: 500;
@@ -278,18 +271,34 @@ p {
   align-items: center;
   gap: 12px;
 }
-.meta-sep {
-  color: var(--ink-faint);
+/* Remove the grid version */
+.feature-article {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  padding-top: 52px;
 }
-.feature-article h2 {
-  font-family: var(--cambria);
-  font-size: clamp(1.625rem, 3.2vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 20px;
+
+/* Image column */
+.feature-article > div:first-child {
+  flex: 0 0 360px; /* controls image width */
+  display: flex; /* allows height stretching */
 }
+
+/* Text column */
+.feature-article > div:last-child {
+  flex: 1;
+}
+
+/* Image */
+.feature-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
 .feature-deck {
   font-size: 1.0625rem;
   font-weight: 400;
@@ -543,10 +552,20 @@ button:hover {
   .hero-right {
     display: none;
   }
+
   .feature-article {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction: column;
   }
+
+  .feature-article > div:first-child {
+    flex: none;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: auto;
+  }
+
   .archive-grid {
     grid-template-columns: 1fr;
   }
