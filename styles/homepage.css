@@ -301,13 +301,6 @@ p {
 }
 
 /* Image */
-.feature-image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-}
 
 .feature-deck {
   font-size: 1.0625rem;
@@ -569,11 +562,6 @@ button:hover {
 
   .feature-article > div:first-child {
     flex: none;
-  }
-
-  .feature-image {
-    width: 100%;
-    height: auto;
   }
 
   .archive-grid {
