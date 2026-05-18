@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe | CyberBrief</title>
+    <style>
+      :root {
+        --bg-color: #0a0f1d;
+        --card-bg: #111827;
+        --text-main: #f3f4f6;
+        --text-muted: #9ca3af;
+        --accent: #00ffcc;
+        --accent-hover: #00d4aa;
+        --border-color: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .subscribe-container {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 40px;
+        max-width: 480px;
+        width: 100%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle cyber accent line at the top */
+      .subscribe-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent), #0077ff);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+        color: var(--text-main);
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .tagline {
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+        color: var(--text-muted);
+      }
+
+      input[type="email"],
+      input[type="text"] {
+        width: 100%;
+        padding: 14px;
+        background-color: #1f2937;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        color: #fff;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      input[type="email"]:focus,
+      input[type="text"]:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 8px rgba(0, 255, 204, 0.2);
+      }
+
+      .btn-subscribe {
+        width: 100%;
+        padding: 14px;
+        background-color: var(--accent);
+        color: #0a0f1d;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          transform 0.1s ease;
+      }
+
+      .btn-subscribe:hover {
+        background-color: var(--accent-hover);
+      }
+
+      .btn-subscribe:active {
+        transform: scale(0.99);
+      }
+
+      .features {
+        margin-top: 30px;
+        padding-top: 25px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      .feature-item svg {
+        margin-right: 10px;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+
+      .footer-text {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      .footer-text a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .footer-text a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="subscribe-container">
+      <div class="logo">Cyber<span>Brief</span></div>
+      <h1>Stay ahead of the threat.</h1>
+      <p class="tagline">
+        Join thousands of cybersecurity professionals. Get actionable threat
+        intelligence, breach analyses, and security news delivered straight to
+        your inbox.
+      </p>
+
+      <!-- Replace '#' with your actual form processing script or ESP endpoint (e.g., Mailchimp, Beehiiv, ConvertKit) -->
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">First Name (Optional)</label>
+          <input type="text" id="name" name="name" placeholder="Alex" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Work Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="alex@company.com"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-subscribe">
+          Subscribe to CyberBrief
+        </button>
+      </form>
+
+      <div class="features">
+        <div class="feature-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Weekly 5-minute executive summaries
+        </div>
+        <div class="feature-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Zero fluff, zero sponsored bias
+        </div>
+        <div class="feature-item">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          100% Free. Unsubscribe at any time.
+        </div>
+      </div>
+
+      <p class="footer-text">
+        We value your privacy. Read our <a href="/privacy">Privacy Policy</a>.
+      </p>
+    </div>
+  </body>
+</html>
