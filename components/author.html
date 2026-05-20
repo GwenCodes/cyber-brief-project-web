@@ -20,3 +20,113 @@
     </p>
   </div>
 </section>
+<section class="subscription-section pt-10 pb-10">
+  <div class="site-Contact">
+    <div class="Contact-inner">
+      <div class="form-col">
+        <p class="form-heading">Get in touch</p>
+        <p class="form-subheading mb-6">
+          Questions about a briefing, speaking engagements, or consulting? Fill
+          out the form and Van will respond within one business day.
+        </p>
+
+        <!--
+                NETLIFY FORMS:
+                The `netlify` and `data-netlify="true"` attributes are all
+                that's needed if the site is deployed on Netlify.
+                Add `data-netlify-honeypot="bot-field"` to catch spam.
+                Netlify picks up the form on first deploy and routes
+                submissions to your dashboard + email notifications.
+                -->
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="contact-form"
+          action="/thank-you"
+        >
+          <!-- Honeypot (hidden, catches bots) -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="display: none">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <!-- Row 1: Name + Email -->
+          <div class="form-row-2">
+            <div class="field-wrap">
+              <label class="field-label" for="fc-name">Your name</label>
+              <input
+                type="text"
+                id="fc-name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+              />
+            </div>
+            <div class="field-wrap">
+              <label class="field-label" for="fc-email">Work email</label>
+              <input
+                type="email"
+                id="fc-email"
+                name="email"
+                placeholder="jane@company.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Company -->
+          <div class="form-row-2">
+            <div class="field-wrap">
+              <label class="field-label" for="fc-phone">Phone number</label>
+              <input
+                type="tel"
+                id="fc-phone"
+                name="phone"
+                placeholder="+1 (555) 000-0000"
+              />
+            </div>
+            <div class="field-wrap">
+              <label class="field-label" for="fc-company">Company name</label>
+              <input
+                type="text"
+                id="fc-company"
+                name="company"
+                placeholder="Acme Corp"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Company size -->
+          <div class="field-wrap">
+            <label class="field-label" for="fc-size">Company size</label>
+            <select id="fc-size" name="company_size" required>
+              <option value="" disabled selected>Select headcount…</option>
+              <option value="1-50">1 - 50 employees</option>
+              <option value="51-250">51 - 250 employees</option>
+              <option value="251-1000">251 - 1,000 employees</option>
+              <option value="1001-5000">1,001 - 5,000 employees</option>
+              <option value="5000+">5,000+ employees</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="field-wrap">
+            <label class="field-label" for="fc-message"
+              >How can Van help?</label
+            >
+            <textarea
+              id="fc-message"
+              name="message"
+              placeholder="Tell us about your security concerns, a topic you'd like covered, or an engagement you have in mind…"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
