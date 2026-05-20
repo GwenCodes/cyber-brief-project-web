@@ -94,166 +94,150 @@
             <div class="Contact-mid">
                 <!-- LEFT: Van Munoz bio -->
                 <div class="bio-col">
-                <p class="bio-label">About the author</p>
+                    <h2>About the author</h2>
 
-                <div class="bio-person">
-                    <div class="bio-photo-wrap">
-                    <!--
-                REPLACE src with the actual photo path, e.g.:
-                src="/img/van-munoz.jpg"
-                -->
-                    <img
-                        src="https://placehold.co/130x130/0e1520/3a7bd5?text=VM"
-                        alt="Van Munoz, founder of CyberEdge LLC"
-                        width="130"
-                        height="130"
-                    />
+                    <div class="bio-person">                    
+                        <img
+                            src="/img/cyber-edge-profile.png"
+                            alt="Van Munoz, founder of CyberEdge LLC"
+                            width="130"
+                            height="130"
+                        />                    
+                        <div class="bio-text">
+                            <p class="bio-name">Van Munoz</p>
+                            <p class="bio-title-tag">Founder, CyberEdge LLC</p>
+                            
+                        </div>
                     </div>
-                    <div class="bio-text">
-                    <p class="bio-name">Van Munoz</p>
-                    <p class="bio-title-tag">Founder, CyberEdge LLC</p>
+
                     <p class="bio-body">
-                        Van is an information security professional with over a
-                        decade of hands-on experience across
-                        security engineering,
-                        threat intelligence, and
-                        vulnerability management.
+                        Van brings practitioner-level depth shaped by years in security engineering, threat intelligence, and vulnerability management. His work spans enterprise infrastructure, regulatory alignment, and emerging AI-driven risks.
                     </p>
+                    
+                    <div class="bio-badges">
+                        <span class="badge">AI Risk &amp; Governance</span>
+                        <span class="badge">Threat Intelligence</span>
+                        <span class="badge">Compliance</span>
+                        <span class="badge">Security Engineering</span>
                     </div>
-                </div>
-
-                <p class="bio-body">
-                    From hardening enterprise infrastructure at Citi to advising
-                    security leaders on AI risk and governance, Van brings
-                    practitioner-level depth to every briefing. Cyber-Brief distills
-                    that expertise into high-signal intelligence for the executives
-                    and security teams who need it most.
-                </p>
-
-                <div class="bio-badges">
-                    <span class="badge">AI Risk &amp; Governance</span>
-                    <span class="badge">Threat Intelligence</span>
-                    <span class="badge">Compliance</span>
-                    <span class="badge">Security Engineering</span>
-                </div>
                 </div>
 
                 <!-- RIGHT: Contact form (Netlify) -->
                 <div class="form-col">
-                <p class="form-heading">Get in touch</p>
-                <p class="form-subheading">
-                    Questions about a briefing, speaking engagements, or consulting?
-                    Fill out the form and Van will respond within one business day.
-                </p>
-
-                <!--
-            NETLIFY FORMS:
-            The `netlify` and `data-netlify="true"` attributes are all
-            that's needed if the site is deployed on Netlify.
-            Add `data-netlify-honeypot="bot-field"` to catch spam.
-            Netlify picks up the form on first deploy and routes
-            submissions to your dashboard + email notifications.
-            -->
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    class="contact-form"
-                    action="/thank-you"
-                >
-                    <!-- Honeypot (hidden, catches bots) -->
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p style="display: none">
-                    <label>Don't fill this out: <input name="bot-field" /></label>
+                    <p class="form-heading">Get in touch</p>
+                    <p class="form-subheading mb-6">
+                        Questions about a briefing, speaking engagements, or consulting?
+                        Fill out the form and Van will respond within one business day.
                     </p>
 
-                    <!-- Row 1: Name + Email -->
-                    <div class="form-row-2">
-                    <div class="field-wrap">
-                        <label class="field-label" for="fc-name">Your name</label>
-                        <input
-                        type="text"
-                        id="fc-name"
-                        name="name"
-                        placeholder="Jane Smith"
-                        required
-                        />
-                    </div>
-                    <div class="field-wrap">
-                        <label class="field-label" for="fc-email">Work email</label>
-                        <input
-                        type="email"
-                        id="fc-email"
-                        name="email"
-                        placeholder="jane@company.com"
-                        required
-                        />
-                    </div>
-                    </div>
-
-                    <!-- Row 2: Phone + Company -->
-                    <div class="form-row-2">
-                    <div class="field-wrap">
-                        <label class="field-label" for="fc-phone"
-                        >Phone number</label
+                    <!--
+                    NETLIFY FORMS:
+                    The `netlify` and `data-netlify="true"` attributes are all
+                    that's needed if the site is deployed on Netlify.
+                    Add `data-netlify-honeypot="bot-field"` to catch spam.
+                    Netlify picks up the form on first deploy and routes
+                    submissions to your dashboard + email notifications.
+                    -->
+                    <form
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        class="contact-form"
+                        action="/thank-you"
                         >
-                        <input
-                        type="tel"
-                        id="fc-phone"
-                        name="phone"
-                        placeholder="+1 (555) 000-0000"
-                        />
-                    </div>
-                    <div class="field-wrap">
-                        <label class="field-label" for="fc-company"
-                        >Company name</label
+                        <!-- Honeypot (hidden, catches bots) -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p class="display: none">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                        </p>
+
+                        <!-- Row 1: Name + Email -->
+                        <div class="form-row-2">
+                            <div class="field-wrap">
+                                <label class="field-label" for="fc-name">Your name</label>
+                                <input
+                                type="text"
+                                id="fc-name"
+                                name="name"
+                                placeholder="Jane Smith"
+                                required
+                                />
+                            </div>
+                            <div class="field-wrap">
+                                <label class="field-label" for="fc-email">Work email</label>
+                                <input
+                                type="email"
+                                id="fc-email"
+                                name="email"
+                                placeholder="jane@company.com"
+                                required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Phone + Company -->
+                        <div class="form-row-2">
+                            <div class="field-wrap">
+                                <label class="field-label" for="fc-phone"
+                                >Phone number</label
+                                >
+                                <input
+                                type="tel"
+                                id="fc-phone"
+                                name="phone"
+                                placeholder="+1 (555) 000-0000"
+                                />
+                            </div>
+                            <div class="field-wrap">
+                                <label class="field-label" for="fc-company"
+                                >Company name</label
+                                >
+                                <input
+                                type="text"
+                                id="fc-company"
+                                name="company"
+                                placeholder="Acme Corp"
+                                required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Company size -->
+                        <div class="field-wrap">
+                            <label class="field-label" for="fc-size">Company size</label>
+                            <select id="fc-size" name="company_size" required>
+                                <option value="" disabled selected>
+                                Select headcount…
+                                </option>
+                                <option value="1-50">1 - 50 employees</option>
+                                <option value="51-250">51 - 250 employees</option>
+                                <option value="251-1000">251 - 1,000 employees</option>
+                                <option value="1001-5000">1,001 - 5,000 employees</option>
+                                <option value="5000+">5,000+ employees</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="field-wrap">
+                        <label class="field-label" for="fc-message"
+                            >How can Van help?</label
                         >
-                        <input
-                        type="text"
-                        id="fc-company"
-                        name="company"
-                        placeholder="Acme Corp"
-                        required
-                        />
-                    </div>
-                    </div>
+                        <textarea
+                            id="fc-message"
+                            name="message"
+                            placeholder="Tell us about your security concerns, a topic you'd like covered, or an engagement you have in mind…"
+                            required
+                        ></textarea>
+                        </div>
 
-                    <!-- Company size -->
-                    <div class="field-wrap">
-                    <label class="field-label" for="fc-size">Company size</label>
-                    <select id="fc-size" name="company_size" required>
-                        <option value="" disabled selected>
-                        Select headcount…
-                        </option>
-                        <option value="1-50">1 - 50 employees</option>
-                        <option value="51-250">51 - 250 employees</option>
-                        <option value="251-1000">251 - 1,000 employees</option>
-                        <option value="1001-5000">1,001 - 5,000 employees</option>
-                        <option value="5000+">5,000+ employees</option>
-                    </select>
-                    </div>
+                        <button type="submit" class="btn-submit">Send message →</button>
 
-                    <!-- Message -->
-                    <div class="field-wrap">
-                    <label class="field-label" for="fc-message"
-                        >How can Van help?</label
-                    >
-                    <textarea
-                        id="fc-message"
-                        name="message"
-                        placeholder="Tell us about your security concerns, a topic you'd like covered, or an engagement you have in mind…"
-                        required
-                    ></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Send message →</button>
-
-                    <p class="form-privacy">
-                    Your information is kept strictly confidential and never
-                    shared. See our <a href="/privacy">privacy policy</a>.
-                    </p>
-                </form>
+                        <p class="form-privacy">
+                        Your information is kept strictly confidential and never
+                        shared. 
+                        </p>
+                    </form>
                 </div>
             </div>
             </div></Contact

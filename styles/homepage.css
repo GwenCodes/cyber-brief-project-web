@@ -7,7 +7,7 @@
   --ink-mid: #4a3830;
   --ink-soft: #8a7060;
   --ink-faint: #c0ada4;
-  --rule: #e2d8d3;
+  --form-bg: #bababa;
   --serif: "Lora", Georgia, serif;
   --sans:
     "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
@@ -642,13 +642,12 @@ button:hover {
   flex-direction: column;
   gap: 1.5rem;
 }
-
-.bio-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #4a5568;
-  font-weight: 500;
+.bio-col h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  color: #63041e;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }
 
 .bio-photo-wrap {
@@ -658,31 +657,17 @@ button:hover {
   flex-shrink: 0;
 }
 .bio-photo-wrap img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 4px;
   object-fit: cover;
   display: block;
   filter: grayscale(20%) contrast(1.05);
 }
-/* Accent corner */
-.bio-photo-wrap::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: -6px;
-  width: 40px;
-  height: 40px;
-  border-left: 2px solid #3a7bd5;
-  border-bottom: 2px solid #3a7bd5;
-  border-radius: 0 0 0 3px;
-  pointer-events: none;
-}
-
 .bio-person {
   display: flex;
-  gap: 1.4rem;
-  align-items: flex-start;
+  align-items: flex-end; /* pushes .bio-text to bottom of the image */
+  gap: 1rem; /* optional spacing between image and text */
 }
 
 .bio-name {
@@ -701,7 +686,7 @@ button:hover {
   margin-bottom: 0.75rem;
 }
 .bio-body {
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: #7a8898;
 }
@@ -713,7 +698,7 @@ button:hover {
 .bio-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   margin-top: 0.25rem;
 }
 .badge {
@@ -723,7 +708,7 @@ button:hover {
   border: 1px solid #ababab;
   border-radius: 4px;
   color: #5a6778;
-  background: #ababab;
+  background: var(--form-bg);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -737,10 +722,9 @@ button:hover {
   line-height: 1.2;
 }
 .form-subheading {
-  font-size: 0.82rem;
-  color: #5a6778;
-  margin-bottom: 1.75rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #7a8898;
 }
 
 /* Netlify form */
@@ -748,6 +732,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  margin-bottom: 3rem;
 }
 
 .form-row-2 {
@@ -773,14 +758,16 @@ label.field-label {
   text-transform: uppercase;
   color: #4a5568;
   font-weight: 500;
+  margin-left: 0.5rem;
 }
 
+/* Unified form field styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select,
 textarea {
-  border: 1px solid #7f7f7f;
+  border: 1px solid #b2b2b2;
   border-radius: 3px;
   font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
@@ -792,17 +779,23 @@ textarea {
   outline: none;
   -webkit-appearance: none;
   appearance: none;
+  background-color: var(--form-bg);
 }
+
+/* Placeholder color */
 input::placeholder,
 textarea::placeholder {
-  color: #4a5568;
+  color: #efefef;
 }
+
+/* Focus state */
 input:focus,
 select:focus,
 textarea:focus {
   border-color: #3a7bd5;
 }
 
+/* Select dropdown arrow */
 select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a5568'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -810,21 +803,23 @@ select {
   padding-right: 2rem;
   cursor: pointer;
 }
+
 select option {
-  background: #0e1520;
-  color: #c8cdd6;
+  color: #4a5568;
 }
 
+/* Textarea-specific adjustments (only what's needed) */
 textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 120px; /* or 80px if you prefer */
   line-height: 1.6;
+  margin: 0; /* match inputs */
 }
 
 .btn-submit {
   align-self: flex-start;
   margin-top: 0.25rem;
-  background: #3a7bd5;
+  background: var(--accent);
   color: #fff;
   border: none;
   padding: 0.65rem 1.75rem;
@@ -848,7 +843,7 @@ textarea {
 
 .form-privacy {
   font-size: 0.72rem;
-  color: #3a4455;
+  color: #4a5568;
   line-height: 1.55;
 }
 .form-privacy a {
