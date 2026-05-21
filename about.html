@@ -48,7 +48,7 @@
   <body class="bg-[#F1F3F5] text-slate-800 font-sans antialiased">
     <div data-include="/components/header.html"></div>
     <main class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto">
-      <article class="p-6 md:p-20">
+      <div class="max-w-4xl mx-auto px-6 py-24">
         <a
           href="index.html"
           class="back-link text-[#EE6C4D] font-bold tracking-widest hover:opacity-80 mb-12 block"
@@ -74,13 +74,23 @@
             board.
           </p>
 
-          <p><strong>Who's behind it</strong></p>
-          <p>
-            Cyber-Brief is written by Van, founder of Cyber Edge LLC and a security practitioner with more than 25 years of experience leading initiatives across financial services, insurance, and critical infrastructure. His work has supported executive teams through audits, regulatory scrutiny, and major modernization efforts — always with a focus on turning complex risk into actionable strategy.
-          </p>
+          
+          <section class="flex flex-col sm:flex-row items-center gap-6">
+            <img
+              src="/img/cyber-edge-profile.png"
+              alt="Van, founder of Cyber-Brief"
+              class="w-32 h-32 rounded-full flex-shrink-0 author-photo grayscale "
+            />
+            <div>              
+              <p>
+                Cyber-Brief is written by Van, founder of Cyber Edge LLC and a security practitioner with more than 25 years of experience leading initiatives across financial services, insurance, and critical infrastructure. His work has supported executive teams through audits, regulatory scrutiny, and major modernization efforts — always with a focus on turning complex risk into actionable strategy.
+              </p>
+            </div>
+          </section>
         </div>
-      </article>      
+      </div>
       <div data-include="/components/contact.html"></div>
+    </main>
       <footer
         class="mt-24 pt-8 border-t border-slate-200 text-sm text-slate-500"
       >
@@ -88,5 +98,6 @@
       </footer>
     </div>
     <script src="/js/include.js"></script>
+    <script src="/js/mobile-menu.js"></script>
   </body>
 </html>

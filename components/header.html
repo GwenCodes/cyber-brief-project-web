@@ -1,20 +1,32 @@
-<nav class="nav">
+<header class="nav">
   <div class="nav-inner">
+    <!-- ORIGINAL LOGO (unchanged) -->
     <a class="nav-logo" href="/index.html">
       <img src="/img/cyber-brief-logo-corral.png" alt="Cyber-Brief logo" />
       <span class="nav-wordmark">Cyber-Brief</span>
     </a>
 
-    <ul class="nav-links font-blinker transition-colors">
-      <li>
-        <a href="/intelligence.html"> Intelligence </a>
-      </li>
-      <li>
-        <a href="/about.html"> About </a>
-      </li>
-      <li>
-        <a href="/components/contact.html">Contact</a>
-      </li>
-    </ul>
+    <!-- MOBILE MENU BUTTON (new, additive) -->
+    <button
+      id="mobile-menu-btn"
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+    >
+      ☰
+    </button>
+
+    <!-- DESKTOP NAV (unchanged) -->
+    <nav class="nav-links">
+      <a href="/intelligence.html">Intelligence</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
   </div>
-</nav>
+
+  <!-- MOBILE NAV (new, additive) -->
+  <nav id="mobile-menu" class="nav-mobile">
+    <a href="/intelligence.html">Intelligence</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>

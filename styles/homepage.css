@@ -7,7 +7,7 @@
   --ink-mid: #4a3830;
   --ink-soft: #8a7060;
   --ink-faint: #c0ada4;
-  --form-bg: #bababa;
+  --form-bg: #dddddd;
   --serif: "Lora", Georgia, serif;
   --sans:
     "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
@@ -34,11 +34,13 @@ body {
 }
 
 /* ── NAV ── */
-nav {
+.nav {
   background: #ffffff;
   position: sticky;
   top: 0;
+  z-index: 50;
 }
+
 .nav-inner {
   max-width: 1080px;
   margin: 0 auto;
@@ -91,6 +93,40 @@ nav {
 }
 .nav-links a:hover {
   color: var(--accent);
+}
+/* --- MOBILE NAV ADDITIONS (NON-DESTRUCTIVE) --- */
+
+/* Hide mobile toggle by default */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* Mobile menu container */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 16px 32px;
+}
+
+/* Mobile menu open state */
+.nav-mobile.open {
+  display: flex;
+}
+
+/* Mobile layout rules */
+@media (max-width: 640px) {
+  .nav-links {
+    display: none; /* hide desktop nav */
+  }
+
+  .nav-toggle {
+    display: block; /* show hamburger */
+  }
 }
 
 /* ── PAGE WRAPPER ── */
@@ -560,8 +596,13 @@ button:hover {
      Contact Section
   ══════════════════════════════════════════ */
 .site-Contact {
-  background: #080c10;
+  background: linear-gradient(
+    90deg,
+    hsla(20, 18%, 3%, 1) 0%,
+    hsla(18, 21%, 24%, 1) 100%
+  );
   border-top: 1px solid #1c2430;
+  border-radius: 4px;
 }
 
 .contact-inner {
@@ -637,89 +678,13 @@ button:hover {
   }
 }
 
-/* ── BIO COLUMN ── */
-.bio-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.bio-col h2 {
-  font-family: "DM Serif Display", serif;
-  font-size: 2rem;
-  color: #63041e;
-  margin-bottom: 0.3rem;
-  line-height: 1.2;
-}
-
-.bio-photo-wrap {
-  position: relative;
-  width: 130px;
-  height: 130px;
-  flex-shrink: 0;
-}
-.bio-photo-wrap img {
-  width: 150px;
-  height: 150px;
-  border-radius: 4px;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(20%) contrast(1.05);
-}
-.bio-person {
-  display: flex;
-  align-items: flex-end; /* pushes .bio-text to bottom of the image */
-  gap: 1rem; /* optional spacing between image and text */
-}
-
-.bio-name {
-  font-family: "DM Serif Display", serif;
-  font-size: 1.4rem;
-  color: #4a5568;
-  margin-bottom: 0.3rem;
-  line-height: 1.2;
-}
-.bio-title-tag {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #4a5568;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-}
-.bio-body {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #7a8898;
-}
-.bio-body strong {
-  color: #aab4c2;
-  font-weight: 400;
-}
-
-.bio-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-.badge {
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  padding: 4px 10px;
-  border: 1px solid #ababab;
-  border-radius: 4px;
-  color: #5a6778;
-  background: var(--form-bg);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 /* ── FORM COLUMN ── */
 .form-heading {
   font-family: "DM Serif Display", serif;
-  font-size: 1.4rem;
-  color: #4a5568;
-  margin-bottom: 0.3rem;
+  font-size: 2.25rem;
+  color: #7a8898;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
   line-height: 1.2;
 }
 .form-subheading {
@@ -786,7 +751,7 @@ textarea {
 /* Placeholder color */
 input::placeholder,
 textarea::placeholder {
-  color: #efefef;
+  color: #6a6e74;
 }
 
 /* Focus state */
@@ -797,14 +762,6 @@ textarea:focus {
 }
 
 /* Select dropdown arrow */
-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a5568'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.85rem center;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
 select option {
   color: #4a5568;
 }
@@ -844,7 +801,7 @@ textarea {
 
 .form-privacy {
   font-size: 0.72rem;
-  color: #4a5568;
+  color: #7a8898;
   line-height: 1.55;
 }
 .form-privacy a {
@@ -855,32 +812,6 @@ textarea {
   text-decoration: underline;
 }
 
-/* ── Contact BOTTOM ── */
-.Contact-bottom {
-  padding: 1.4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.Contact-copy {
-  font-size: 0.75rem;
-  color: #2e3844;
-}
-.Contact-legal {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-.Contact-legal a {
-  font-size: 0.75rem;
-  color: #2e3844;
-  text-decoration: none;
-}
-.Contact-legal a:hover {
-  color: #4a5568;
-}
 /* ══════════════════════════════════════════
      End of Contact Section
   ══════════════════════════════════════════ */
