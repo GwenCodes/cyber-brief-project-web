@@ -558,13 +558,10 @@ button:hover {
 .site-Contact {
   background: #080c10;
   border-top: 1px solid #1c2430;
-  padding: 0;
 }
 
 .contact-inner {
   max-width: 1160px;
-  margin: 0 auto;
-  padding: 4rem 2rem 0;
 }
 
 /* Top: logo + nav row */
