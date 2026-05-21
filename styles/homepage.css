@@ -494,6 +494,10 @@ button:hover {
   color: var(--accent);
 }
 /* ── FOOTER ── */
+.footer-section {
+  background: #0a0807;
+  border-top: 1px solid #1c2430;
+}
 
 .site-footer,
 .footer-container {
