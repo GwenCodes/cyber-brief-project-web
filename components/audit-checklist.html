@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Audit Checklists — Audit Season</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #0d0f0e;
+        --ink-2: #3a3d3c;
+        --ink-3: #6b6f6e;
+        --ink-4: #a8aeac;
+        --surface: #f5f3ef;
+        --surface-2: #eceae5;
+        --surface-3: #e2e0da;
+        --white: #fdfcfa;
+        --accent: #1a5c45;
+        --accent-light: #e8f2ee;
+        --accent-mid: #2d8c68;
+        --institutional: #2c3580;
+        --institutional-light: #eaecf7;
+        --foundational: #1a5c45;
+        --warn: #8b4000;
+        --warn-light: #fdf0e6;
+        --border: rgba(13, 15, 14, 0.1);
+        --shadow:
+          0 1px 3px rgba(13, 15, 14, 0.08), 0 4px 16px rgba(13, 15, 14, 0.06);
+        --shadow-lg:
+          0 2px 8px rgba(13, 15, 14, 0.08), 0 12px 40px rgba(13, 15, 14, 0.1);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Figtree", sans-serif;
+        background: var(--surface);
+        color: var(--ink);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+
+      /* HEADER */
+      .site-header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+      }
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-3);
+        text-decoration: none;
+        font-family: "DM Mono", monospace;
+        letter-spacing: -0.01em;
+        transition: color 0.15s;
+      }
+      .back-link:hover {
+        color: var(--accent);
+      }
+      .back-arrow {
+        font-size: 16px;
+      }
+      .header-label {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--ink-4);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* HERO */
+      .hero {
+        background: var(--white);
+        padding: 4rem 2rem 3rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 80% 60% at 50% 100%,
+          rgba(26, 92, 69, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hero-eyebrow {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hero-eyebrow::before,
+      .hero-eyebrow::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: var(--accent);
+        opacity: 0.5;
+      }
+      .hero h1 {
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        font-weight: 400;
+        line-height: 1.15;
+        color: var(--ink);
+        max-width: 640px;
+        margin: 0 auto 1rem;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--accent);
+      }
+      .hero-sub {
+        font-size: 15px;
+        color: var(--ink-3);
+        max-width: 480px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      /* TAB NAV */
+      .tab-nav {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 0;
+      }
+      .tab-btn {
+        font-family: "Figtree", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 8px 20px;
+        border-radius: 100px;
+        border: 1.5px solid var(--border);
+        background: transparent;
+        color: var(--ink-3);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .tab-btn:hover {
+        color: var(--ink);
+        border-color: var(--ink-3);
+      }
+      .tab-btn.active {
+        background: var(--ink);
+        color: var(--white);
+        border-color: var(--ink);
+      }
+
+      /* MAIN LAYOUT */
+      .main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 5rem;
+      }
+
+      /* PANELS */
+      .panel {
+        display: none;
+      }
+      .panel.active {
+        display: block;
+      }
+
+      /* PROGRESS DASHBOARD */
+      .dashboard {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        gap: 1rem;
+        align-items: center;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-num {
+        font-family: "Instrument Serif", serif;
+        font-size: 2rem;
+        line-height: 1;
+        color: var(--ink);
+      }
+      .stat-num.green {
+        color: var(--accent);
+      }
+      .stat-label {
+        font-size: 11px;
+        color: var(--ink-4);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 2px;
+        font-family: "DM Mono", monospace;
+      }
+      .progress-col {
+      }
+      .progress-track {
+        background: var(--surface-2);
+        border-radius: 100px;
+        height: 8px;
+        overflow: hidden;
+        margin-bottom: 6px;
+      }
+      .progress-fill {
+        height: 100%;
+        border-radius: 100px;
+        background: linear-gradient(90deg, var(--accent-mid), var(--accent));
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .progress-meta {
+        display: flex;
+        justify-content: space-between;
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--ink-4);
+      }
+
+      /* SECTION BLOCK */
+      .section-block {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .section-title-row {
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .section-title {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+      }
+      .section-pill {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--ink-4);
+        background: var(--surface-2);
+        padding: 3px 10px;
+        border-radius: 100px;
+      }
+      .section-pill.complete {
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+
+      /* CHECKLIST ITEMS */
+      .check-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 1.25rem;
+        border-bottom: 1px solid var(--border);
+        cursor: pointer;
+        transition: background 0.15s;
+        user-select: none;
+      }
+      .check-item:last-child {
+        border-bottom: none;
+      }
+      .check-item:hover {
+        background: var(--surface);
+      }
+      .check-item.done {
+        background: rgba(26, 92, 69, 0.03);
+      }
+
+      .checkbox {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        border: 1.5px solid var(--surface-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+        transition: all 0.2s;
+        background: var(--white);
+      }
+      .check-item.done .checkbox {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .checkbox svg {
+        display: none;
+      }
+      .check-item.done .checkbox svg {
+        display: block;
+      }
+
+      .check-body {
+        flex: 1;
+        min-width: 0;
+      }
+      .check-text {
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--ink);
+        transition: color 0.2s;
+      }
+      .check-item.done .check-text {
+        color: var(--ink-4);
+        text-decoration: line-through;
+        text-decoration-color: var(--surface-3);
+      }
+      .check-meta {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 5px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        font-family: "DM Mono", monospace;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 2px 8px;
+        border-radius: 100px;
+        letter-spacing: 0.02em;
+      }
+      .badge-f {
+        background: var(--accent-light);
+        color: var(--foundational);
+      }
+      .badge-i {
+        background: var(--institutional-light);
+        color: var(--institutional);
+      }
+      .check-note {
+        font-size: 12px;
+        color: var(--warn);
+        background: var(--warn-light);
+        border-radius: 6px;
+        padding: 5px 10px;
+        margin-top: 6px;
+        line-height: 1.5;
+        display: flex;
+        gap: 6px;
+        align-items: flex-start;
+      }
+      .check-note::before {
+        content: "→";
+        flex-shrink: 0;
+      }
+
+      /* KIT CARDS */
+      .kit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 10px;
+      }
+      .kit-card {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: 14px;
+        padding: 1.25rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .kit-card:hover {
+        border-color: var(--ink-3);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-lg);
+      }
+      .kit-card.done {
+        border-color: var(--accent);
+        background: var(--accent-light);
+      }
+      .kit-card-check {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1.5px solid var(--surface-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--white);
+        transition: all 0.2s;
+      }
+      .kit-card.done .kit-card-check {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .kit-card.done .kit-card-check svg {
+        display: block;
+      }
+      .kit-card-check svg {
+        display: none;
+      }
+      .kit-title {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.35;
+      }
+      .kit-card.done .kit-title {
+        color: var(--accent);
+      }
+      .kit-desc {
+        font-size: 12.5px;
+        color: var(--ink-3);
+        line-height: 1.55;
+      }
+      .kit-card.done .kit-desc {
+        color: var(--accent);
+        opacity: 0.75;
+      }
+
+      /* LEGEND */
+      .legend {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--ink-3);
+      }
+      .legend-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+      }
+
+      /* DISCLAIMER */
+      .disclaimer {
+        margin-top: 2rem;
+        padding: 1rem 1.25rem;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-size: 12px;
+        color: var(--ink-3);
+        line-height: 1.7;
+        font-style: italic;
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .panel.active .section-block,
+      .panel.active .dashboard,
+      .panel.active .kit-card {
+        animation: fadeUp 0.35s ease both;
+      }
+      .panel.active .section-block:nth-child(2) {
+        animation-delay: 0.04s;
+      }
+      .panel.active .section-block:nth-child(3) {
+        animation-delay: 0.08s;
+      }
+      .panel.active .section-block:nth-child(4) {
+        animation-delay: 0.12s;
+      }
+      .panel.active .section-block:nth-child(5) {
+        animation-delay: 0.16s;
+      }
+      .panel.active .kit-card:nth-child(2) {
+        animation-delay: 0.05s;
+      }
+      .panel.active .kit-card:nth-child(3) {
+        animation-delay: 0.1s;
+      }
+      .panel.active .kit-card:nth-child(4) {
+        animation-delay: 0.15s;
+      }
+      .panel.active .kit-card:nth-child(5) {
+        animation-delay: 0.2s;
+      }
+      .panel.active .kit-card:nth-child(6) {
+        animation-delay: 0.25s;
+      }
+
+      @media (max-width: 640px) {
+        .dashboard {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .progress-col {
+          grid-column: 1 / -1;
+        }
+        .hero {
+          padding: 3rem 1.25rem 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="audit_season_article.md" class="back-link">
+        <span class="back-arrow">←</span> Back to article
+      </a>
+      <span class="header-label">Audit Season</span>
+    </header>
+
+    <div class="hero">
+      <div class="hero-eyebrow">Interactive Tools</div>
+      <h1>Audit <em>Readiness</em> Checklists</h1>
+      <p class="hero-sub">
+        Two practical checklists to build your compliance sales kit and verify
+        your audit controls — check items off as you go.
+      </p>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('sales')">
+          Outbound Sales Kit
+        </button>
+        <button class="tab-btn" onclick="switchTab('checklist')">
+          Audit Readiness
+        </button>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- SALES KIT PANEL -->
+      <div id="panel-sales" class="panel active">
+        <div class="dashboard">
+          <div class="stat">
+            <div class="stat-num green" id="k-done">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="k-left">6</div>
+            <div class="stat-label">Remaining</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="k-pct">0%</div>
+            <div class="stat-label">Kit ready</div>
+          </div>
+          <div class="progress-col">
+            <div class="progress-track">
+              <div class="progress-fill" id="k-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress-meta">
+              <span>Outbound compliance sales kit</span>
+              <span id="k-frac">0 / 6</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-grid" id="kit-grid">
+          <div class="kit-card" onclick="toggleKit(0)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">1-Page Trust Overview</div>
+            <div class="kit-desc">
+              High-level summary for non-technical buyers — CFOs and procurement
+              leads. Covers certifications, audit frequency, and key controls in
+              plain language.
+            </div>
+          </div>
+          <div class="kit-card" onclick="toggleKit(1)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">Pre-Drafted NDA Template</div>
+            <div class="kit-desc">
+              Your own mutual NDA ready to send immediately. Prevents legal
+              delays and signals you've been through this process before.
+            </div>
+          </div>
+          <div class="kit-card" onclick="toggleKit(2)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">Full Audit Report</div>
+            <div class="kit-desc">
+              Latest SOC 2 Type II or ISO 27001 documentation staged and ready
+              to deliver the moment the NDA is signed.
+            </div>
+          </div>
+          <div class="kit-card" onclick="toggleKit(3)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">Pre-Filled CAIQ / SIG</div>
+            <div class="kit-desc">
+              Completed security questionnaire ready to hand over. Saves the
+              buyer's risk team weeks of work — a differentiator most
+              competitors skip.
+            </div>
+          </div>
+          <div class="kit-card" onclick="toggleKit(4)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">Pen Test Executive Summary</div>
+            <div class="kit-desc">
+              Dated summary with scope, methodology, and remediation
+              confirmation. Full reports stay internal; the summary is standard
+              at institutional level.
+            </div>
+          </div>
+          <div class="kit-card" onclick="toggleKit(5)">
+            <div class="kit-card-check">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4.5L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="kit-title">Named Security Contact</div>
+            <div class="kit-desc">
+              A real name, title, and direct line — not a generic inbox.
+              Institutional buyers expect a dedicated owner, not a shared alias.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDIT READINESS PANEL -->
+      <div id="panel-checklist" class="panel">
+        <div class="dashboard">
+          <div class="stat">
+            <div class="stat-num green" id="c-done">0</div>
+            <div class="stat-label">Verified</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="c-left">22</div>
+            <div class="stat-label">Remaining</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="c-pct">0%</div>
+            <div class="stat-label">Complete</div>
+          </div>
+          <div class="progress-col">
+            <div class="progress-track">
+              <div class="progress-fill" id="c-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress-meta">
+              <span>Controls verified</span>
+              <span id="c-frac">0 / 22</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <div
+              class="legend-dot"
+              style="background: var(--foundational)"
+            ></div>
+            Foundational — minimum viable
+          </div>
+          <div class="legend-item">
+            <div
+              class="legend-dot"
+              style="background: var(--institutional)"
+            ></div>
+            Institutional — wins largest accounts
+          </div>
+        </div>
+
+        <div id="cl-body"></div>
+
+        <div class="disclaimer">
+          This checklist is an educational resource and starting point, not a
+          substitute for formal risk assessments or legal counsel. Firms with
+          specific regulatory duties — NYDFS Part 500, DORA, SEC Regulation S-P,
+          or the EU AI Act — should collaborate with qualified compliance
+          counsel to address framework-specific mandates.
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const CHECK_SVG = `<svg width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4.5L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+      const sections = [
+        {
+          name: "Governance & Documentation",
+          items: [
+            {
+              text: "Information Security Policy documented, approved by leadership, and updated within the last 12 months",
+              tier: "f",
+            },
+            {
+              text: "Incident Response Plan with defined roles, escalation paths, and communication procedures",
+              tier: "f",
+            },
+            {
+              text: "Business Continuity & Disaster Recovery Plan, fully documented and tested within the last 12 months",
+              tier: "f",
+            },
+            {
+              text: "AI Governance Policy covering approved and prohibited AI tools and data-handling restrictions — proactively closing Shadow AI gaps so unauthorized tools don't contradict your documented controls",
+              tier: "i",
+              note: "Unauthorized AI tools can create structural inconsistencies in your audit controls.",
+            },
+            {
+              text: "Board or executive-level attestation formally confirming that security policies have been reviewed and approved",
+              tier: "i",
+            },
+          ],
+        },
+        {
+          name: "Access Controls & Identity",
+          items: [
+            {
+              text: "Multi-Factor Authentication (MFA) enforced across all systems containing client or financial data",
+              tier: "f",
+              note: "MFA gaps can void cyber insurance claims. The City of Hamilton's insurer denied an $18.3M claim because MFA was not fully deployed.",
+            },
+            {
+              text: "Principle of Least Privilege enforced — employees access only the specific systems required for their direct role",
+              tier: "f",
+            },
+            {
+              text: "Documented offboarding procedure ensuring all access is fully revoked within 24 hours of departure",
+              tier: "f",
+            },
+            {
+              text: "Privileged Access Management (PAM) controls safeguarding administrator accounts — the keys to the kingdom",
+              tier: "i",
+            },
+            {
+              text: "Quarterly access reviews: documented audits confirming who has access to sensitive environments and that it remains appropriate",
+              tier: "i",
+            },
+          ],
+        },
+        {
+          name: "Vendor & Third-Party Risk",
+          items: [
+            {
+              text: "Live, centralized inventory of all vendors that handle your systems, data, or client information",
+              tier: "f",
+            },
+            {
+              text: "SOC 2 reports actively collected from all critical vendors, dated within the last 12 months",
+              tier: "f",
+              note: "Your vendor risk program is a direct extension of your own security posture — and institutional clients will scrutinize it.",
+            },
+            {
+              text: "Vendor contracts include explicit breach notification requirements, targeting a window of 72 hours or less",
+              tier: "f",
+            },
+            {
+              text: "Fourth-party risk assessment: mapping critical vendors' own subcontractors to identify hidden supply chain vulnerabilities",
+              tier: "i",
+            },
+          ],
+        },
+        {
+          name: "Data Protection & Incident Response",
+          items: [
+            {
+              text: "Encryption enforced for all sensitive data — both at rest in databases and in transit across networks",
+              tier: "f",
+            },
+            {
+              text: "Offline, immutable backups with clearly documented Recovery Time Objectives (RTOs)",
+              tier: "f",
+            },
+            {
+              text: "Breach notification procedure capable of meeting a 72-hour regulatory reporting window — notification must run in parallel with forensics, not after",
+              tier: "f",
+              note: "Waiting until a forensic investigation is complete before notifying puts your firm squarely in the liability zone.",
+            },
+            {
+              text: "Tabletop incident response exercise conducted with key leadership stakeholders within the last 12 months",
+              tier: "i",
+            },
+          ],
+        },
+        {
+          name: "Audit & Compliance Posture",
+          items: [
+            {
+              text: "Annual SOC 2 Type II audit completed with a formal report dated within the last 12 months",
+              tier: "f",
+            },
+            {
+              text: "Management responses documented for any audit exceptions, with concrete evidence of remediation",
+              tier: "f",
+            },
+            {
+              text: "SOC 2 scope expanded beyond Security to explicitly include Availability and Confidentiality criteria",
+              tier: "i",
+            },
+            {
+              text: "Full Rapid-Response Trust Package organized and ready to deploy within one hour: Trust Overview, audit report, pen test summary, and pre-filled CAIQ/SIG",
+              tier: "i",
+            },
+          ],
+        },
+      ];
+
+      const clState = new Array(22).fill(false);
+      const kitState = new Array(6).fill(false);
+
+      function getSectionStart(si) {
+        let s = 0;
+        for (let i = 0; i < si; i++) s += sections[i].items.length;
+        return s;
+      }
+
+      function renderChecklist() {
+        const body = document.getElementById("cl-body");
+        let html = "";
+        sections.forEach((sec, si) => {
+          const start = getSectionStart(si);
+          const secDone = sec.items.filter(
+            (_, ii) => clState[start + ii],
+          ).length;
+          const complete = secDone === sec.items.length;
+          html += `<div class="section-block">
+      <div class="section-title-row">
+        <span class="section-title">${sec.name}</span>
+        <span class="section-pill ${complete ? "complete" : ""}">${secDone} / ${sec.items.length}</span>
+      </div>`;
+          sec.items.forEach((item, ii) => {
+            const idx = start + ii;
+            const done = clState[idx];
+            html += `<div class="check-item ${done ? "done" : ""}" onclick="toggleCl(${idx})">
+        <div class="checkbox">${CHECK_SVG}</div>
+        <div class="check-body">
+          <div class="check-text">${item.text}</div>
+          <div class="check-meta">
+            <span class="badge ${item.tier === "f" ? "badge-f" : "badge-i"}">${item.tier === "f" ? "Foundational" : "Institutional"}</span>
+          </div>
+          ${item.note ? `<div class="check-note">${item.note}</div>` : ""}
+        </div>
+      </div>`;
+          });
+          html += `</div>`;
+        });
+        body.innerHTML = html;
+      }
+
+      function updateClProgress() {
+        const done = clState.filter(Boolean).length;
+        const total = 22;
+        document.getElementById("c-done").textContent = done;
+        document.getElementById("c-left").textContent = total - done;
+        document.getElementById("c-pct").textContent =
+          Math.round((done / total) * 100) + "%";
+        document.getElementById("c-frac").textContent = done + " / " + total;
+        document.getElementById("c-bar").style.width =
+          Math.round((done / total) * 100) + "%";
+      }
+
+      function toggleCl(idx) {
+        clState[idx] = !clState[idx];
+        renderChecklist();
+        updateClProgress();
+      }
+
+      function updateKitProgress() {
+        const done = kitState.filter(Boolean).length;
+        const total = 6;
+        document.getElementById("k-done").textContent = done;
+        document.getElementById("k-left").textContent = total - done;
+        document.getElementById("k-pct").textContent =
+          Math.round((done / total) * 100) + "%";
+        document.getElementById("k-frac").textContent = done + " / " + total;
+        document.getElementById("k-bar").style.width =
+          Math.round((done / total) * 100) + "%";
+      }
+
+      function toggleKit(idx) {
+        kitState[idx] = !kitState[idx];
+        const cards = document.querySelectorAll(".kit-card");
+        cards[idx].classList.toggle("done", kitState[idx]);
+        updateKitProgress();
+      }
+
+      function switchTab(name) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b, i) =>
+            b.classList.toggle("active", ["sales", "checklist"][i] === name),
+          );
+        document
+          .querySelectorAll(".panel")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("panel-" + name).classList.add("active");
+      }
+
+      renderChecklist();
+      updateClProgress();
+      updateKitProgress();
+    </script>
+  </body>
+</html>
