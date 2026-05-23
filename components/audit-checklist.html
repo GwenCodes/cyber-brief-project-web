@@ -422,6 +422,49 @@
         color: var(--ink-2);
         line-height: 1.75;
       }
+      /* CTA */
+      .cta {
+        margin-top: 4rem;
+        padding: 1.5rem;
+        background: var(--accent-bg);
+        border-radius: 14px;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 16px;
+        height: 14rem;
+        line-height: 25.6px;
+      }
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .modal.hidden {
+        display: none;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 12px;
+        position: relative;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
 
       /* ANIMATIONS */
       @keyframes fadeUp {
@@ -565,7 +608,45 @@
         DORA, SEC Regulation S-P, or the EU AI Act — should collaborate with
         qualified compliance counsel to address framework-specific mandates.
       </div>
+      <div class="cta">
+        <div>
+          <strong>Work With a Cybersecurity Expert</strong>
+        </div>
+        <p class="margin-top: 10rem">
+          Navigating an audit — or preparing for one — is far easier with the
+          right guidance. Cyber Edge LLC is here to support executive teams
+          through audits, regulatory scrutiny, and compliance strategy across
+          financial services, insurance, and critical infrastructure. Whether
+          you're building your first SOC 2 program or tightening controls ahead
+          of an institutional deal, Cyber Edge can help you turn your security
+          posture into a genuine business asset.
+        </p>
+        <div class="margin-top: 2px">
+          <strong><a href="#" id="open-contact">Get in touch here</a> </strong>
+        </div>
+      </div>
     </main>
+    <div id="contact-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-contact" class="close-btn">×</button>
+
+        <h2>Get in touch</h2>
+        <p>
+          Questions about consulting? Van will respond within one business day.
+        </p>
+
+        <form name="popup-contact" method="POST" data-netlify="true">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea
+            name="message"
+            placeholder="Your message"
+            required
+          ></textarea>
+          <button type="submit" class="submit-btn">Send message</button>
+        </form>
+      </div>
+    </div>
 
     <script>
       const CHECK_SVG = `<svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -763,5 +844,6 @@
       renderChecklist();
       updateProgress();
     </script>
+    <script src="/js/contact-popup.js"></script>
   </body>
 </html>
