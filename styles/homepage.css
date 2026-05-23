@@ -52,12 +52,14 @@ body {
   justify-content: space-between;
   gap: 24px;
 }
+
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
 }
+
 .nav-logo img {
   width: 32px;
   height: 32px;
@@ -71,6 +73,7 @@ body {
 .subscribe-link:hover {
   color: var(--green);
 }
+
 .nav-wordmark {
   font-family: var(--cambria);
   font-size: 1.25rem;
@@ -79,12 +82,14 @@ body {
   color: var(--ink);
 }
 
+/* Desktop nav */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 32px;
   list-style: none;
 }
+
 .nav-links a {
   font-size: 1rem;
   font-weight: 500;
@@ -92,12 +97,14 @@ body {
   text-decoration: none;
   transition: color 0.12s;
 }
+
 .nav-links a:hover {
   color: var(--accent);
 }
-/* --- MOBILE NAV ADDITIONS (NON-DESTRUCTIVE) --- */
 
-/* Hide mobile toggle by default */
+/* --- MOBILE NAV ADDITIONS --- */
+
+/* Hamburger toggle (hidden on desktop) */
 .nav-toggle {
   display: none;
   background: none;
@@ -107,19 +114,33 @@ body {
   color: var(--ink);
 }
 
-/* Mobile menu container */
+/* Mobile menu container (hidden by default) */
 .nav-mobile {
   display: none;
   flex-direction: column;
   padding: 16px 32px;
+  background: #ffffff;
+  border-top: 1px solid var(--ink-soft);
 }
 
-/* Mobile menu open state */
+/* When JS toggles .open */
 .nav-mobile.open {
   display: flex;
 }
 
-/* Mobile layout rules */
+.nav-mobile a {
+  padding: 12px 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink-soft);
+}
+
+.nav-mobile a:last-child {
+  border-bottom: none;
+}
+
+/* --- RESPONSIVE RULES --- */
 @media (max-width: 640px) {
   .nav-links {
     display: none; /* hide desktop nav */
@@ -127,6 +148,12 @@ body {
 
   .nav-toggle {
     display: block; /* show hamburger */
+  }
+}
+
+@media (min-width: 641px) {
+  .nav-mobile {
+    display: none !important; /* never show mobile menu on desktop */
   }
 }
 
