@@ -422,48 +422,70 @@
         color: var(--ink-2);
         line-height: 1.75;
       }
-      /* CTA */
-      .cta {
-        margin-top: 4rem;
-        padding: 1.5rem;
-        background: var(--accent-bg);
-        border-radius: 14px;
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 16px;
-        height: 14rem;
-        line-height: 25.6px;
-      }
-      .modal {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-      }
-
-      .modal.hidden {
-        display: none;
-      }
-
-      .modal-content {
-        background: white;
+      /* Page Contact */
+      .page-contact {
+        max-width: 700px;
+        margin: 0 auto 5rem;
         padding: 2rem;
-        width: 90%;
-        max-width: 500px;
+        background: var(--white);
         border-radius: 12px;
-        position: relative;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       }
 
-      .close-btn {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: none;
+      .contact-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-subtitle {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .form-row input {
+        flex: 1;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        align-self: center;
+        background: var(--foundational, #0078d4);
+        color: white;
         border: none;
-        font-size: 24px;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
         cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .submit-btn:hover {
+        background: #005fa3;
       }
 
       /* ANIMATIONS */
@@ -608,45 +630,41 @@
         DORA, SEC Regulation S-P, or the EU AI Act — should collaborate with
         qualified compliance counsel to address framework-specific mandates.
       </div>
-      <div class="cta">
-        <div>
-          <strong>Work With a Cybersecurity Expert</strong>
-        </div>
-        <p class="margin-top: 10rem">
-          Navigating an audit — or preparing for one — is far easier with the
-          right guidance. Cyber Edge LLC is here to support executive teams
-          through audits, regulatory scrutiny, and compliance strategy across
-          financial services, insurance, and critical infrastructure. Whether
-          you're building your first SOC 2 program or tightening controls ahead
-          of an institutional deal, Cyber Edge can help you turn your security
-          posture into a genuine business asset.
-        </p>
-        <div class="margin-top: 2px">
-          <strong><a href="#" id="open-contact">Get in touch here</a> </strong>
-        </div>
-      </div>
     </main>
-    <div id="contact-modal" class="modal hidden">
-      <div class="modal-content">
-        <button id="close-contact" class="close-btn">×</button>
+    <section id="page-contact" class="page-contact">
+      <h2 class="contact-title">Get in touch</h2>
+      <div>
+        <strong>Work With a Cybersecurity Expert</strong>
+      </div>
+      <p class="margin-top: 10rem">
+        Navigating an audit — or preparing for one — is far easier with the
+        right guidance. Cyber Edge LLC is here to support executive teams
+        through audits, regulatory scrutiny, and compliance strategy across
+        financial services, insurance, and critical infrastructure. Whether
+        you're building your first SOC 2 program or tightening controls ahead of
+        an institutional deal, Cyber Edge can help you turn your security
+        posture into a genuine business asset.
+      </p>
+      <p class="contact-subtitle">
+        Questions about consulting? Van will respond within one business day.
+      </p>
 
-        <h2>Get in touch</h2>
-        <p>
-          Questions about consulting? Van will respond within one business day.
-        </p>
-
-        <form name="popup-contact" method="POST" data-netlify="true">
+      <form
+        name="page-contact-form"
+        method="POST"
+        data-netlify="true"
+        class="contact-form"
+      >
+        <div class="form-row">
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Your email" required />
-          <textarea
-            name="message"
-            placeholder="Your message"
-            required
-          ></textarea>
-          <button type="submit" class="submit-btn">Send message</button>
-        </form>
-      </div>
-    </div>
+        </div>
+
+        <textarea name="message" placeholder="Your message" required></textarea>
+
+        <button type="submit" class="submit-btn">Send message</button>
+      </form>
+    </section>
 
     <script>
       const CHECK_SVG = `<svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -844,6 +862,5 @@
       renderChecklist();
       updateProgress();
     </script>
-    <script src="/js/contact-popup.js"></script>
   </body>
 </html>
