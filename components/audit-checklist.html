@@ -20,18 +20,18 @@
       }
 
       /*
-    WCAG AA compliance:
-    - Body text: #1C1C1C on #F6F4F0 = 15.3:1 ✓
-    - Secondary text: #4A4A4A on #F6F4F0 = 7.2:1 ✓
-    - Muted text (labels only, non-critical): #696969 on #FFFFFF = 5.7:1 ✓
-    - Accent green #155C3E on white = 7.8:1 ✓
-    - Accent green #155C3E on #E8F2EC = 6.9:1 ✓
-    - Institutional #1E3A8A on white = 10.2:1 ✓
-    - Institutional #1E3A8A on #E8EDF8 = 8.6:1 ✓
-    - Warn text #7A3500 on #FEF3E8 = 7.1:1 ✓
-    - Min body font: 16px
-    - All interactive elements have visible focus states
-  */
+          WCAG AA compliance:
+          - Body text: #1C1C1C on #F6F4F0 = 15.3:1 ✓
+          - Secondary text: #4A4A4A on #F6F4F0 = 7.2:1 ✓
+          - Muted text (labels only, non-critical): #696969 on #FFFFFF = 5.7:1 ✓
+          - Accent green #155C3E on white = 7.8:1 ✓
+          - Accent green #155C3E on #E8F2EC = 6.9:1 ✓
+          - Institutional #1E3A8A on white = 10.2:1 ✓
+          - Institutional #1E3A8A on #E8EDF8 = 8.6:1 ✓
+          - Warn text #7A3500 on #FEF3E8 = 7.1:1 ✓
+          - Min body font: 16px
+          - All interactive elements have visible focus states
+        */
 
       :root {
         --ink: #1c1c1c;
@@ -248,28 +248,6 @@
         color: var(--ink-3);
       }
 
-      /* LEGEND */
-      .legend {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 1.25rem;
-        flex-wrap: wrap;
-      }
-      .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--ink-2);
-      }
-      .legend-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 3px;
-        flex-shrink: 0;
-      }
-
       /* SECTION BLOCK */
       .section-block {
         background: var(--white);
@@ -383,34 +361,6 @@
         margin-top: 6px;
         flex-wrap: wrap;
       }
-      .badge {
-        font-size: 11px;
-        font-weight: 600;
-        padding: 3px 9px;
-        border-radius: 100px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-      .badge-f {
-        background: var(--accent-bg);
-        color: var(--accent);
-      }
-      .badge-i {
-        background: var(--inst-bg);
-        color: var(--inst);
-      }
-
-      .check-note {
-        font-size: 14px;
-        color: var(--warn);
-        background: var(--warn-bg);
-        border-left: 3px solid var(--warn);
-        border-radius: 0 6px 6px 0;
-        padding: 8px 12px;
-        margin-top: 8px;
-        line-height: 1.55;
-      }
-
       /* DISCLAIMER */
       .disclaimer {
         margin-top: 2rem;
@@ -471,27 +421,37 @@
 
       .form-row {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
       }
 
+      /* Inputs behave responsively */
       .form-row input {
-        flex: 1;
+        flex: 1 1 250px; /* min width 250px, grows as needed */
         padding: 0.75rem;
         border: 1px solid #ccc;
         border-radius: 6px;
       }
+
+      /* Mobile: always stack */
       @media (max-width: 640px) {
         .form-row {
           flex-direction: column;
         }
-      }
-      @media (min-width: 768px) {
-        .form-row {
-          flex-wrap: wrap;
-        }
 
         .form-row input {
           flex: 1 1 100%;
+        }
+      }
+
+      /* Tablet and up: two columns when space allows */
+      @media (min-width: 641px) {
+        .form-row {
+          flex-direction: row;
+        }
+
+        .form-row input {
+          flex: 1 1 250px;
         }
       }
 
@@ -639,25 +599,6 @@
         </div>
       </div>
 
-      <div class="legend" role="list" aria-label="Tier legend">
-        <div class="legend-item" role="listitem">
-          <div
-            class="legend-dot"
-            style="background: var(--accent)"
-            aria-hidden="true"
-          ></div>
-          Foundational — minimum viable
-        </div>
-        <div class="legend-item" role="listitem">
-          <div
-            class="legend-dot"
-            style="background: var(--inst)"
-            aria-hidden="true"
-          ></div>
-          Institutional — wins largest accounts
-        </div>
-      </div>
-
       <div id="cl-body" role="region" aria-label="Audit checklist"></div>
 
       <div class="disclaimer" role="note">
@@ -722,24 +663,20 @@
           items: [
             {
               text: "Information Security Policy documented, approved by leadership, and updated within the last 12 months",
-              tier: "f",
             },
             {
               text: "Incident Response Plan with defined roles, escalation paths, and communication procedures",
-              tier: "f",
             },
             {
               text: "Business Continuity & Disaster Recovery Plan, fully documented and tested within the last 12 months",
-              tier: "f",
             },
             {
               text: "AI Governance Policy covering approved and prohibited AI tools and data-handling restrictions — proactively closing Shadow AI gaps so unauthorized tools don't contradict your documented controls",
-              tier: "i",
+
               note: "Unauthorized AI tools can create structural inconsistencies in your audit controls.",
             },
             {
               text: "Board or executive-level attestation formally confirming that security policies have been reviewed and approved",
-              tier: "i",
             },
           ],
         },
@@ -748,24 +685,20 @@
           items: [
             {
               text: "Multi-Factor Authentication (MFA) enforced across all systems containing client or financial data",
-              tier: "f",
+
               note: "MFA gaps can void cyber insurance claims. The City of Hamilton's insurer denied an $18.3M claim because MFA was not fully deployed.",
             },
             {
               text: "Principle of Least Privilege enforced — employees access only the specific systems required for their direct role",
-              tier: "f",
             },
             {
               text: "Documented offboarding procedure ensuring all access is fully revoked within 24 hours of departure",
-              tier: "f",
             },
             {
               text: "Privileged Access Management (PAM) controls safeguarding administrator accounts — the keys to the kingdom",
-              tier: "i",
             },
             {
               text: "Quarterly access reviews: documented audits confirming who has access to sensitive environments and that it remains appropriate",
-              tier: "i",
             },
           ],
         },
@@ -774,20 +707,17 @@
           items: [
             {
               text: "Live, centralized inventory of all vendors that handle your systems, data, or client information",
-              tier: "f",
             },
             {
               text: "SOC 2 reports actively collected from all critical vendors, dated within the last 12 months",
-              tier: "f",
+
               note: "Your vendor risk program is a direct extension of your own security posture — and institutional clients will scrutinize it.",
             },
             {
               text: "Vendor contracts include explicit breach notification requirements, targeting a window of 72 hours or less",
-              tier: "f",
             },
             {
               text: "Fourth-party risk assessment: mapping critical vendors' own subcontractors to identify hidden supply chain vulnerabilities",
-              tier: "i",
             },
           ],
         },
@@ -796,20 +726,17 @@
           items: [
             {
               text: "Encryption enforced for all sensitive data — both at rest in databases and in transit across networks",
-              tier: "f",
             },
             {
-              text: "Offline, immutable backups with clearly documented Recovery Time Objectives (RTOs)",
-              tier: "f",
+              text: "Offline, immutable backups with clearly documented Recovery Protection Objectives (RPOs)",
             },
             {
               text: "Breach notification procedure capable of meeting a 72-hour regulatory reporting window — notification must run in parallel with forensics, not after",
-              tier: "f",
+
               note: "Waiting until a forensic investigation is complete before notifying puts your firm squarely in the liability zone.",
             },
             {
               text: "Tabletop incident response exercise conducted with key leadership stakeholders within the last 12 months",
-              tier: "i",
             },
           ],
         },
@@ -818,25 +745,18 @@
           items: [
             {
               text: "Annual SOC 2 Type II audit completed with a formal report dated within the last 12 months",
-              tier: "f",
             },
             {
-              text: "Management responses documented for any audit exceptions, with concrete evidence of remediation",
-              tier: "f",
-            },
-            {
-              text: "SOC 2 scope expanded beyond Security to explicitly include Availability and Confidentiality criteria",
-              tier: "i",
+              text: "Management response documented and tracked risk exceptions with plan of remediation",
             },
             {
               text: "Full Rapid-Response Trust Package organized and ready to deploy within one hour: Trust Overview, audit report, pen test summary, and pre-filled CAIQ/SIG",
-              tier: "i",
             },
           ],
         },
       ];
 
-      const clState = new Array(22).fill(false);
+      const clState = new Array(21).fill(false);
 
       function getSectionStart(si) {
         let s = 0;
@@ -847,48 +767,56 @@
       function renderChecklist() {
         const body = document.getElementById("cl-body");
         let html = "";
+
         sections.forEach((sec, si) => {
           const start = getSectionStart(si);
+          const total = sec.items.length;
           const secDone = sec.items.filter(
             (_, ii) => clState[start + ii],
           ).length;
-          const complete = secDone === sec.items.length;
-          html += `<div class="section-block" role="group" aria-label="${sec.name}">
-      <div class="section-title-row">
-        <span class="section-title">${sec.name}</span>
-        <span class="section-pill ${complete ? "complete" : ""}" aria-label="${secDone} of ${sec.items.length} complete">${secDone} / ${sec.items.length}</span>
-      </div>`;
+          const complete = secDone === total;
+
+          html += `
+      <div class="section-block" role="group" aria-label="${sec.name}">
+        <div class="section-title-row">
+          <span class="section-title">${sec.name}</span>
+          <span class="section-pill ${complete ? "complete" : ""}" aria-label="${secDone} of ${total} complete">
+            ${secDone} / ${total}
+          </span>
+        </div>
+    `;
+
           sec.items.forEach((item, ii) => {
             const idx = start + ii;
             const done = clState[idx];
-            const tierLabel =
-              item.tier === "f" ? "Foundational" : "Institutional";
-            html += `<div
-        class="check-item ${done ? "done" : ""}"
-        onclick="toggleCl(${idx})"
-        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCl(${idx})}"
-        role="checkbox"
-        aria-checked="${done}"
-        tabindex="0"
-        aria-label="${item.text} — ${tierLabel}">
-        <div class="checkbox" aria-hidden="true">${CHECK_SVG}</div>
-        <div class="check-body">
-          <div class="check-text">${item.text}</div>
-          <div class="check-meta">
-            <span class="badge ${item.tier === "f" ? "badge-f" : "badge-i"}" aria-hidden="true">${tierLabel}</span>
+
+            html += `
+        <div
+          class="check-item ${done ? "done" : ""}"
+          role="checkbox"
+          aria-checked="${done}"
+          tabindex="0"
+          aria-label="${item.text}"
+          onclick="toggleCl(${idx})"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCl(${idx})}"
+        >
+          <div class="checkbox" aria-hidden="true">${CHECK_SVG}</div>
+          <div class="check-body">
+            <div class="check-text">${item.text}</div>
           </div>
-          ${item.note ? `<div class="check-note" role="note">${item.note}</div>` : ""}
         </div>
-      </div>`;
+      `;
           });
+
           html += `</div>`;
         });
+
         body.innerHTML = html;
       }
 
       function updateProgress() {
         const done = clState.filter(Boolean).length;
-        const total = 22;
+        const total = clState.length;
         const pct = Math.round((done / total) * 100);
         document.getElementById("c-done").textContent = done;
         document.getElementById("c-left").textContent = total - done;
