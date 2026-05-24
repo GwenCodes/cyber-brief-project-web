@@ -443,6 +443,35 @@ p {
   margin-left: 30px;
   margin-right: 30px;
 }
+/* -CTA BOX- */
+.cta-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ink-faint);
+  border-radius: 8px;
+  background: var(--form-bg);
+  text-align: center;
+}
+
+.cta-box p {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  color: var(--ink);
+}
+
+.cta-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.cta-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* ── ARCHIVE ── */
 .archive-wrap {
