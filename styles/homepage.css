@@ -644,6 +644,71 @@ button:hover {
 .text-accent {
   color: var(--accent);
 }
+/*Columns*/
+.say-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 2rem;
+  font-size: 1.125rem;
+}
+
+.say-row {
+  display: table-row;
+}
+
+.say-cell {
+  display: table-cell;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.say-row:last-child .say-cell {
+  border-bottom: none;
+}
+
+.say-cell:last-child {
+  border-right: none;
+}
+
+.say-header .say-cell {
+  font-weight: 600;
+  background: #f7f7f7;
+}
+
+/* Desktop layout: two columns with vertical + horizontal lines */
+@media (min-width: 768px) {
+  .say-row {
+    grid-template-columns: 1fr 1fr;
+    border: none;
+    padding: 0;
+  }
+
+  .say-label {
+    background: #f7f7f7;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+  .say-cell {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .say-label:nth-of-type(2),
+  .say-cell:nth-of-type(4) {
+    border-right: none;
+  }
+
+  .say-row:last-child .say-cell,
+  .say-row:last-child .say-label {
+    border-bottom: none;
+  }
+}
+
 /* ── FOOTER ── */
 .footer-section {
   background: var(--bg-warm);
