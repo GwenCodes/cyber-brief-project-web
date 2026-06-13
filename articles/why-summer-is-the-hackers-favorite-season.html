@@ -67,6 +67,41 @@
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/about.css" />
     <link rel="stylesheet" href="/styles/feature-sections.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Summer Slump: A Hacker's Ultimate Playground",
+        "description": "Summer is the hackers' favorite season. Discover why cybercriminals target organizations during the summer months and how to defend against these attacks.",
+        "image": "https://cyber-brief.net/images/articles/why-summer-is-the-hackers-favorite-season/og.png",
+        "url": "https://cyber-brief.net/articles/why-summer-is-the-hackers-favorite-season",
+        "mainEntityOfPage": "https://cyber-brief.net/articles/why-summer-is-the-hackers-favorite-season",
+        "author": {
+          "@type": "Person",
+          "name": "Van Munoz",
+          "jobTitle": "Owner"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cyber-Brief",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cyber-brief.net/images/cyber-brief-og.png"
+          }
+        }
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
   </head>
   <body>
     <div data-include="/components/header.html"></div>
@@ -284,7 +319,35 @@
             present at the next board meeting.
           </p>
         </section>
+        <div data-include="/components/author.html"></div>
       </article>
     </main>
+    <div data-include="/components/footer.html"></div>
+    <script src="/mobile-menu.js" defer></script>
+    <script src="/signup-logic.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector(".read-link");
+        if (!link) return;
+
+        const isLocal =
+          location.hostname === "127.0.0.1" ||
+          location.hostname === "localhost";
+
+        const path = location.pathname;
+        const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
+
+        if (!slugMatch) {
+          console.warn("No article slug found in URL.");
+          return;
+        }
+
+        const slug = slugMatch[1];
+        const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+        const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+        link.href = isLocal ? localUrl : prodUrl;
+      });
+    </script>
   </body>
 </html>
