@@ -114,26 +114,26 @@
   display: inline-block;
 }
 /* ── PULL QUOTE ── */
-.pq {
+.quote {
   margin: 48px auto;
   padding: 36px 40px;
-  background: var(--ink);
+  background: #3b3b3b;
   color: var(--paper);
   position: relative;
 }
-.pq::before {
+.quote:before {
   content: "\201C";
   font-family: var(--display);
   font-size: clamp(8rem, 10vw, 11rem);
   color: var(--red);
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 20px;
   line-height: 1;
   pointer-events: none;
 }
-.pq blockquote {
+.quote blockquote {
   font-family: var(--body);
   font-size: clamp(1.5rem, 2.8vw, 1.8rem);
   font-style: italic;
@@ -141,7 +141,7 @@
   position: relative;
   z-index: 1;
 }
-.pq-attr {
+.quote-attr {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.18em;
