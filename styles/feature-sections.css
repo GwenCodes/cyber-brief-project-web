@@ -120,6 +120,7 @@
   background: #3b3b3b;
   color: var(--paper);
   position: relative;
+  border-radius: 8px;
 }
 .quote:before {
   content: "\201C";

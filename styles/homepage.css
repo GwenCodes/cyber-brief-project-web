@@ -446,7 +446,7 @@ p {
 /* -CTA BOX- */
 .cta-box {
   margin-top: 2rem;
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--rule);
   border-radius: 8px;
   background: var(--form-bg);
@@ -454,8 +454,9 @@ p {
 }
 
 .cta-box p {
+  font-family: var(--sans);
+  font-size: clamp(1.125rem, 1.2vw, 1.2rem);
   margin-bottom: 0.75rem;
-  font-size: 1.125rem;
   color: var(--ink);
 }
 

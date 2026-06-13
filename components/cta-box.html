@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Summer Slump: A Hacker's Ultimate Playground</title>
+    <meta
+      name="description"
+      content="Summer is the hackers' favorite season. Discover why cybercriminals target organizations during the summer months and how to defend against these attacks."
+    />
+    <link
+      rel="canonical"
+      href="https://cyber-brief.net/articles/the-summer-slump"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="article:author" content="Van Munoz" />
+    <meta
+      property="article:author"
+      content="https://www.linkedin.com/in/vanmunoz/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="The Summer Slump: A Hacker's Ultimate Playground"
+    />
+    <meta
+      property="og:description"
+      content="Summer is the hackers' favorite season. Discover why cybercriminals target organizations during the summer months and how to defend against these attacks."
+    />
+    <meta
+      property="og:url"
+      content="https://cyber-brief.net/the-summer-slump"
+    />
+    <meta
+      property="og:site_name"
+      content="Cyber-Brief Strategic Intelligence"
+    />
+    <meta property="og:image" content=" " />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content=" " />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Fonts (Grouped and ordered for optimal loading) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind v3 compiled CSS (WARNING: Replace script version with compiled stylesheet for production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="/styles/reality-section.css" />
+    <link rel="stylesheet" href="/styles/signup-section.css" />
+    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
+    <link rel="stylesheet" href="/styles/feature-sections.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Summer Slump: A Hacker's Ultimate Playground",
+        "description": "Summer is the hackers' favorite season. Discover why cybercriminals target organizations during the summer months and how to defend against these attacks.",
+        "image": "https://cyber-brief.net/images/articles/the-summer-slump/og.png",
+        "url": "https://cyber-brief.net/articles/the-summer-slump",
+        "mainEntityOfPage": "https://cyber-brief.net/articles/the-summer-slump",
+        "author": {
+          "@type": "Person",
+          "name": "Van Munoz",
+          "jobTitle": "Owner"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cyber-Brief",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cyber-brief.net/images/cyber-brief-og.png"
+          }
+        }
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
+
+    <style>
+      /* ── CTA Box (Editorial Inline CTA) ───────────────────────────── */
+
+      /* CTA Box — full width on mobile, 75% on desktop */
+      .cta-box {
+        width: 100%; /* mobile: full width */
+        max-width: none;
+        margin-inline: auto;
+        margin-top: clamp(1.5rem, 4vw, 3rem);
+        padding: clamp(1.25rem, 3vw, 2rem);
+
+        background: #3b3b3b;
+        border: 1px solid #3b3b3b;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* Desktop: lock to 75% of newsletter container */
+      @media (min-width: 640px) {
+        .cta-box {
+          width: 75%;
+          max-width: clamp(32rem, 75%, 42rem);
+          /* 42rem ≈ 672px = 3/4 of your 896px newsletter container */
+        }
+      }
+
+      /* CTA text */
+      .cta-box p {
+        font-family: var(--sans);
+        font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+        line-height: 1.6;
+        color: var(--rule);
+        margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+      }
+
+      /* CTA link */
+      .cta-link {
+        display: inline-block;
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 2px;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
+      }
+
+      .cta-link:hover {
+        color: var(--green);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="/components/header.html"></div>
+    <main
+      class="newsletter-container border pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+    >
+      <section class="cta-box mb-6">
+        <p>
+          Get in touch with a seasoned cybersecurity expert to get personalized
+          guidance.
+        </p>
+        <a
+          href="/components/audit-checklist.html#audit-consultation-contact-form"
+          class="cta-link"
+        >
+          Make an Appointment
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
