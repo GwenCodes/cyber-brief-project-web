@@ -67,6 +67,14 @@ a:hover {
   color: var(--accent-hover);
   transition: color 0.3s ease;
 }
+.source-link {
+  transition: color 0.3s ease;
+  color: var(--text-dim);
+}
+.source-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
 
 /* Core Article Layout */
 .content-body {
