@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="/styles/homepage.css" />
     <link rel="stylesheet" href="/styles/signup-section.css" />
     <link rel="stylesheet" href="/styles/about.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
 
     <link
       rel="icon"
@@ -320,8 +321,9 @@
       </section>
     </div>
     <div data-include="/components/footer.html"></div>
-    <script src="/mobile-menu.js"></script>
-    <script src="/signup-logic.js"></script>
+    <script src="/mobile-menu.js" defer></script>
+    <script src="/signup-logic.js" defer></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const link = document.querySelector(".read-link");
