@@ -176,7 +176,19 @@
             <strong class="editorial-bold"
               >The humans were barely in the loop.</strong
             >
-            (Source: Infosecurity Magazine, Red Canary)
+            (Source:
+            <a
+              href="https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Infosecurity Magazine</a
+            >,
+            <a
+              href="https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Red Canary</a
+            >)
           </p>
           <p class="mb-6">
             So if their reconnaissance is automated, your deception needs to
@@ -185,7 +197,7 @@
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Your Honeypot Doesn't Fools People, It Doesn't Fool Models.
+            Your Honeypot Does Not Fool Models
           </h2>
           <p class="mb-6">
             Here's the uncomfortable truth about most deception infrastructure:
@@ -206,63 +218,49 @@
               >If you can poison what goes in, you degrade what comes out, and
               that's where active deception gets genuinely interesting.</strong
             >
-            (Source: Google Cloud)
+            (Source:
+            <a
+              href="https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Google Cloud</a
+            >)
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
             Turning Their Automation Against Them
           </h2>
-          <p class="mb-6">
-            This is the part that's genuinely fun to think about, at least from
-            a defender's perspective.
-          </p>
-          <p class="mb-6">
-            Modern deception infrastructure doesn't have to look the same to
-            every probe. A well-configured decoy application can present
-            dynamically generated, simulated vulnerabilities tailored to each
-            scanning session. Instead of static, rules-based honeypots,
-            LLM-driven deception environments can now dynamically respond to
-            attackers, keeping them engaged longer and capturing richer
-            intelligence about their tools, tactics, and intent. (Source: CSO
-            Online)
-          </p>
-          <p class="mb-6">
-            The practical effect is brutal for the attacker. Their automated
-            tool harvests what looks like a promising attack surface: apparent
-            misconfigurations, fake credentials, simulated API endpoints. That
-            fabricated data gets fed into their model. Their model prioritizes
-            it. Their operators plan around it. And none of it exists.
-            <strong class="editorial-bold"
-              >You've essentially wasted their compute budget and delayed their
-              timeline while your incident response team gets a clean window to
-              act</strong
-            >. Even well-resourced campaigns have shown that AI-orchestrated
-            intrusion frequently overstates findings and occasionally fabricates
-            data, claiming credentials that don't work. Poisoned inputs
-            accelerate that failure mode considerably. (Source: Hadrian)
-          </p>
-        </section>
-        <section class="content-body text-slate-800 font-sans antialiased">
-          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Poisoning the Pipeline
-          </h2>
-          <p class="mb-6">
-            There's a deeper principle at work here, and it's worth sitting with
-            for a moment. LLMs hallucinate when inputs conflict. That's not a
-            bug unique to consumer chatbots; it's a structural property of how
-            these models work. Feed them inconsistent, contradictory, or
-            fabricated telemetry, and their outputs become unreliable. Defenders
-            can exploit this deliberately.
-          </p>
-          <p class="mb-6">
-            By injecting poisoned data into an attacker's collection pipeline,
-            you compromise the integrity of their entire intelligence picture.
-            Their model draws inaccurate conclusions about your architecture,
-            your vulnerabilities, your defensive posture. Meanwhile, your own
-            verification layer continues validating legitimate internal traffic
-            against strict behavioral baselines.
-          </p>
+          <p class="mb-6">       
+            Attackers today use AI to scan your systems and find weaknesses, automatically, at scale, faster than any human team could. But that automation has a vulnerability of its own: it trusts what it finds.
+            So what if what it finds is fake?</p>
+            <p class="mb-6">
+            Defenders can set up decoy environments that look completely real, fake passwords, fake system endpoints, fake misconfigurations, but lead nowhere. The attacker's AI scans, finds what looks like a goldmine, and reports back. Their team plans an attack around it. And none of it exists.</p>
+            <section>
+              <strong class="editorial-bold">             
+                <p class="mb-6">
+                  Every fake credential you plant doesn't just waste their time. It quietly corrupts everything their AI thinks it knows about you.
+                </p>
+              </strong>
+            </section>
+            <p class="mb-6">
+            It gets better. AI models break down when they're fed bad information. Give them conflicting or fabricated data and their conclusions become unreliable, not sometimes, but consistently. That's just how they work. So every fake credential and phantom vulnerability you plant doesn't just waste their time. It quietly poisons everything their model thinks it knows about you.
+            </p>
+            <p class="mb-6">
+            By the time they realize something is wrong, your security team has already seen them coming. (Sources:
+            <a
+              href="https://www.csoonline.com/article/4140945"
+              target="_blank"
+              rel="noopener noreferrer"
+              >CSO Online,</a>        
+            <a
+              href="https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Hadrian</a
+            >)</p>
+          </p>      
+          
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
@@ -340,13 +338,23 @@
             citing a real-world incident where a canary AWS key triggered an
             alert during a compromised GitHub Action. That's exactly the kind of
             early warning that prevents a bad day from becoming a very bad
-            quarter. (Source: Wiz)
+            quarter. (Source:
+            <a
+              href="https://www.wiz.io/blog/practical-package-security-the-unofficial-guide"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Wiz</a
+            >)
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
             Tools Worth Knowing
           </h2>
+          <p class="mb-6">
+            Here are some tools that can help you implement and manage deception
+            technology effectively.
+          </p>
           <ul class="list-disc pl-6 mb-6">
             <li>
               <strong>Thinkst Canary</strong> (<a
