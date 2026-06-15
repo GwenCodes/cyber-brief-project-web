@@ -167,11 +167,16 @@
           </p>
           <p class="mb-6">
             In September 2025, Anthropic detected and disrupted what they
-            assessed as the first largely AI-orchestrated cyber espionage
-            campaign, where a Chinese state-sponsored group used Claude Code to
-            execute approximately 80 to 90 percent of tactical attack operations
-            autonomously. The humans were barely in the loop. (Source:
-            Infosecurity Magazine, Red Canary)
+            assessed as the
+            <strong class="editorial-bold"
+              >first largely AI-orchestrated cyber espionage campaign</strong
+            >, where a Chinese state-sponsored group used Claude Code to execute
+            approximately 80 to 90 percent of tactical attack operations
+            autonomously.
+            <strong class="editorial-bold"
+              >The humans were barely in the loop.</strong
+            >
+            (Source: Infosecurity Magazine, Red Canary)
           </p>
           <p class="mb-6">
             So if their reconnaissance is automated, your deception needs to
@@ -187,8 +192,7 @@
             it was designed for a threat actor who reads output, pauses, and
             thinks. Default-configured honeypots, predictable decoy structures,
             static fake credentials, these things get flagged and skipped by
-            automated scanners in seconds. The tool doesn't get suspicious. It
-            just moves on.
+            automated scanners in seconds.
           </p>
           <p class="mb-6">
             The goal now is different. You're not trying to confuse a person;
@@ -197,8 +201,11 @@
             third-party relationships, and automate intelligence gathering that
             would previously have required significant manual effort. That data
             gets fed into the attacker's LLM, which synthesizes it into an
-            attack plan. If you can poison what goes in, you degrade what comes
-            out, and that's where active deception gets genuinely interesting.
+            attack plan.
+            <strong class="editorial-bold"
+              >If you can poison what goes in, you degrade what comes out, and
+              that's where active deception gets genuinely interesting.</strong
+            >
             (Source: Google Cloud)
           </p>
         </section>
@@ -225,13 +232,15 @@
             tool harvests what looks like a promising attack surface: apparent
             misconfigurations, fake credentials, simulated API endpoints. That
             fabricated data gets fed into their model. Their model prioritizes
-            it. Their operators plan around it. And none of it exists. You've
-            essentially wasted their compute budget and delayed their timeline
-            while your incident response team gets a clean window to act. Even
-            well-resourced campaigns have shown that AI-orchestrated intrusion
-            frequently overstates findings and occasionally fabricates data,
-            claiming credentials that don't work. Poisoned inputs accelerate
-            that failure mode considerably. (Source: Hadrian)
+            it. Their operators plan around it. And none of it exists.
+            <strong class="editorial-bold"
+              >You've essentially wasted their compute budget and delayed their
+              timeline while your incident response team gets a clean window to
+              act</strong
+            >. Even well-resourced campaigns have shown that AI-orchestrated
+            intrusion frequently overstates findings and occasionally fabricates
+            data, claiming credentials that don't work. Poisoned inputs
+            accelerate that failure mode considerably. (Source: Hadrian)
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
@@ -273,8 +282,9 @@
             credentials that were never distributed internally. So when
             something does interact with those assets, you don't need to run it
             through a correlation engine or wait for an analyst to triage the
-            ticket. It's malicious, full stop, and your team can act on it
-            immediately.
+            ticket.
+            <strong class="editorial-bold">It's malicious, full stop </strong>,
+            and your team can act on it immediately.
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
@@ -294,9 +304,10 @@
             Deception assets contain that risk by drawing automated tools into
             controlled environments where they can be observed and studied,
             rather than allowed to move freely toward production systems.
-            Incidents caught at the decoy layer are fundamentally cheaper to
-            remediate than incidents caught after lateral movement has already
-            occurred. And the intelligence you gather from watching a live agent
+            <strong class="editorial-bold">
+              caught at the decoy layer are fundamentally cheaper to remediate
+              than incidents caught</strong
+            >. And the intelligence you gather from watching a live agent
             interact with your honeypot, what it targets first, how it
             authenticates, what data it attempts to exfiltrate, is genuinely
             valuable for hardening your real environment.
@@ -309,22 +320,27 @@
           <p class="mb-6">
             Here's where a lot of organizations stumble: they treat deception
             technology as a one-time deployment rather than a living component
-            of their security posture. A honeypot that doesn't evolve gets
-            learned. An attacker who hits the same decoy pattern twice will
-            eventually recognize it, especially if their tooling is adaptive.
+            of their security posture.
+            <strong class="editorial-bold"
+              >A honeypot that doesn't evolve gets learned</strong
+            >. An attacker who hits the same decoy pattern twice will eventually
+            recognize it, especially if their tooling is adaptive.
           </p>
           <p class="mb-6">
             Deception needs to be written into your risk governance from the
             start, not bolted on after a breach forces the conversation. Every
             new enterprise LLM instance your organization deploys is a natural
             opportunity to embed honeytokens as silent tripwires for
-            unauthorized model access. Every application deployment workflow
-            should have deception checkpoints built in. Wiz's practical security
-            guidance for 2026 specifically highlights CI/CD honeytokens as
-            high-signal detection mechanisms, citing a real-world incident where
-            a canary AWS key triggered an alert during a compromised GitHub
-            Action. That's exactly the kind of early warning that prevents a bad
-            day from becoming a very bad quarter. (Source: Wiz)
+            unauthorized model access.
+            <strong class="editorial-bold"
+              >Every application deployment workflow should have deception
+              checkpoints built in</strong
+            >. Wiz's practical security guidance for 2026 specifically
+            highlights CI/CD honeytokens as high-signal detection mechanisms,
+            citing a real-world incident where a canary AWS key triggered an
+            alert during a compromised GitHub Action. That's exactly the kind of
+            early warning that prevents a bad day from becoming a very bad
+            quarter. (Source: Wiz)
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
