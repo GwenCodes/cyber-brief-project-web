@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Poisoning the Prompt: Why Your Deception Strategy Must Target Models, Not
+      Humans
+    </title>
+    <meta
+      name="description"
+      content="Discover why targeting AI models is more effective than targeting humans."
+    />
+    <link
+      rel="canonical"
+      href="https://cyber-brief.net/articles/poisoning-the-prompt"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="article:author" content="Van Munoz" />
+    <meta
+      property="article:author"
+      content="https://www.linkedin.com/in/vanmunoz/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Poisoning the Prompt: Why Your Deception Strategy Must Target Models, Not Humans"
+    />
+    <meta
+      property="og:description"
+      content="Discover why targeting AI models is more effective than targeting humans."
+    />
+    <meta
+      property="og:url"
+      content="https://cyber-brief.net/poisoning-the-prompt"
+    />
+    <meta
+      property="og:site_name"
+      content="Cyber-Brief Strategic Intelligence"
+    />
+    <meta property="og:image" content=" " />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content=" " />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Fonts (Grouped and ordered for optimal loading) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind v3 compiled CSS (WARNING: Replace script version with compiled stylesheet for production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="/styles/reality-section.css" />
+    <link rel="stylesheet" href="/styles/signup-section.css" />
+    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/about.css" />
+    <link rel="stylesheet" href="/styles/feature-sections.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Poisoning the Prompt: Why Your Deception Strategy Must Target Models, Not Humans",
+        "description": "Poisoning the prompt is a critical strategy for modern deception. Discover why targeting AI models is more effective than targeting humans.",
+        "image": "https://cyber-brief.net/images/articles/poisoning-the-prompt/og.png",
+        "url": "https://cyber-brief.net/articles/poisoning-the-prompt",
+        "mainEntityOfPage": "https://cyber-brief.net/articles/poisoning-the-prompt",
+        "author": {
+          "@type": "Person",
+          "name": "Van Munoz",
+          "jobTitle": "Owner"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cyber-Brief",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cyber-brief.net/images/cyber-brief-og.png"
+          }
+        }
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-include]").forEach(async (el) => {
+          const file = el.getAttribute("data-include");
+          const html = await fetch(file).then((res) => res.text());
+          el.innerHTML = html;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div data-include="/components/header.html"></div>
+    <main
+      class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+    >
+      <article class="p-6 md:p-20">
+        <!-- HERO / TITLE BLOCK -->
+        <section class="text-center mb-16">
+          <span
+            class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
+          >
+            Strategic Briefing
+          </span>
+
+          <h1 class="title">
+            <span class="mb-2">Poisoning the Prompt:</span>
+          </h1>
+          <h2 class="title text-3xl tracking-tight mt-4 mb-6">
+            Why Your Deception Strategy Must Target Models, <br />Not Humans
+          </h2>
+        </section>
+        <section>
+          <div class="newsletter-image w-full max-w-5xl mx-auto mb-16">
+            <!-- The Wrapper: Handles the aspect ratio and clipping -->
+            <div
+              class="w-full aspect-square md:aspect-video overflow-hidden rounded-md shadow-xl"
+            >
+              <img
+                src="/img/poisoning-the-prompt-cyber-brief.png"
+                alt="Strategic Briefing Visual"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <div
+            class="font-ibm mb-6 bg-zinc-300 p-4 rounded-lg border-l-4 border-[#EE6C4D] shadow-sm"
+          >
+            <p class="mb-4">
+              For decades, active deception in cybersecurity meant one thing:
+              trick the human. Build a believable honeypot, wait for a curious
+              attacker to poke around, and catch them in the act. The whole game
+              was social engineering in reverse, and it worked reasonably well
+              when there was an actual person on the other end making judgment
+              calls. That assumption is now obsolete.
+            </p>
+          </div>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            They're Not Hacking You Anymore. They're Feeding Your Data to a
+            Model.
+          </h2>
+          <p class="mb-6">
+            According to CrowdStrike's Global Threat Report 2026, AI-enabled
+            attacks increased 89% in 2025, with threat actors using LLMs to plan
+            and accelerate reconnaissance operations, create phishing campaigns
+            in multiple languages, and bypass security tool safeguards at scale.
+          </p>
+          <p class="mb-6">
+            In September 2025, Anthropic detected and disrupted what they
+            assessed as the first largely AI-orchestrated cyber espionage
+            campaign, where a Chinese state-sponsored group used Claude Code to
+            execute approximately 80 to 90 percent of tactical attack operations
+            autonomously. The humans were barely in the loop. (Source:
+            Infosecurity Magazine, Red Canary)
+          </p>
+          <p class="mb-6">
+            So if their reconnaissance is automated, your deception needs to
+            stop targeting humans too.
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Your Honeypot Doesn't Fools People, It Doesn't Fool Models.
+          </h2>
+          <p class="mb-6">
+            Here's the uncomfortable truth about most deception infrastructure:
+            it was designed for a threat actor who reads output, pauses, and
+            thinks. Default-configured honeypots, predictable decoy structures,
+            static fake credentials, these things get flagged and skipped by
+            automated scanners in seconds. The tool doesn't get suspicious. It
+            just moves on.
+          </p>
+          <p class="mb-6">
+            The goal now is different. You're not trying to confuse a person;
+            you're trying to corrupt a pipeline. Adversaries are prompting
+            models to generate detailed organizational hierarchies, map
+            third-party relationships, and automate intelligence gathering that
+            would previously have required significant manual effort. That data
+            gets fed into the attacker's LLM, which synthesizes it into an
+            attack plan. If you can poison what goes in, you degrade what comes
+            out, and that's where active deception gets genuinely interesting.
+            (Source: Google Cloud)
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Turning Their Automation Against Them
+          </h2>
+          <p class="mb-6">
+            This is the part that's genuinely fun to think about, at least from
+            a defender's perspective.
+          </p>
+          <p class="mb-6">
+            Modern deception infrastructure doesn't have to look the same to
+            every probe. A well-configured decoy application can present
+            dynamically generated, simulated vulnerabilities tailored to each
+            scanning session. Instead of static, rules-based honeypots,
+            LLM-driven deception environments can now dynamically respond to
+            attackers, keeping them engaged longer and capturing richer
+            intelligence about their tools, tactics, and intent. (Source: CSO
+            Online)
+          </p>
+          <p class="mb-6">
+            The practical effect is brutal for the attacker. Their automated
+            tool harvests what looks like a promising attack surface: apparent
+            misconfigurations, fake credentials, simulated API endpoints. That
+            fabricated data gets fed into their model. Their model prioritizes
+            it. Their operators plan around it. And none of it exists. You've
+            essentially wasted their compute budget and delayed their timeline
+            while your incident response team gets a clean window to act. Even
+            well-resourced campaigns have shown that AI-orchestrated intrusion
+            frequently overstates findings and occasionally fabricates data,
+            claiming credentials that don't work. Poisoned inputs accelerate
+            that failure mode considerably. (Source: Hadrian)
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Poisoning the Pipeline
+          </h2>
+          <p class="mb-6">
+            There's a deeper principle at work here, and it's worth sitting with
+            for a moment. LLMs hallucinate when inputs conflict. That's not a
+            bug unique to consumer chatbots; it's a structural property of how
+            these models work. Feed them inconsistent, contradictory, or
+            fabricated telemetry, and their outputs become unreliable. Defenders
+            can exploit this deliberately.
+          </p>
+          <p class="mb-6">
+            By injecting poisoned data into an attacker's collection pipeline,
+            you compromise the integrity of their entire intelligence picture.
+            Their model draws inaccurate conclusions about your architecture,
+            your vulnerabilities, your defensive posture. Meanwhile, your own
+            verification layer continues validating legitimate internal traffic
+            against strict behavioral baselines.
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            The Advantage of a Signal Only an Attacker Can Trigger
+          </h2>
+          <p class="mb-6">
+            Ask any SOC analyst what their biggest problem is, and they'll tell
+            you it's volume. Too many alerts, too little context, too much time
+            spent chasing false positives. Generic monitoring tools generate
+            noise almost by design because they're watching for anomalies in
+            behavior that legitimate users also exhibit.
+          </p>
+          <p class="mb-6">
+            Deception assets invert this completely. Real users don't browse
+            hidden network shares. They don't click on fake database tokens
+            buried three directories deep. They don't authenticate against decoy
+            credentials that were never distributed internally. So when
+            something does interact with those assets, you don't need to run it
+            through a correlation engine or wait for an analyst to triage the
+            ticket. It's malicious, full stop, and your team can act on it
+            immediately.
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Why Deception Is Cheaper Than Recovery
+          </h2>
+          <p class="mb-6">
+            Let's be direct about the business case, because this conversation
+            eventually lands on a CFO's desk. Automated attacks don't move
+            slowly. Once an agent finds a foothold and begins lateral movement,
+            the window for containment shrinks fast. The dwell time between
+            initial access and significant damage is measured in hours, not
+            days, when the attacker is an autonomous agent with no sleep
+            schedule.
+          </p>
+          <p class="mb-6">
+            Deception assets contain that risk by drawing automated tools into
+            controlled environments where they can be observed and studied,
+            rather than allowed to move freely toward production systems.
+            Incidents caught at the decoy layer are fundamentally cheaper to
+            remediate than incidents caught after lateral movement has already
+            occurred. And the intelligence you gather from watching a live agent
+            interact with your honeypot, what it targets first, how it
+            authenticates, what data it attempts to exfiltrate, is genuinely
+            valuable for hardening your real environment.
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Make It Part of the Architecture
+          </h2>
+          <p class="mb-6">
+            Here's where a lot of organizations stumble: they treat deception
+            technology as a one-time deployment rather than a living component
+            of their security posture. A honeypot that doesn't evolve gets
+            learned. An attacker who hits the same decoy pattern twice will
+            eventually recognize it, especially if their tooling is adaptive.
+          </p>
+          <p class="mb-6">
+            Deception needs to be written into your risk governance from the
+            start, not bolted on after a breach forces the conversation. Every
+            new enterprise LLM instance your organization deploys is a natural
+            opportunity to embed honeytokens as silent tripwires for
+            unauthorized model access. Every application deployment workflow
+            should have deception checkpoints built in. Wiz's practical security
+            guidance for 2026 specifically highlights CI/CD honeytokens as
+            high-signal detection mechanisms, citing a real-world incident where
+            a canary AWS key triggered an alert during a compromised GitHub
+            Action. That's exactly the kind of early warning that prevents a bad
+            day from becoming a very bad quarter. (Source: Wiz)
+          </p>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            Tools Worth Knowing
+          </h2>
+          <ul class="list-disc pl-6 mb-6">
+            <li>
+              <strong>Thinkst Canary</strong> (<a
+                href="https://thinkst.com/canary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >thinkst.com/canary</a
+              >): Fast to deploy, minimal maintenance, excellent signal-to-noise
+              ratio. A strong starting point for any team.
+            </li>
+            <li>
+              <strong>SentinelOne Singularity Hologram</strong> (<a
+                href="https://sentinelone.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >sentinelone.com</a
+              >): Automates decoy creation and distribution at scale, with
+              native integration into the SentinelOne ecosystem for unified
+              visibility and accelerated response.
+            </li>
+            <li>
+              <strong>Tracebit</strong> (<a
+                href="https://tracebit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >tracebit.com</a
+              >): Built for cloud-first environments, deploying and managing
+              security canaries across cloud accounts and endpoints with minimal
+              operational overhead.
+            </li>
+          </ul>
+        </section>
+        <section class="content-body text-slate-800 font-sans antialiased">
+          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
+            References
+          </h2>
+          <ul class="list-disc pl-6 mb-6">
+            <li>
+              <strong>Anthropic</strong> (2025). Anthropic threat intelligence
+              report (August 2025 ed.).
+              <a
+                href="https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.anthropic.com/news/detecting-countering-misuse-aug-2025</a
+              >
+            </li>
+            <li>
+              <strong>CrowdStrike</strong> (2026). Global threat report 2026.
+              <a
+                href="https://www.crowdstrike.com/global-threat-report/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.crowdstrike.com/global-threat-report/</a
+              >
+            </li>
+            <li>
+              <strong>CSO Online</strong> "Why CISOs Should Embrace AI
+              Honeypots," March 2026:
+              <a
+                href="https://www.csoonline.com/article/4140945"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.csoonline.com/article/4140945</a
+              >
+            </li>
+            <li>
+              <strong>Google Cloud</strong> (2025). Google Cloud security
+              research and threat intelligence analysis.
+              <a
+                href="https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access</a
+              >
+            </li>
+            <li>
+              <strong>Hadrian</strong> (2026). Hadrian threat intelligence
+              research and attack surface management insights.
+              <a
+                href="https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months</a
+              >
+            </li>
+            <li>
+              <strong>Infosecurity Magazine</strong> (2026). Information
+              security strategy, insight, and business intelligence.
+              <a
+                href="https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/</a
+              >
+            </li>
+            <li>
+              <strong>Red Canary</strong> (2026). Threat detection report 2026.
+              <a
+                href="https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/</a
+              >
+            </li>
+            <li>
+              <strong>Wiz</strong> (2026). Wiz cloud security guidance 2026.
+              <a
+                href="https://www.wiz.io/blog/practical-package-security-the-unofficial-guide"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.wiz.io/blog/practical-package-security-the-unofficial-guide</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <div data-include="/components/footer.html"></div>
+    <script src="/mobile-menu.js" defer></script>
+    <script src="/signup-logic.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector(".read-link");
+        if (!link) return;
+
+        const isLocal =
+          location.hostname === "127.0.0.1" ||
+          location.hostname === "localhost";
+
+        const path = location.pathname;
+        const slugMatch = path.match(/\/articles\/([^\/]+)\.html$/);
+
+        if (!slugMatch) {
+          console.warn("No article slug found in URL.");
+          return;
+        }
+
+        const slug = slugMatch[1];
+        const localUrl = `http://127.0.0.1:5500/src/articles/${slug}.html`;
+        const prodUrl = `https://cyber-brief.net/articles/${slug}.html`;
+
+        link.href = isLocal ? localUrl : prodUrl;
+      });
+    </script>
+  </body>
+</html>
