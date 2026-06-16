@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="/styles/signup-section.css" />
     <link rel="stylesheet" href="/styles/about.css" />
     <link rel="stylesheet" href="/styles/index.css" />
-    
+
     <link
       rel="icon"
       type="image/x-icon"
@@ -53,7 +53,9 @@
 
   <body class="bg-[#F1F3F5] text-slate-800 font-sans antialiased">
     <div data-include="/components/header.html"></div>
-    <main class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto">
+    <main
+      class="newsletter-container pt-12 w-full px-1 sm:max-w-4xl sm:mx-auto"
+    >
       <div class="max-w-4xl mx-auto px-6 py-10 sm:py-24">
         <h1 class="text-4xl font-bold text-slate-900 mb-8 leading-tight">
           Cyber <span class="text-[#EE6C4D]">intelligence</span> for financial
@@ -63,200 +65,110 @@
         <div class="space-y-8 text-lg leading-relaxed text-slate-700">
           <p>
             Cyber-Brief exists for the CISOs, executives, and board members who
-            need to stay ahead of the governance, risk management, and compliance
-            landscape.
+            need to stay ahead of the governance, risk management, and
+            compliance landscape.
           </p>
           <p>
-            Every issue is verified, sourced, and written for decision-makers. We
-            translate what's happening in cyber governance into what it means for
-            your organization, your exposure, and your next conversation with the
-            board.
+            Every issue is verified, sourced, and written for decision-makers.
+            We translate what's happening in cyber governance into what it means
+            for your organization, your exposure, and your next conversation
+            with the board.
           </p>
 
-          
           <section class="flex flex-col sm:flex-row items-center gap-6">
             <img
               src="/img/cyber-edge-profile.png"
               alt="Van, founder of Cyber-Brief"
-              class="w-32 h-32 rounded-full flex-shrink-0 author-photo grayscale "
+              class="w-32 h-32 rounded-full flex-shrink-0 author-photo grayscale"
             />
-            <div>              
+            <div>
               <p>
-                Cyber-Brief is written by Van, founder of Cyber Edge LLC and a security practitioner with more than 25 years of experience leading initiatives across financial services, insurance, and critical infrastructure. His work has supported executive teams through audits, regulatory scrutiny, and major modernization efforts — always with a focus on turning complex risk into actionable strategy.
+                Cyber-Brief is written by Van, founder of Cyber Edge LLC and a
+                security practitioner with more than 25 years of experience
+                leading initiatives across financial services, insurance, and
+                critical infrastructure. His work has supported executive teams
+                through audits, regulatory scrutiny, and major modernization
+                efforts — always with a focus on turning complex risk into
+                actionable strategy.
               </p>
             </div>
           </section>
         </div>
       </div>
-      <section class="faq">
-        <div class="container py-md-5">
-          <div class="faq-title text-wrap">
-            <h4>
-              <strong>Frequently Asked Questions about Cybersecurity </strong>
-            </h4>
+      <section class="faq-section">
+        <div class="faq-container">
+          <div class="faq-title">
+            <h2>Frequently Asked Questions about Cybersecurity</h2>
           </div>
-          <div class="accordion" id="faqAccordion">
-            <!-- FAQ Item 1 -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button lh-base"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne">
-                  How do you ensure our cloud applications and systems meet
-                  strict regulatory and security standards?
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse lh-base ms-5"
-                aria-labelledby="headingOne"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  <p>
-                    <strong>CE</strong> can conduct end-to-end risk and
-                    compliance evaluations across SaaS, Azure, AWS, and on-prem
-                    environments to ensure every system aligns with industry
-                    regulations such as <strong>NYDFS, NIST,</strong> and
-                    <strong>APRA</strong>. This includes reviewing and approving
-                    architecture designs, firewall changes, and infrastructure
-                    updates before they go live.
-                  </p>
-                  <p>
-                    By applying a <strong>Secure by Design</strong> approach, I
-                    identify gaps early and provide practical mitigation
-                    strategies so your technology remains both compliant and
-                    resilient. This process has helped organizations streamline
-                    approvals—reducing architecture review timelines by
-                    <strong>up to 30%</strong>.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <!-- FAQ Item 2 -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo">
-                  How can you help our organization prepare for audits and
-                  strengthen our security governance?
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse lh-base ms-5"
-                aria-labelledby="headingTwo"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  <p>
-                    I lead audit-readiness efforts for both internal and
-                    external assessments, ensuring teams understand requirements
-                    and all remediation work is tracked to completion.
-                  </p>
-                  <p>
-                    Beyond audit preparation, I support CISOs by driving
-                    firm-wide governance initiatives—maintaining proper zoning
-                    and network segmentation, updating security policies, and
-                    translating complex technical risks into clear business
-                    insights for stakeholders.
-                  </p>
-                  <p>
-                    This governance-focused approach strengthens organizational
-                    alignment and keeps security programs operating at a high
-                    level of maturity.
-                  </p>
-                </div>
+          <div class="pure-accordion">
+            <details class="accordion-item" open>
+              <summary class="accordion-header">
+                How do you ensure our cloud applications and systems meet strict
+                regulatory and security standards?
+              </summary>
+              <div class="accordion-body">
+                <p>
+                  <strong>CE</strong> can conduct end-to-end risk and compliance
+                  evaluations across SaaS, Azure, AWS, and on-prem environments
+                  to ensure every system aligns with industry regulations such
+                  as <strong>NYDFS, NIST,</strong> and <strong>APRA</strong>.
+                  This includes reviewing and approving architecture designs,
+                  firewall changes, and infrastructure updates before they go
+                  live.
+                </p>
+                <p>
+                  By applying a <strong>Secure by Design</strong> approach, I
+                  identify gaps early and provide practical mitigation
+                  strategies so your technology remains both compliant and
+                  resilient. This process has helped organizations streamline
+                  approvals—reducing architecture review timelines by
+                  <strong>up to 30%</strong>.
+                </p>
               </div>
-            </div>
+            </details>
 
-            <!-- FAQ Item 3 -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree">
-                  How do you help different teams in our company understand and
-                  manage security risks?
-                </button>
-              </h2>
-              <div
-                id="collapseThree"
-                class="accordion-collapse collapse lh-base ms-5"
-                aria-labelledby="headingThree"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  <p>
-                    I act as a liaison between the security organization and
-                    cross-functional teams—such as IT, engineering, operations,
-                    and business leadership. My role is to translate complex
-                    security findings into clear, actionable business terms so
-                    teams understand both the risks and the business impact.
-                  </p>
-                  <p>
-                    Early stakeholder alignment helps organizations move faster,
-                    make smarter decisions, and keep security working in service
-                    of the business.
-                  </p>
-                </div>
+            <details class="accordion-item">
+              <summary class="accordion-header">
+                How can you help our organization prepare for audits and
+                strengthen our security governance?
+              </summary>
+              <div class="accordion-body">
+                <p>
+                  I lead audit-readiness efforts for both internal and external
+                  assessments, ensuring teams understand requirements and all
+                  remediation work is tracked to completion.
+                </p>
+                <p>
+                  Beyond audit preparation, I support CISOs by driving firm-wide
+                  governance initiatives—maintaining proper zoning and network
+                  segmentation, updating security policies, and translating
+                  complex technical risks into clear business insights for
+                  stakeholders.
+                </p>
               </div>
-            </div>
+            </details>
 
-            <!-- FAQ Item 4 -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button
-                  class="accordion-button collapsed lh-base"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
-                  aria-expanded="false"
-                  aria-controls="collapseFour">
-                  How do you improve the security of our network architecture
-                  and data protection strategy?
-                </button>
-              </h2>
-              <div
-                id="collapseFour"
-                class="accordion-collapse collapse lh-base ms-5"
-                aria-labelledby="headingFour"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  I evaluate and enhance zoning and network segmentation
-                  strategies to ensure data is properly protected according to
-                  its classification level. This includes reviewing firewall
-                  rules, network flows, and architecture changes to verify that
-                  everything complies with internal security policies. I also
-                  provide recommendations to refine your overall security
-                  standards and strengthen defenses across critical
-                  systems—helping reduce exposure while improving long-term
-                  security posture.
-                </div>
+            <details class="accordion-item">
+              <summary class="accordion-header">
+                How do you help different teams in our company understand and
+                manage security risks?
+              </summary>
+              <div class="accordion-body">
+                <p>
+                  I act as a liaison between the security organization and
+                  cross-functional teams—such as IT, engineering, operations,
+                  and business leadership. My role is to translate complex
+                  security findings into clear, actionable business terms so
+                  teams understand both the risks and the business impact.
+                </p>
               </div>
-            </div>
+            </details>
           </div>
         </div>
       </section>
-      <div data-include="/components/contact.html"></div>
+      <div class="mb-6" data-include="/components/contact.html"></div>
     </main>
-      <footer
-        class="sm:mt-4 sm:pt-6 text-sm text-slate-500 mb-5 text-center"
-      >
-        © 2026 Cyber-Brief. Operational Resilience for the Modern Defense.
-      </footer>
-    </div>
     <div data-include="/components/footer.html"></div>
     <script src="/mobile-menu.js"></script>
     <script src="/signup-logic.js"></script>

@@ -818,12 +818,7 @@ button:hover {
      Contact Section
   ══════════════════════════════════════════ */
 .site-Contact {
-  background: linear-gradient(
-    135deg,
-    hsla(20, 20%, 3%, 1) 0%,
-    hsla(20, 22%, 14%, 1) 44%,
-    hsla(18, 21%, 24%, 1) 100%
-  );
+  background: linear-gradient(180deg, #0f1824 0%, #445d7e 50%, #0f1824 100%);
   border-top: 1px solid #1c2430;
   border-radius: 4px;
 }
