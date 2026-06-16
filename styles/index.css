@@ -259,7 +259,7 @@ a.editorial-bold:hover {
   font-family: var(--sans-display, "Roboto", sans-serif);
   font-weight: 900;
   font-size: clamp(1.4rem, 4vw, 2rem);
-  letter-spacing: normal;
+  letter-spacing: 0.03em;
   line-height: 1.5;
   color: #f5f0e8;
   text-transform: uppercase;
