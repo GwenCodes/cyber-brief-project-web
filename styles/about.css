@@ -43,13 +43,12 @@ img.rounded-full {
 
 /* Layout Container (Replaces Bootstrap Grid) */
 .faq-section {
-  padding: 3rem 1rem;
   display: flex;
   justify-content: center;
 }
 
 .faq-container {
-  width: 80%;
+  width: 100%;
   max-width: 800px; /* Limits width on desktop naturally */
 }
 
