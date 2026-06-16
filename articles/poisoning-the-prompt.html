@@ -165,7 +165,7 @@
             <strong class="editorial-bold"
               >threat actors using LLMs to plan and accelerate reconnaissance
               operations, create phishing campaigns in multiple languages, and
-              bypass security tool safeguards at scale.</strong
+              bypass security controls at scale.</strong
             >
           </p>
           <p class="mb-6">
@@ -177,10 +177,10 @@
             approximately 80 to 90 percent of tactical attack operations
             autonomously. The humans were barely in the loop. (Source:
             <a
-              href="https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/"
+              href="https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              >Infosecurity Magazine</a
+              >Anthropic</a
             >,
             <a
               href="https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/"
@@ -203,7 +203,7 @@
           <p class="mb-6">
             Attackers use AI to scan environments and identify weaknesses at a
             scale no human team could match. But that automation has a weakness
-            of its own: it assumes the data it collects is accurate.
+            of its own: it trusts the data it collects.
           </p>
           <p class="mb-6">
             Defenders can deploy
@@ -217,6 +217,17 @@
             The model reports back. The attack plan takes shape around
             fabricated intelligence. The attackers think they've mapped your
             environment. They haven't.
+          </p>
+          <p class="mb-6">
+            <strong class="editorial-bold"
+              >This is prompt poisoning: deliberately corrupting the inputs an
+              AI system relies on so that its outputs become unreliable,
+              misleading, or operationally useless.</strong
+            >
+            When an attacker's LLM ingests your honeypot data, it doesn't know
+            the environment it's analyzing is fake. It draws confident
+            conclusions from fabricated intelligence and hands those conclusions
+            back to the humans or agents directing the attack.
           </p>
           <p class="mb-6">
             By the time they realize something is wrong, your security team has
@@ -267,11 +278,11 @@
           </h2>
           <p class="mb-6">
             Let's be direct about the business case, because this conversation
-            eventually lands on a CFO's desk. Automated attacks don't move
-            slowly. Once an agent finds a foothold and begins lateral movement,
-            the containment window shrinks fast. When the attacker is an
-            autonomous agent with no sleep schedule, dwell time is measured in
-            hours, not days.
+            eventually lands on a CFO's desk. Automated attacks don't wait. Once
+            an agent finds a foothold and begins lateral movement, the
+            containment window shrinks fast. When the attacker is an autonomous
+            agent with no sleep schedule, dwell time is measured in hours, not
+            days.
           </p>
           <p class="mb-6">
             Deception assets contain that risk by drawing automated tools into
@@ -290,9 +301,6 @@
             Make It Part of the Architecture
           </h2>
           <p class="mb-6">
-            Here's where a lot of organizations stumble: they treat deception
-            technology as a one-time deployment rather than a living component
-            of their security posture.
             <strong class="editorial-bold"
               >A honeypot that doesn't evolve gets learned</strong
             >. An attacker who hits the same decoy pattern twice will eventually
@@ -330,7 +338,7 @@
             technology effectively.
           </p>
           <ul class="list-disc pl-6 mb-6">
-            <li>
+            <li class="mb-3">
               <strong>Thinkst Canary</strong> (<a
                 href="https://thinkst.com/canary"
                 target="_blank"
@@ -339,7 +347,7 @@
               >): Fast to deploy, minimal maintenance, excellent signal-to-noise
               ratio. A strong starting point for any team.
             </li>
-            <li>
+            <li class="mb-3">
               <strong>SentinelOne Singularity Hologram</strong> (<a
                 href="https://sentinelone.com"
                 target="_blank"
@@ -349,7 +357,7 @@
               native integration into the SentinelOne ecosystem for unified
               visibility and accelerated response.
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Tracebit</strong> (<a
                 href="https://tracebit.com"
                 target="_blank"
@@ -366,7 +374,7 @@
             References
           </h2>
           <ul class="list-disc pl-6 mb-6">
-            <li>
+            <li class="mb-3">
               <strong>Anthropic</strong> (2025). Anthropic threat intelligence
               report (August 2025 ed.).
               <a
@@ -376,7 +384,7 @@
                 >https://www.anthropic.com/news/detecting-countering-misuse-aug-2025</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>CrowdStrike</strong> (2026). Global threat report 2026.
               <a
                 href="https://www.crowdstrike.com/global-threat-report/"
@@ -385,7 +393,7 @@
                 >https://www.crowdstrike.com/global-threat-report/</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>CSO Online</strong> "Why CISOs Should Embrace AI
               Honeypots," March 2026:
               <a
@@ -395,7 +403,7 @@
                 >https://www.csoonline.com/article/4140945</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Google Cloud</strong> (2025). Google Cloud security
               research and threat intelligence analysis.
               <a
@@ -405,7 +413,7 @@
                 >https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Hadrian</strong> (2026). Hadrian threat intelligence
               research and attack surface management insights.
               <a
@@ -415,7 +423,7 @@
                 >https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Infosecurity Magazine</strong> (2026). Information
               security strategy, insight, and business intelligence.
               <a
@@ -425,7 +433,7 @@
                 >https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Red Canary</strong> (2026). Threat detection report 2026.
               <a
                 href="https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/"
@@ -434,7 +442,7 @@
                 >https://redcanary.com/threat-detection-report/trends/ai-cybersecurity/</a
               >
             </li>
-            <li>
+            <li class="mb-3">
               <strong>Wiz</strong> (2026). Wiz cloud security guidance 2026.
               <a
                 href="https://www.wiz.io/blog/practical-package-security-the-unofficial-guide"
