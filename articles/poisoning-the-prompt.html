@@ -161,9 +161,12 @@
           </h2>
           <p class="mb-6">
             According to CrowdStrike's Global Threat Report 2026, AI-enabled
-            attacks increased 89% in 2025, with threat actors using LLMs to plan
-            and accelerate reconnaissance operations, create phishing campaigns
-            in multiple languages, and bypass security tool safeguards at scale.
+            attacks increased 89% in 2025, with
+            <strong class="editorial-bold"
+              >threat actors using LLMs to plan and accelerate reconnaissance
+              operations, create phishing campaigns in multiple languages, and
+              bypass security tool safeguards at scale.</strong
+            >
           </p>
           <p class="mb-6">
             In September 2025, Anthropic detected and disrupted what they
@@ -172,11 +175,7 @@
               >first largely AI-orchestrated cyber espionage campaign</strong
             >, where a Chinese state-sponsored group used Claude Code to execute
             approximately 80 to 90 percent of tactical attack operations
-            autonomously.
-            <strong class="editorial-bold"
-              >The humans were barely in the loop.</strong
-            >
-            (Source:
+            autonomously. The humans were barely in the loop. (Source:
             <a
               href="https://www.infosecurity-magazine.com/news/ai-powered-cyberattacks-up/"
               target="_blank"
@@ -191,76 +190,55 @@
             >)
           </p>
           <p class="mb-6">
-            So if their reconnaissance is automated, your deception needs to
-            stop targeting humans too.
-          </p>
-        </section>
-        <section class="content-body text-slate-800 font-sans antialiased">
-          <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            Your Honeypot Does Not Fool Models
-          </h2>
-          <p class="mb-6">
-            Here's the uncomfortable truth about most deception infrastructure:
-            it was designed for a threat actor who reads output, pauses, and
-            thinks. Default-configured honeypots, predictable decoy structures,
-            static fake credentials, these things get flagged and skipped by
-            automated scanners in seconds.
-          </p>
-          <p class="mb-6">
-            The goal now is different. You're not trying to confuse a person;
-            you're trying to corrupt a pipeline. Adversaries are prompting
-            models to generate detailed organizational hierarchies, map
-            third-party relationships, and automate intelligence gathering that
-            would previously have required significant manual effort. That data
-            gets fed into the attacker's LLM, which synthesizes it into an
-            attack plan.
             <strong class="editorial-bold"
-              >If you can poison what goes in, you degrade what comes out, and
-              that's where active deception gets genuinely interesting.</strong
+              >The attack is automated. The defense should be too.</strong
             >
-            (Source:
-            <a
-              href="https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Google Cloud</a
-            >)
           </p>
         </section>
+
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
             Turning Their Automation Against Them
           </h2>
-          <p class="mb-6">       
-            Attackers today use AI to scan your systems and find weaknesses, automatically, at scale, faster than any human team could. But that automation has a vulnerability of its own: it trusts what it finds.
-            So what if what it finds is fake?</p>
-            <p class="mb-6">
-            Defenders can set up decoy environments that look completely real, fake passwords, fake system endpoints, fake misconfigurations, but lead nowhere. The attacker's AI scans, finds what looks like a goldmine, and reports back. Their team plans an attack around it. And none of it exists.</p>
-            <section>
-              <strong class="editorial-bold">             
-                <p class="mb-6">
-                  Every fake credential you plant doesn't just waste their time. It quietly corrupts everything their AI thinks it knows about you.
-                </p>
-              </strong>
-            </section>
-            <p class="mb-6">
-            It gets better. AI models break down when they're fed bad information. Give them conflicting or fabricated data and their conclusions become unreliable, not sometimes, but consistently. That's just how they work. So every fake credential and phantom vulnerability you plant doesn't just waste their time. It quietly poisons everything their model thinks it knows about you.
-            </p>
-            <p class="mb-6">
-            By the time they realize something is wrong, your security team has already seen them coming. (Sources:
+          <p class="mb-6">
+            Attackers use AI to scan environments and identify weaknesses at a
+            scale no human team could match. But that automation has a weakness
+            of its own: it assumes the data it collects is accurate.
+          </p>
+          <p class="mb-6">
+            Defenders can deploy
+            <strong class="editorial-bold">honeypots</strong> that appear
+            completely legitimate fake credentials, system endpoints, and
+            misconfigurations that lead nowhere. An attacker's AI scans the
+            environment, finds what looks like a goldmine, and feeds it into the
+            attack planning process.
+          </p>
+          <p class="mb-6">
+            The model reports back. The attack plan takes shape around
+            fabricated intelligence. The attackers think they've mapped your
+            environment. They haven't.
+          </p>
+          <p class="mb-6">
+            By the time they realize something is wrong, your security team has
+            already detected their activity, and
+            <strong class="editorial-bold"
+              >active deception has handed you a blueprint of their
+              methods.</strong
+            >
+            (Sources:
             <a
               href="https://www.csoonline.com/article/4140945"
               target="_blank"
               rel="noopener noreferrer"
-              >CSO Online,</a>        
+              >CSO Online,</a
+            >
             <a
               href="https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months"
               target="_blank"
               rel="noopener noreferrer"
               >Hadrian</a
-            >)</p>
-          </p>      
-          
+            >)
+          </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
@@ -269,20 +247,18 @@
           <p class="mb-6">
             Ask any SOC analyst what their biggest problem is, and they'll tell
             you it's volume. Too many alerts, too little context, too much time
-            spent chasing false positives. Generic monitoring tools generate
-            noise almost by design because they're watching for anomalies in
-            behavior that legitimate users also exhibit.
+            chasing false positives. Deception assets invert this completely.
+            Real users don't browse hidden network shares, click on fake
+            database tokens buried three directories deep, or authenticate
+            against decoy credentials that were never distributed internally.
           </p>
           <p class="mb-6">
-            Deception assets invert this completely. Real users don't browse
-            hidden network shares. They don't click on fake database tokens
-            buried three directories deep. They don't authenticate against decoy
-            credentials that were never distributed internally. So when
-            something does interact with those assets, you don't need to run it
-            through a correlation engine or wait for an analyst to triage the
-            ticket.
-            <strong class="editorial-bold">It's malicious, full stop,
-            and your team can act on it immediately.</strong>
+            When something does interact with those assets, you don't need a
+            correlation engine or an analyst to triage the ticket.
+            <strong class="editorial-bold"
+              >It's malicious, full stop, and your team can act
+              immediately.</strong
+            >
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
@@ -293,22 +269,20 @@
             Let's be direct about the business case, because this conversation
             eventually lands on a CFO's desk. Automated attacks don't move
             slowly. Once an agent finds a foothold and begins lateral movement,
-            the window for containment shrinks fast. The dwell time between
-            initial access and significant damage is measured in hours, not
-            days, when the attacker is an autonomous agent with no sleep
-            schedule.
+            the containment window shrinks fast. When the attacker is an
+            autonomous agent with no sleep schedule, dwell time is measured in
+            hours, not days.
           </p>
           <p class="mb-6">
             Deception assets contain that risk by drawing automated tools into
-            controlled environments where they can be observed and studied,
-            rather than allowed to move freely toward production systems.
-            <strong class="editorial-bold">
-              caught at the decoy layer are fundamentally cheaper to remediate
-              than incidents caught</strong
-            >. And the intelligence you gather from watching a live agent
-            interact with your honeypot, what it targets first, how it
-            authenticates, what data it attempts to exfiltrate, is genuinely
-            valuable for hardening your real environment.
+            controlled environments where they can be observed.
+            <strong class="editorial-bold"
+              >Incidents caught at the decoy layer are cheaper to remediate than
+              those that reach production.</strong
+            >
+            And the intelligence you gather from watching a live agent interact
+            with your honeypot is genuinely valuable for hardening your real
+            environment.
           </p>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
@@ -336,9 +310,9 @@
             >. Wiz's practical security guidance for 2026 specifically
             highlights CI/CD honeytokens as high-signal detection mechanisms,
             citing a real-world incident where a canary AWS key triggered an
-            alert during a compromised GitHub Action. That's exactly the kind of
-            early warning that prevents a bad day from becoming a very bad
-            quarter. (Source:
+            alert during a compromised GitHub Action. That's the kind of early
+            warning that prevents a bad day from becoming a very bad quarter.
+            (Source:
             <a
               href="https://www.wiz.io/blog/practical-package-security-the-unofficial-guide"
               target="_blank"
