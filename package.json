@@ -2,5 +2,7 @@
   "name": "cyber-brief",
   "version": "1.0.0",
   "scripts": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@netlify/blobs": "^10.7.9"
+  }
 }
