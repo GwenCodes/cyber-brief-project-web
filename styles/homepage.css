@@ -486,12 +486,21 @@ p {
   gap: 0;
 }
 
-/* NEW LAYOUT: thumbnail + title on top, description full width */
-.archive-item {
-  padding: 40px 0;
-  border-bottom: 1px solid var(--rule);
+/* Make the entire card clickable */
+.archive-link {
+  display: block;
   text-decoration: none;
   color: inherit;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* NEW LAYOUT: thumbnail + title on top, description full width */
+/* Horizontal grid lines restored */
+
+/* Internal card spacing only */
+.archive-item {
+  padding: 40px 0;
+  border-bottom: none;
 
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -502,25 +511,34 @@ p {
   column-gap: 1.5rem;
   row-gap: 1rem;
 
-  transition: opacity 0.12s;
+  transition:
+    background 0.12s ease,
+    transform 0.12s ease;
 }
 
-.archive-item:nth-child(odd) {
-  padding-right: 48px;
-  border-right: 1px solid var(--rule);
+/* Full-card hover now applies to the link */
+.archive-link:hover .archive-item {
+  background: var(--paper-soft);
+  transform: translateY(-2px);
+}
+/* COLUMN PADDING + VERTICAL GRID LINE */
+.archive-link:nth-child(odd) {
+  padding-right: 48px; /* left column */
+  border-right: 1px solid var(--rule); /* vertical grid line restored */
+}
+/* HORIZONTAL GRID LINE */
+.archive-item {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--rule); /* horizontal grid line restored */
 }
 
-.archive-item:nth-child(even) {
-  padding-left: 48px;
+.archive-link:nth-child(even) {
+  padding-left: 48px; /* right column */
 }
 
 .archive-item:last-child,
 .archive-item:nth-last-child(2):nth-child(odd) {
   border-bottom: none;
-}
-
-.archive-item:hover {
-  opacity: 0.3;
 }
 
 /* Thumbnail */
@@ -533,13 +551,19 @@ p {
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
+  transition: filter 0.2s ease;
+}
+
+/* Optional grayscale → color hover */
+.archive-link:hover .archive-thumb img {
+  filter: grayscale(0%);
 }
 
 /* Title */
 .archive-header {
   grid-area: header;
   display: flex;
-  align-items: center; /* centers h3 vertically relative to thumbnail */
+  align-items: center;
 }
 
 .archive-header h3 {
@@ -552,7 +576,7 @@ p {
   margin: 0;
 }
 
-/* Description (full width) */
+/* Description */
 .archive-description,
 .archive-item p {
   grid-area: desc;
@@ -569,7 +593,7 @@ p {
   display: none !important;
 }
 
-/* Arrow hover (kept in case you still use it) */
+/* Arrow hover */
 .archive-arrow {
   font-size: 1rem;
   color: var(--ink-soft);
@@ -578,7 +602,7 @@ p {
     color 0.12s;
 }
 
-.archive-item:hover .archive-arrow {
+.archive-link:hover .archive-arrow {
   transform: translateX(4px);
   color: var(--accent);
 }
@@ -589,13 +613,24 @@ p {
     grid-template-columns: 1fr;
   }
 
+  /* The grid children are .archive-link, not .archive-item */
+  .archive-link {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none; /* remove vertical divider on mobile */
+    display: block;
+  }
+
   .archive-item {
     grid-template-columns: 1fr;
     grid-template-areas:
       "thumb"
       "header"
       "desc";
-    border-bottom: 1px solid var(--rule) !important;
+
+    /* restore horizontal grid lines cleanly */
+    border-bottom: 1px solid var(--rule);
+    padding: 32px 0; /* consistent vertical spacing */
   }
 
   .archive-thumb img {
