@@ -521,6 +521,18 @@ p {
   background: var(--paper-soft);
   transform: translateY(-2px);
 }
+/* Grayscale thumbnail + title on hover */
+.archive-link:hover .archive-thumb img,
+.archive-link:hover .archive-thumb {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+/* Archive header turns green on hover */
+.archive-link:hover .archive-header h3 {
+  color: var(--green);
+  transition: color 0.2s ease;
+}
+
 /* COLUMN PADDING + VERTICAL GRID LINE */
 .archive-link:nth-child(odd) {
   padding-right: 48px; /* left column */
@@ -552,11 +564,6 @@ p {
   object-fit: cover;
   border-radius: 8px;
   transition: filter 0.2s ease;
-}
-
-/* Optional grayscale → color hover */
-.archive-link:hover .archive-thumb img {
-  filter: grayscale(0%);
 }
 
 /* Title */
