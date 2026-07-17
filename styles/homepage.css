@@ -216,7 +216,7 @@ p {
   font-weight: 400;
   color: var(--ink);
   line-height: 1.65;
-  max-width: 600px;
+  max-width: 700px;
 }
 .hero-actions {
   margin-top: 36px;
@@ -620,12 +620,13 @@ p {
     grid-template-columns: 1fr;
   }
 
-  /* The grid children are .archive-link, not .archive-item */
+  /* Center each link block */
   .archive-link {
-    padding-left: 0;
-    padding-right: 0;
-    border-right: none; /* remove vertical divider on mobile */
+    padding: 0;
+    margin: 0 auto;
+    border-right: none;
     display: block;
+    text-align: center; /* centers header text + desc */
   }
 
   .archive-item {
@@ -635,21 +636,33 @@ p {
       "header"
       "desc";
 
-    /* restore horizontal grid lines cleanly */
     border-bottom: 1px solid var(--rule);
-    padding: 32px 0; /* consistent vertical spacing */
+    padding: 32px 0;
+
+    /* Center grid children */
+    justify-items: center; /* centers thumb + header + desc */
+    align-items: center; /* vertical centering */
   }
 
   .archive-thumb img {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto; /* ensures perfect centering */
   }
 
+  /* Remove desktop column padding logic */
   .archive-item:nth-child(odd),
   .archive-item:nth-child(even) {
     padding-left: 0;
     padding-right: 0;
     border-right: none;
+  }
+  .archive-link,
+  .archive-link:nth-child(odd),
+  .archive-link:nth-child(even) {
+    padding: 0 !important;
+    border-right: none !important;
   }
 }
 
@@ -657,6 +670,12 @@ p {
   font-style: italic;
   color: var(--ink-faint);
 }
+@media (max-width: 768px) {
+  .archive-thumb img[src*="coming-soon"] {
+    content: url("/img/coming-soon-mobile.png");
+  }
+}
+
 .tag {
   font-size: 0.625rem;
   font-weight: 600;
