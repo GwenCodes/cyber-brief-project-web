@@ -209,22 +209,20 @@ a.editorial-bold:hover {
     3,
     minmax(0, 1fr)
   ); /* Creates 3 strictly equal columns */
-  gap: 120px; /* Optional: Adds spacing between columns */
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 /* Optional styling to visualize the columns */
 .grid-item {
   color: var(--rule);
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
 @media (max-width: 640px) {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .grid-item {
     padding: 6px;
@@ -246,7 +244,7 @@ a.editorial-bold:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 35px;
 }
 
 /* CTA */
