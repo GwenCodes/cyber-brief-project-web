@@ -9,12 +9,12 @@
   --ink-faint: #c0ada4;
   --form-bg: #dddddd;
   --rule: #e2d8d3;
-  --serif: "Lora", Georgia, serif;
+  --serif: 'Lora', Georgia, serif;
   --sans:
-    "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --times: "Times New Roman", Times, serif;
-  --cambria: "Cambria", "Times New Roman", Times, serif;
+    'Source Sans 3', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --times: 'Times New Roman', Times, serif;
+  --cambria: 'Cambria', 'Times New Roman', Times, serif;
 }
 
 *,
@@ -162,7 +162,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 @media (min-width: 768px) {
@@ -515,8 +515,8 @@ body {
   grid-template-columns: 120px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "thumb header"
-    "desc desc";
+    'thumb header'
+    'desc desc';
   column-gap: 1.5rem;
   row-gap: 1rem;
 
@@ -641,9 +641,9 @@ body {
   .archive-item {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "thumb"
-      "header"
-      "desc";
+      'thumb'
+      'header'
+      'desc';
 
     border-bottom: 1px solid var(--rule);
     padding: 32px 0;
@@ -680,8 +680,8 @@ body {
   color: var(--ink-faint);
 }
 @media (max-width: 768px) {
-  .archive-thumb img[src*="coming-soon"] {
-    content: url("/img/coming-soon-mobile.png");
+  .archive-thumb img[src*='coming-soon'] {
+    content: url('/img/coming-soon-mobile.png');
   }
 }
 
@@ -787,7 +787,7 @@ button:hover {
   background: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .consultation-form-section p {
@@ -878,7 +878,7 @@ button:hover {
   justify-content: center;
   padding: 4rem 2rem;
   opacity: 0.3;
-  font-family: "DM Serif Display", serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.4rem;
   letter-spacing: 0.02em;
   color: #4a5568;
@@ -909,7 +909,7 @@ button:hover {
 }
 
 .Contact-logo {
-  font-family: "DM Serif Display", serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.25rem;
   color: #e8edf5;
   letter-spacing: 0.03em;
@@ -968,7 +968,7 @@ button:hover {
 
 /* ── FORM COLUMN ── */
 .form-heading {
-  font-family: "DM Serif Display", serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 2.25rem;
   color: #c8c8c8;
   margin-bottom: 0;
@@ -1018,14 +1018,14 @@ label.field-label,
 }
 
 /* Unified form field styling */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 select,
 textarea {
   border: 1px solid #c7c7c7;
   border-radius: 3px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
   padding: 0.6rem 0.85rem;
   width: 100%;
@@ -1071,7 +1071,7 @@ textarea {
   color: #fff;
   border: none;
   padding: 0.65rem 1.75rem;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.1em;
