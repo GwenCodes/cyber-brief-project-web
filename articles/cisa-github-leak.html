@@ -1,391 +1,424 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      One Disabled Setting: What the CISA GitHub Leak Actually Exposed |
-      Cyber-Brief Strategic Intelligence
-    </title>
-    <meta name="description" content="" />
-    <link
-      rel="canonical"
-      href="https://cyber-brief.net/articles/cisa-github-leak.html"
-    />
-    <meta name="robots" content="index, follow" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+        One Disabled Setting: What the CISA GitHub Leak Actually Exposed |
+        Cyber-Brief Strategic Intelligence
+        </title>
+        <meta name="description" content="" />
+        <link
+        rel="canonical"
+        href="https://cyber-brief.net/articles/cisa-github-leak.html"
+        />
+        <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
-    <meta property="article:author" content="Van Munoz" />
-    <meta
-      property="article:author"
-      content="https://www.linkedin.com/in/vanmunoz/"
-    />
-    <meta property="og:type" content="article" />
-    <meta
-      property="og:title"
-      content="One Disabled Setting: What the CISA GitHub Leak Actually Exposed"
-    />
-    <meta
-      property="og:description"
-      content="Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions."
-    />
-    <meta
-      property="og:url"
-      content="https://cyber-brief.net/articles/your-encryption-is-broken"
-    />
-    <meta
-      property="og:site_name"
-      content="Cyber-Brief Strategic Intelligence"
-    />
-    <meta
-      property="og:image"
-      content="https://cyber-brief.net/public/images/articles/your-encryption-is-broken/og.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Your Encryption May Already Be Broken. You Just Don't Know It Yet."
-    />
-    <meta property="og:locale" content="en_US" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Your Encryption May Already Be Broken. You Just Don't Know It Yet."
-    />
-    <meta
-      name="twitter:description"
-      content="Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions."
-    />
-    <meta
-      name="twitter:image"
-      content="https://cyber-brief.net/public/images/articles/your-encryption-is-broken/og.png"
-    />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&family=Blinker:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Open Graph -->
+        <meta property="article:author" content="Van Munoz" />
+        <meta
+        property="article:author"
+        content="https://www.linkedin.com/in/vanmunoz/"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+        property="og:title"
+        content="One Disabled Setting: What the CISA GitHub Leak Actually Exposed"
+        />
+        <meta
+        property="og:description"
+        content="Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions."
+        />
+        <meta
+        property="og:url"
+        content="https://cyber-brief.net/articles/your-encryption-is-broken"
+        />
+        <meta
+        property="og:site_name"
+        content="Cyber-Brief Strategic Intelligence"
+        />
+        <meta
+        property="og:image"
+        content="https://cyber-brief.net/public/images/articles/your-encryption-is-broken/og.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+        property="og:image:alt"
+        content="Your Encryption May Already Be Broken. You Just Don't Know It Yet."
+        />
+        <meta property="og:locale" content="en_US" />
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+        name="twitter:title"
+        content="Your Encryption May Already Be Broken. You Just Don't Know It Yet."
+        />
+        <meta
+        name="twitter:description"
+        content="Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions."
+        />
+        <meta
+        name="twitter:image"
+        content="https://cyber-brief.net/public/images/articles/your-encryption-is-broken/og.png"
+        />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400;700;900&family=Blinker:wght@400;600;700&display=swap"
+        rel="stylesheet"
+        />
 
-    <!-- Tailwind (replace with compiled CSS in production) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Tailwind (replace with compiled CSS in production) -->
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="/styles/reality-section.css" />
-    <link rel="stylesheet" href="/styles/signup-section.css" />
-    <link rel="stylesheet" href="/styles/homepage.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/about.css" />
-    <link rel="stylesheet" href="/styles/feature-sections.css" />
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="/styles/reality-section.css" />
+        <link rel="stylesheet" href="/styles/signup-section.css" />
+        <link rel="stylesheet" href="/styles/homepage.css" />
+        <link rel="stylesheet" href="/styles/index.css" />
+        <link rel="stylesheet" href="/styles/about.css" />
+        <link rel="stylesheet" href="/styles/feature-sections.css" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Your Encryption May Already Be Broken. You Just Don't Know It Yet.",
-        "description": "Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions.",
-        "image": "https://cyber-brief.net/images/articles/your-encryption-is-broken/og.png",
-        "url": "https://cyber-brief.net/articles/your-encryption-is-broken",
-        "mainEntityOfPage": "https://cyber-brief.net/articles/your-encryption-is-broken",
-        "author": {
-          "@type": "Person",
-          "name": "Van Munoz",
-          "jobTitle": "Owner"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Cyber-Brief",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://cyber-brief.net/images/cyber-brief-og.png"
-          }
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Your Encryption May Already Be Broken. You Just Don't Know It Yet.",
+            "description": "Preparing for the quantum future means investing in cybersecurity expertise and planning for the inevitable migration to quantum-resistant solutions.",
+            "image": "https://cyber-brief.net/images/articles/your-encryption-is-broken/og.png",
+            "url": "https://cyber-brief.net/articles/your-encryption-is-broken",
+            "mainEntityOfPage": "https://cyber-brief.net/articles/your-encryption-is-broken",
+            "author": {
+            "@type": "Person",
+            "name": "Van Munoz",
+            "jobTitle": "Owner"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Cyber-Brief",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://cyber-brief.net/images/cyber-brief-og.png"
+            }
+            }
         }
-      }
-    </script>
+        </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("[data-include]").forEach(async (el) => {
-          const file = el.getAttribute("data-include");
-          const html = await fetch(file).then((res) => res.text());
-          el.innerHTML = html;
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("[data-include]").forEach(async (el) => {
+            const file = el.getAttribute("data-include");
+            const html = await fetch(file).then((res) => res.text());
+            el.innerHTML = html;
+            });
         });
-      });
-    </script>
-  </head>
-  <body>
-    <div data-include="/components/header.html"></div>
-    <main
-      class="newsletter-container pt-12 sm:pt-10 w-full px-1 sm:max-w-4xl sm:mx-auto"
-    >
-      <h1>One Disabled Setting: What the CISA GitHub Leak Actually Exposed</h1>
-
-      <p>
-        <strong>Bottom line up front</strong><br />
-        The agency that writes the playbook for everyone else just proved, in
-        public, that the playbook only works if it's actually followed. Every
-        organization running developer environments, contractor access, or cloud
-        infrastructure should treat this less as a story about CISA and more as
-        a mirror.
-      </p>
-
-      <p>
-        For six months, a public GitHub repository quietly held the keys,
-        literally, to some of the federal government's most sensitive cloud
-        infrastructure. It wasn't discovered by an attacker. It wasn't
-        discovered by CISA. It was discovered by a security researcher running
-        routine, automated scans, who then had to escalate through a journalist
-        because the agency's own reporting channels weren't clear enough to
-        reach the right people quickly.
-      </p>
-
-      <p>
-        That's the real headline buried under the technical details:
-        <strong
-          >CISA, the agency that writes the federal government's own rules for
-          cyber hygiene, ended up as living proof of what happens when nobody
-          enforces them.</strong
+        </script>
+    </head>
+    <body>
+        <div data-include="/components/header.html"></div>
+        <main
+        class="newsletter-container pt-12 sm:pt-10 w-full px-1 sm:max-w-4xl sm:mx-auto"
         >
-      </p>
+            <article class="p-6 md:p-20">
+                <!-- HERO / TITLE BLOCK -->
+                <section class="text-center mb-16">
+                    <span
+                        class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
+                    >
+                        Strategic Briefing
+                    </span>
 
-      <h2>The Exposure</h2>
+                    <h1 class="title">
+                        <span class="mb-2">One Disabled Setting: </span>
+                    </h1>
+                    <h2 class="title text-3xl tracking-tight mt-4 mb-6">
+                        What the CISA GitHub Leak Actually Exposed
+                    </h2>
+                </section>
+                <section>
+                    <div class="newsletter-image w-full max-w-5xl mx-auto mb-16">
+                        <!-- The Wrapper: Handles the aspect ratio and clipping -->
+                        <div
+                        class="w-full aspect-square md:aspect-video overflow-hidden rounded-md shadow-xl"
+                        >
+                        <img
+                            src="/img/poisoning-the-prompt-cyber-brief.png"
+                            alt="Strategic Briefing Visual"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                        </div>
+                    </div>
+                </section>
+                <section></section>               
 
-      <p>
-        A contractor working for CISA had uploaded a copy of the agency's build
-        and deployment repository to a personal GitHub account, intending to
-        spin up cloud infrastructure independently. In the process,
-        administrator and build credentials for CISA's coding systems, along
-        with infrastructure-as-code data describing how the agency's cloud
-        environment is configured, ended up in that same public folder.
-      </p>
+            <p>
+                <strong>Bottom line up front</strong><br />
+                The agency that writes the playbook for everyone else just proved, in
+                public, that the playbook only works if it's actually followed. Every
+                organization running developer environments, contractor access, or cloud
+                infrastructure should treat this less as a story about CISA and more as
+                a mirror.
+            </p>
 
-      <p>
-        The repository, ironically named
-        <strong
-          >"Private-CISA," contained roughly 844 megabytes of material</strong
-        >: plaintext passwords, AWS access tokens, CI/CD (Continuous
-        Integration/Continuous Deployment) build logs, Kubernetes manifests, and
-        Terraform infrastructure code. One file was titled, without apparent
-        irony, "importantAWStokens." It held administrative credentials to three
-        AWS GovCloud servers: the isolated cloud environment used for regulated
-        government workloads.
-      </p>
+            <p>
+                For six months, a public GitHub repository quietly held the keys,
+                literally, to some of the federal government's most sensitive cloud
+                infrastructure. It wasn't discovered by an attacker. It wasn't
+                discovered by CISA. It was discovered by a security researcher running
+                routine, automated scans, who then had to escalate through a journalist
+                because the agency's own reporting channels weren't clear enough to
+                reach the right people quickly.
+            </p>
 
-      <p>
-        <strong
-          >GitHub ships with a default setting that blocks users from publishing
-          SSH keys and other secrets into public repositories. According to the
-          CISA postmortem, the account holder had explicitly disabled it. The
-          safety mechanism wasn't bypassed through some clever exploit: it was
-          turned off, presumably for convenience.</strong
-        >
-      </p>
+            <p>
+                That's the real headline buried under the technical details:
+                <strong
+                >CISA, the agency that writes the federal government's own rules for
+                cyber hygiene, ended up as living proof of what happens when nobody
+                enforces them.</strong
+                >
+            </p>
 
-      <h2>A Rare Moment of Honesty, And Why It's Not Enough</h2>
+            <h2>The Exposure</h2>
 
-      <p>
-        Credit where it's due: CISA's after-action report, published in July,
-        was unusually candid. The agency acknowledged that its private
-        repositories also contained secrets that had to be removed and rotated.
-        It admitted that researcher-reporting channels weren't well defined,
-        forcing the discovering researcher to try email, a vulnerability
-        disclosure platform meant for different kinds of reports, and finally a
-        journalist, before the issue got real traction. That level of
-        self-critique from a national cybersecurity agency is rare.
-      </p>
+            <p>
+                A contractor working for CISA had uploaded a copy of the agency's build
+                and deployment repository to a personal GitHub account, intending to
+                spin up cloud infrastructure independently. In the process,
+                administrator and build credentials for CISA's coding systems, along
+                with infrastructure-as-code data describing how the agency's cloud
+                environment is configured, ended up in that same public folder.
+            </p>
 
-      <p>
-        But transparency after the fact doesn't undo the exposure window.
-        <strong
-          >This wasn't a sophisticated adversary defeating layered defenses. It
-          was a known, well-documented failure mode: static secrets committed to
-          a personal repository that has caused breaches for a decade across
-          every industry</strong
-        >. The lesson isn't really about CISA's incompetence. It's about what
-        happens when contractor oversight, credential architecture, and
-        detection response all rely on manual diligence rather than structural
-        enforcement.
-      </p>
+            <p>
+                The repository, ironically named
+                <strong
+                >"Private-CISA," contained roughly 844 megabytes of material</strong
+                >: plaintext passwords, AWS access tokens, CI/CD (Continuous
+                Integration/Continuous Deployment) build logs, Kubernetes manifests, and
+                Terraform infrastructure code. One file was titled, without apparent
+                irony, "importantAWStokens." It held administrative credentials to three
+                AWS GovCloud servers: the isolated cloud environment used for regulated
+                government workloads.
+            </p>
 
-      <p>
-        It's worth noting that CISA has lost roughly a third of its workforce
-        amid recent budget and staffing reductions. That doesn't excuse the
-        exposure. But it's a useful data point for any organization asking a
-        harder question: do our security controls actually hold up when
-        headcount shrinks and contractors turn over?
-        <strong
-          >Most controls quietly depend on people paying continuous attention,
-          and that's exactly what's hardest to sustain when a team is stretched
-          thin.</strong
-        >
-      </p>
+            <p>
+                <strong
+                >GitHub ships with a default setting that blocks users from publishing
+                SSH keys and other secrets into public repositories. According to the
+                CISA postmortem, the account holder had explicitly disabled it. The
+                safety mechanism wasn't bypassed through some clever exploit: it was
+                turned off, presumably for convenience.</strong
+                >
+            </p>
 
-      <p>
-        This repository incident isn't the only recent episode raising questions
-        about discipline at the top of the agency.
-        <strong
-          >In January, Politico reported that CISA's own acting director, Madhu
-          Gottumukkala, had uploaded government contracting documents marked
-          "for official use only" to the public version of ChatGPT between
-          mid-July and early August 2025</strong
-        >. The uploads tripped CISA's own automated security sensors, generating
-        multiple alerts and prompting a DHS review into whether the disclosures
-        had compromised government security. The files weren't classified, but
-        they weren't meant for public release either, and once entered into a
-        public LLM they're subject to the platform's own data handling, outside
-        federal control entirely. What made it worse: Gottumukkala had
-        personally requested and received a special exception to use ChatGPT
-        months earlier, at a time when the tool was blocked for most DHS staff
-        over exactly this kind of risk. One official told Politico he'd pushed
-        CISA into granting him access, "and then he abused it."
-      </p>
+            <h2>A Rare Moment of Honesty, And Why It's Not Enough</h2>
 
-      <p>
-        Put the two incidents side by side and a pattern emerges that's more
-        troubling than either one alone. A leaked secret in a personal repo is a
-        process failure anyone can have. A sitting agency head bypassing his own
-        organization's data-handling controls, the ones his agency sets for the
-        rest of the federal government, is a culture failure.
-      </p>
+            <p>
+                Credit where it's due: CISA's after-action report, published in July,
+                was unusually candid. The agency acknowledged that its private
+                repositories also contained secrets that had to be removed and rotated.
+                It admitted that researcher-reporting channels weren't well defined,
+                forcing the discovering researcher to try email, a vulnerability
+                disclosure platform meant for different kinds of reports, and finally a
+                journalist, before the issue got real traction. That level of
+                self-critique from a national cybersecurity agency is rare.
+            </p>
 
-      <h2>How A Secrets Leak Actually Unfolds</h2>
+            <p>
+                But transparency after the fact doesn't undo the exposure window.
+                <strong
+                >This wasn't a sophisticated adversary defeating layered defenses. It
+                was a known, well-documented failure mode: static secrets committed to
+                a personal repository that has caused breaches for a decade across
+                every industry</strong
+                >. The lesson isn't really about CISA's incompetence. It's about what
+                happens when contractor oversight, credential architecture, and
+                detection response all rely on manual diligence rather than structural
+                enforcement.
+            </p>
 
-      <p>
-        Understanding why this kind of exposure is so dangerous requires
-        understanding two mechanics that run in parallel.
-      </p>
+            <p>
+                It's worth noting that CISA has lost roughly a third of its workforce
+                amid recent budget and staffing reductions. That doesn't excuse the
+                exposure. But it's a useful data point for any organization asking a
+                harder question: do our security controls actually hold up when
+                headcount shrinks and contractors turn over?
+                <strong
+                >Most controls quietly depend on people paying continuous attention,
+                and that's exactly what's hardest to sustain when a team is stretched
+                thin.</strong
+                >
+            </p>
 
-      <p>
-        First, detection. Firms like GitGuardian continuously scan public code
-        repositories: not just an organization's own GitHub account, but the
-        entire public internet, looking for patterns that match password
-        formats, API key structures, and other secret signatures. It functions
-        like a smoke detector for the open internet: always listening, flagging
-        anomalies automatically. In this case, the system worked. Automated
-        alerts were generated well before the public disclosure. The failure
-        wasn't detection; it was response: the alerts didn't reach the right
-        people fast enough to act.
-      </p>
+            <p>
+                This repository incident isn't the only recent episode raising questions
+                about discipline at the top of the agency.
+                <strong
+                >In January, Politico reported that CISA's own acting director, Madhu
+                Gottumukkala, had uploaded government contracting documents marked
+                "for official use only" to the public version of ChatGPT between
+                mid-July and early August 2025</strong
+                >. The uploads tripped CISA's own automated security sensors, generating
+                multiple alerts and prompting a DHS review into whether the disclosures
+                had compromised government security. The files weren't classified, but
+                they weren't meant for public release either, and once entered into a
+                public LLM they're subject to the platform's own data handling, outside
+                federal control entirely. What made it worse: Gottumukkala had
+                personally requested and received a special exception to use ChatGPT
+                months earlier, at a time when the tool was blocked for most DHS staff
+                over exactly this kind of risk. One official told Politico he'd pushed
+                CISA into granting him access, "and then he abused it."
+            </p>
 
-      <p>
-        Second, blast radius. A single exposed administrative key doesn't just
-        expose one system. It exposes every downstream resource that key can
-        touch. In a cloud environment built on interconnected roles and
-        permissions, the impact can be substantial. That's why the remediation
-        timeline matters as much as the discovery timeline. Even after CISA took
-        the repository offline, the exposed AWS access keys reportedly remained
-        technically valid for an additional 48 hours, because fully rotating
-        credentials across a complex, interconnected environment takes real
-        operational time: time an attacker doesn't need to wait for.
-      </p>
+            <p>
+                Put the two incidents side by side and a pattern emerges that's more
+                troubling than either one alone. A leaked secret in a personal repo is a
+                process failure anyone can have. A sitting agency head bypassing his own
+                organization's data-handling controls, the ones his agency sets for the
+                rest of the federal government, is a culture failure.
+            </p>
 
-      <p>
-        This is the core argument for moving away from static, long-lived
-        credentials entirely. A permanent access key is a liability the moment
-        it's created, because its value to an attacker never depreciates until
-        someone manually revokes it. A short-lived, dynamically issued
-        credential, one that expires automatically within minutes, is a
-        fundamentally different risk proposition. If it leaks, it's already
-        worthless by the time anyone finds it.
-      </p>
+            <h2>How A Secrets Leak Actually Unfolds</h2>
 
-      <h2>What Security Teams Should Actually Do</h2>
+            <p>
+                Understanding why this kind of exposure is so dangerous requires
+                understanding two mechanics that run in parallel.
+            </p>
 
-      <p>
-        This incident offers a genuinely actionable checklist, not just a
-        cautionary tale:
-      </p>
+            <p>
+                First, detection. Firms like GitGuardian continuously scan public code
+                repositories: not just an organization's own GitHub account, but the
+                entire public internet, looking for patterns that match password
+                formats, API key structures, and other secret signatures. It functions
+                like a smoke detector for the open internet: always listening, flagging
+                anomalies automatically. In this case, the system worked. Automated
+                alerts were generated well before the public disclosure. The failure
+                wasn't detection; it was response: the alerts didn't reach the right
+                people fast enough to act.
+            </p>
 
-      <ul>
-        <li>
-          <strong>Audit immediately.</strong> Search for personal or unmanaged
-          accounts holding company infrastructure-as-code, build scripts, or
-          credential files. This should happen this week, not next quarter.
-        </li>
-        <li>
-          <strong>Lock down push protection.</strong> Confirm that
-          secret-scanning and push-protection settings on your organization's
-          repositories cannot be disabled by an individual contributor or
-          contractor account.
-        </li>
-        <li>
-          <strong>Move to dynamic secrets.</strong> Begin migrating static cloud
-          credentials, the kind that don't expire, toward short-lived,
-          dynamically issued tokens scoped to specific roles and sessions.
-        </li>
-        <li>
-          <strong>Extend scanning to contractors.</strong> Contractual language
-          should require continuous, automated secrets scanning across any
-          repository a contractor controls, not just repositories the
-          organization directly owns.
-        </li>
-        <li>
-          <strong>Define your disclosure channel.</strong> Publish a single,
-          clear, prominently placed channel for security researchers to report
-          exposures, and make sure it's monitored by someone who can act
-          same-day, not next-quarter.
-        </li>
-        <li>
-          <strong>Rotate as a drill, not a crisis.</strong> Treat credential
-          rotation like a fire drill: scheduled, rehearsed, and boring, not
-          something improvised under pressure after a public leak.
-        </li>
-      </ul>
+            <p>
+                Second, blast radius. A single exposed administrative key doesn't just
+                expose one system. It exposes every downstream resource that key can
+                touch. In a cloud environment built on interconnected roles and
+                permissions, the impact can be substantial. That's why the remediation
+                timeline matters as much as the discovery timeline. Even after CISA took
+                the repository offline, the exposed AWS access keys reportedly remained
+                technically valid for an additional 48 hours, because fully rotating
+                credentials across a complex, interconnected environment takes real
+                operational time: time an attacker doesn't need to wait for.
+            </p>
 
-      <p><em>Sources:</em></p>
+            <p>
+                This is the core argument for moving away from static, long-lived
+                credentials entirely. A permanent access key is a liability the moment
+                it's created, because its value to an attacker never depreciates until
+                someone manually revokes it. A short-lived, dynamically issued
+                credential, one that expires automatically within minutes, is a
+                fundamentally different risk proposition. If it leaks, it's already
+                worthless by the time anyone finds it.
+            </p>
 
-      <p>
-        <strong>Krebs on Security</strong> (original report):
-        <a
-          href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
-          >https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/</a
-        >
-      </p>
+            <h2>What Security Teams Should Actually Do</h2>
 
-      <p>
-        <strong>Krebs on Security</strong> (follow-up, "Lessons Learned"):
-        <a
-          href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
-          >https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/</a
-        >
-      </p>
+            <p>
+                This incident offers a genuinely actionable checklist, not just a
+                cautionary tale:
+            </p>
 
-      <p>
-        <strong>Security Boulevard</strong>:
-        <a
-          href="https://securityboulevard.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
-          >https://securityboulevard.com/2026/07/lessons-learned-from-cisas-recent-github-leak/</a
-        >
-      </p>
+            <ul>
+                <li>
+                <strong>Audit immediately.</strong> Search for personal or unmanaged
+                accounts holding company infrastructure-as-code, build scripts, or
+                credential files. This should happen this week, not next quarter.
+                </li>
+                <li>
+                <strong>Lock down push protection.</strong> Confirm that
+                secret-scanning and push-protection settings on your organization's
+                repositories cannot be disabled by an individual contributor or
+                contractor account.
+                </li>
+                <li>
+                <strong>Move to dynamic secrets.</strong> Begin migrating static cloud
+                credentials, the kind that don't expire, toward short-lived,
+                dynamically issued tokens scoped to specific roles and sessions.
+                </li>
+                <li>
+                <strong>Extend scanning to contractors.</strong> Contractual language
+                should require continuous, automated secrets scanning across any
+                repository a contractor controls, not just repositories the
+                organization directly owns.
+                </li>
+                <li>
+                <strong>Define your disclosure channel.</strong> Publish a single,
+                clear, prominently placed channel for security researchers to report
+                exposures, and make sure it's monitored by someone who can act
+                same-day, not next-quarter.
+                </li>
+                <li>
+                <strong>Rotate as a drill, not a crisis.</strong> Treat credential
+                rotation like a fire drill: scheduled, rehearsed, and boring, not
+                something improvised under pressure after a public leak.
+                </li>
+            </ul>
 
-      <p>
-        <strong>Cybersecurity Dive</strong>:
-        <a
-          href="https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/"
-          >https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/</a
-        >
-      </p>
+            <p><em>Sources:</em></p>
 
-      <p>
-        <strong>Akeyless</strong>:
-        <a
-          href="https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/"
-          >https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/</a
-        >
-      </p>
+            <p>
+                <strong>Krebs on Security</strong> (original report):
+                <a
+                href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
+                >https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/</a
+                >
+            </p>
 
-      <p>
-        <strong>Politico</strong>:
-        <a
-          href="https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361"
-          >https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361</a
-        >
-      </p>
-    </main>
+            <p>
+                <strong>Krebs on Security</strong> (follow-up, "Lessons Learned"):
+                <a
+                href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
+                >https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/</a
+                >
+            </p>
+
+            <p>
+                <strong>Security Boulevard</strong>:
+                <a
+                href="https://securityboulevard.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
+                >https://securityboulevard.com/2026/07/lessons-learned-from-cisas-recent-github-leak/</a
+                >
+            </p>
+
+            <p>
+                <strong>Cybersecurity Dive</strong>:
+                <a
+                href="https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/"
+                >https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/</a
+                >
+            </p>
+
+            <p>
+                <strong>Akeyless</strong>:
+                <a
+                href="https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/"
+                >https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/</a
+                >
+            </p>
+
+            <p>
+                <strong>Politico</strong>:
+                <a
+                href="https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361"
+                >https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361</a
+                >
+            </p>
+        </main>
+        <div data-include="/components/author.html"></div>
+      </article>
     <div data-include="/components/footer.html"></div>
     <script src="/mobile-menu.js" defer></script>
     <script src="/signup-logic.js" defer></script>
@@ -425,5 +458,6 @@
       async
       src="https://scripts.simpleanalyticscdn.com/latest.js"
     ></script>
+    
   </body>
 </html>
