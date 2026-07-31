@@ -101,9 +101,7 @@
       <article class="p-6 md:p-20">
         <!-- HERO / TITLE BLOCK -->
         <section class="text-center mb-16">
-          <span
-            class="font-ibm font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block"
-          >
+          <span class="font-bold text-[#EE6C4D] text-sm uppercase tracking-[0.3em] mb-4 block">
             Strategic Briefing
           </span>
           <h1 class="title">
@@ -124,9 +122,7 @@
           </div>
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
-          <div
-            class="font-ibm mb-6 bg-zinc-300 p-4 rounded-lg border-l-4 border-[#EE6C4D] shadow-sm"
-          >
+          <div class="mb-6 bg-zinc-300 p-4 rounded-lg border-l-4 border-[#EE6C4D] shadow-sm">
             <p class="mb-4"><strong class="editorial-bold">bottom line up front</strong></p>
             <p class="mb-6">
               The agency that writes the playbook for everyone else just proved, in public, that the
@@ -156,9 +152,9 @@
           <p class="mb-6">
             A contractor working for CISA had uploaded a copy of the agency's build and deployment
             repository to a personal GitHub account, intending to spin up cloud infrastructure
-            independently. In the process, administrator and build credentials for CISA's coding
-            systems, along with infrastructure-as-code data describing how the agency's cloud
-            environment is configured, ended up in that same public folder.
+            independently. In the process, administrator and build credentials for CISA's
+            development systems, along with infrastructure-as-code data describing how the agency's
+            cloud environment is configured, ended up in that same public folder.
           </p>
           <p class="mb-6">
             The repository, ironically named
@@ -188,16 +184,16 @@
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            A Rare Moment of Honesty, And Why It's Not Enough
+            A Rare Moment of Honesty and Why It's Not Enough
           </h2>
           <p class="mb-6">
             Credit where it's due: CISA's after-action report, published in July, was unusually
             candid. [2] The agency acknowledged that its private repositories also contained secrets
             that had to be removed and rotated. It admitted that researcher-reporting channels
-            weren't well defined, forcing the discovering researcher to try email, a vulnerability
-            disclosure platform meant for different kinds of reports, and finally a journalist,
-            before the issue got real traction. That level of self-critique from a national
-            cybersecurity agency is rare. [3] [4]
+            weren't well defined, forcing the researcher who discovered the issue to try email, a
+            vulnerability disclosure platform meant for different kinds of reports, and finally a
+            journalist, before the issue got real traction. That level of self-critique from a
+            national cybersecurity agency is rare. [3] [4]
           </p>
           <p class="mb-6">
             But transparency after the fact doesn't undo the exposure window.
@@ -234,7 +230,7 @@
             personally requested and received a special exception to use ChatGPT months earlier, at
             a time when the tool was blocked for most DHS staff over exactly this kind of risk. One
             official told Politico he'd pushed CISA into granting him access, "and then he abused
-            it." [6]
+            it." [5]
           </p>
 
           <p class="mb-6">
@@ -246,7 +242,7 @@
         </section>
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">
-            How A Secrets Leak Actually Unfolds
+            How a Secrets Leak Actually Unfolds
           </h2>
 
           <p class="mb-6">
@@ -261,8 +257,11 @@
             internet, looking for patterns that match password formats, API key structures, and
             other secret signatures. It functions like a smoke detector for the open internet:
             always listening, flagging anomalies automatically. In this case, the system worked.
-            Automated alerts were generated well before the public disclosure. The failure wasn't
-            detection; it was response: the alerts didn't reach the right people fast enough to act.
+            Automated alerts were generated well before the public disclosure.
+            <strong class="editorial-bold"
+              >The failure wasn't detection; it was response: the alerts didn't reach the right
+              people fast enough to act.</strong
+            >
           </p>
 
           <p class="mb-6">
@@ -279,10 +278,11 @@
           <p class="mb-6">
             This is the core argument for moving away from static, long-lived credentials entirely.
             A permanent access key is a liability the moment it's created, because its value to an
-            attacker never depreciates until someone manually revokes it. A short-lived, dynamically
-            issued credential, one that expires automatically within minutes, is a fundamentally
-            different risk proposition. If it leaks, it's already worthless by the time anyone finds
-            it.
+            attacker never depreciates until someone manually revokes it.
+            <strong class="editorial-bold"
+              >A short-lived credential that expires automatically within minutes is the best
+              practice. If it leaks, it's already useless by the time anyone finds it.</strong
+            >
           </p>
         </section>
         <!--Call To Action Box-->
@@ -298,33 +298,33 @@
           </h2>
 
           <ul>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Audit immediately.</strong> Search for personal or
               unmanaged accounts holding company infrastructure-as-code, build scripts, or
               credential files. This should happen this week, not next quarter.
             </li>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Lock down push protection.</strong> Confirm that
               secret-scanning and push-protection settings on your organization's repositories
               cannot be disabled by an individual contributor or contractor account.
             </li>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Move to dynamic secrets.</strong> Begin migrating
               static cloud credentials, the kind that don't expire, toward short-lived, dynamically
               issued tokens scoped to specific roles and sessions.
             </li>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Extend scanning to contractors.</strong> Contractual
               language should require continuous, automated secrets scanning across any repository a
               contractor controls, not just repositories the organization directly owns.
             </li>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Define your disclosure channel.</strong> Publish a
               single, clear, prominently placed channel for security researchers to report
               exposures, and make sure it's monitored by someone who can act same-day, not
               next-quarter.
             </li>
-            <li id="source-1" class="mb-3">
+            <li class="editorial-list-item mb-3">
               <strong class="editorial-bold">Rotate as a drill, not a crisis.</strong> Treat
               credential rotation like a fire drill: scheduled, rehearsed, and boring, not something
               improvised under pressure after a public leak.
@@ -334,8 +334,8 @@
         <section class="content-body text-slate-800 font-sans antialiased">
           <h2 class="content-title text-3xl tracking-tight mt-16 mb-6">Sources:</h2>
           <ul class="pl-6 mb-6">
-            <li id="source-1" class="mb-3">
-              <strong>[1] GitGuardian</strong> (original report):
+            <li class="mb-3">
+              <strong>[1] GitGuardian</strong>:
               <a
                 href="https://blog.gitguardian.com/how-we-got-a-cisa-github-leak-taken-down-in-26-hours/"
                 target="_blank"
@@ -345,8 +345,8 @@
                 ></a
               >
             </li>
-            <li id="source-1" class="mb-3">
-              <strong>[2] Krebs on Security</strong> (follow-up, "Lessons Learned"):
+            <li class="mb-3">
+              <strong>[2] Krebs on Security</strong>:
               <a
                 href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
                 target="_blank"
@@ -357,7 +357,7 @@
               >
             </li>
 
-            <li id="source-1" class="mb-3">
+            <li class="mb-3">
               <strong>[3] Security Boulevard</strong>:
               <a
                 href="https://securityboulevard.com/2026/07/lessons-learned-from-cisas-recent-github-leak/"
@@ -369,7 +369,7 @@
               >
             </li>
 
-            <li id="source-1" class="mb-3">
+            <li class="mb-3">
               <strong>[4] Cybersecurity Dive</strong>:
               <a
                 href="https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/"
@@ -381,18 +381,8 @@
               >
             </li>
 
-            <li id="source-1" class="mb-3">
-              <strong>[5] Akeyless</strong>:
-              <a
-                href="https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><em>https://www.akeyless.io/blog/lessons-from-the-cisa-github-leak/</em></a
-              >
-            </li>
-
-            <li id="source-1" class="mb-3">
-              <strong>[6] Politico</strong>:
+            <li class="mb-3">
+              <strong>[5] Politico</strong>:
               <a
                 href="https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361"
                 target="_blank"
@@ -404,9 +394,9 @@
             </li>
           </ul>
         </section>
+        <div data-include="/components/author.html"></div>
       </article>
     </main>
-    <div data-include="/components/author.html"></div>
     <div data-include="/components/footer.html"></div>
     <script src="/mobile-menu.js" defer></script>
     <script src="/signup-logic.js" defer></script>
